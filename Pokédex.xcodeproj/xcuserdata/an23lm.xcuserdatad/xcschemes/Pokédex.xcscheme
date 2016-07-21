@@ -20,6 +20,34 @@
                ReferencedContainer = "container:Poke&#x301;dex.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F7A2E5131D401CD40022D528"
+               BuildableName = "Poke&#x301;dexTests.xctest"
+               BlueprintName = "Poke&#x301;dexTests"
+               ReferencedContainer = "container:Poke&#x301;dex.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F7A2E51E1D401CD40022D528"
+               BuildableName = "Poke&#x301;dexUITests.xctest"
+               BlueprintName = "Poke&#x301;dexUITests"
+               ReferencedContainer = "container:Poke&#x301;dex.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7A2E5131D401CD40022D528"
-               BuildableName = "Poke&#x301;dexTests.xctest"
-               BlueprintName = "Poke&#x301;dexTests"
-               ReferencedContainer = "container:Poke&#x301;dex.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F7A2E51E1D401CD40022D528"
-               BuildableName = "Poke&#x301;dexUITests.xctest"
-               BlueprintName = "Poke&#x301;dexUITests"
-               ReferencedContainer = "container:Poke&#x301;dex.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
