@@ -1,0 +1,1 @@
+ const unsigned char Pods_Poke_dexVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_Poke_dex  PROJECT:Pods-1" "\n"; const double Pods_Poke_dexVersionNumber __attribute__ ((used)) = (double)1.;

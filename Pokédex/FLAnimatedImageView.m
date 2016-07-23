@@ -392,14 +392,14 @@ static NSUInteger gcd(NSUInteger a, NSUInteger b)
                 self.needsDisplayWhenImageBecomesAvailable = NO;
             }
             
-            //PRAGMA:MARK Added system version verification 
+            //PRAGMA:MARK Added system version verification
             
             if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
-                printf("version less than 10");
+                //printf("version less than 10");
                 self.accumulator += displayLink.duration * displayLink.frameInterval;
             }
             else {
-                printf("version is 10");
+                //printf("version is 10");
                 self.accumulator += displayLink.duration;
             }
             

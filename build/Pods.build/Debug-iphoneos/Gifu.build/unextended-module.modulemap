@@ -1,0 +1,10 @@
+framework module Gifu {
+  umbrella header "Gifu-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Gifu.__Swift {
+    exclude header "Gifu-Swift.h"
+}

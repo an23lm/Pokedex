@@ -1,0 +1,757 @@
+[
+  {
+    "number": 1,
+    "tier": "F",
+    "powerup": 13
+  },
+  {
+    "number": 2,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 3,
+    "tier": "A",
+    "powerup": 33
+  },
+  {
+    "number": 4,
+    "tier": "F",
+    "powerup": 13
+  },
+  {
+    "number": 5,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 6,
+    "tier": "A",
+    "powerup": 33
+  },
+  {
+    "number": 7,
+    "tier": "F",
+    "powerup": 13
+  },
+  {
+    "number": 8,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 9,
+    "tier": "A",
+    "powerup": 32
+  },
+  {
+    "number": 10,
+    "tier": "F",
+    "powerup": 5
+  },
+  {
+    "number": 11,
+    "tier": "F",
+    "powerup": 6
+  },
+  {
+    "number": 12,
+    "tier": "B",
+    "powerup": 18
+  },
+  {
+    "number": 13,
+    "tier": "F",
+    "powerup": 5
+  },
+  {
+    "number": 14,
+    "tier": "F",
+    "powerup": 7
+  },
+  {
+    "number": 15,
+    "tier": "B",
+    "powerup": 20
+  },
+  {
+    "number": 16,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 17,
+    "tier": "B",
+    "powerup": 18
+  },
+  {
+    "number": 18,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 19,
+    "tier": "F",
+    "powerup": 7
+  },
+  {
+    "number": 20,
+    "tier": "B",
+    "powerup": 20
+  },
+  {
+    "number": 21,
+    "tier": "F",
+    "powerup": 9
+  },
+  {
+    "number": 22,
+    "tier": "B",
+    "powerup": 23
+  },
+  {
+    "number": 23,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 24,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 25,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 26,
+    "tier": "B",
+    "powerup": 27
+  },
+  {
+    "number": 27,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 28,
+    "tier": "B",
+    "powerup": 23
+  },
+  {
+    "number": 29,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 30,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 31,
+    "tier": "B",
+    "powerup": 19
+  },
+  {
+    "number": 32,
+    "tier": "A",
+    "powerup": 32
+  },
+  {
+    "number": 33,
+    "tier": "B",
+    "powerup": 20
+  },
+  {
+    "number": 34,
+    "tier": "A",
+    "powerup": 33
+  },
+  {
+    "number": 35,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 36,
+    "tier": "A",
+    "powerup": 33
+  },
+  {
+    "number": 37,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 38,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 39,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 40,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 41,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 42,
+    "tier": "B",
+    "powerup": 27
+  },
+  {
+    "number": 43,
+    "tier": "F",
+    "powerup": 15
+  },
+  {
+    "number": 44,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 45,
+    "tier": "A",
+    "powerup": 32
+  },
+  {
+    "number": 46,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 47,
+    "tier": "B",
+    "powerup": 23
+  },
+  {
+    "number": 48,
+    "tier": "F",
+    "powerup": 14
+  },
+  {
+    "number": 49,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 50,
+    "tier": "F",
+    "powerup": 7
+  },
+  {
+    "number": 51,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 52,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 53,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 54,
+    "tier": "F",
+    "powerup": 14
+  },
+  {
+    "number": 55,
+    "tier": "A",
+    "powerup": 32
+  },
+  {
+    "number": 56,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 57,
+    "tier": "B",
+    "powerup": 27
+  },
+  {
+    "number": 58,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 59,
+    "tier": "S",
+    "powerup": 40
+  },
+  {
+    "number": 60,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 61,
+    "tier": "",
+    "powerup": ""
+  },
+  {
+    "number": 62,
+    "tier": "A",
+    "powerup": 34
+  },
+  {
+    "number": 63,
+    "tier": "F",
+    "powerup": 9
+  },
+  {
+    "number": 64,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 65,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 66,
+    "tier": "F",
+    "powerup": 15
+  },
+  {
+    "number": 67,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 68,
+    "tier": "A",
+    "powerup": 35
+  },
+  {
+    "number": 69,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 70,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 71,
+    "tier": "A",
+    "powerup": 35
+  },
+  {
+    "number": 72,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 73,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 74,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 75,
+    "tier": "B",
+    "powerup": 19
+  },
+  {
+    "number": 76,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 77,
+    "tier": "B",
+    "powerup": 20
+  },
+  {
+    "number": 78,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 79,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 80,
+    "tier": "A",
+    "powerup": 35
+  },
+  {
+    "number": 81,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 82,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 83,
+    "tier": "F",
+    "powerup": 15
+  },
+  {
+    "number": 84,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 85,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 86,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 87,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 88,
+    "tier": "B",
+    "powerup": 17
+  },
+  {
+    "number": 89,
+    "tier": "S",
+    "powerup": 38
+  },
+  {
+    "number": 90,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 91,
+    "tier": "B",
+    "powerup": 26
+  },
+  {
+    "number": 92,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 93,
+    "tier": "B",
+    "powerup": 18
+  },
+  {
+    "number": 94,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 95,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 96,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 97,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 98,
+    "tier": "F",
+    "powerup": 11
+  },
+  {
+    "number": 99,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 100,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 101,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 102,
+    "tier": "B",
+    "powerup": 18
+  },
+  {
+    "number": 103,
+    "tier": "S",
+    "powerup": 38
+  },
+  {
+    "number": 104,
+    "tier": "F",
+    "powerup": 13
+  },
+  {
+    "number": 105,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 106,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 107,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 108,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 109,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 110,
+    "tier": "S",
+    "powerup": 37
+  },
+  {
+    "number": 111,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 112,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 113,
+    "tier": "F",
+    "powerup": 9
+  },
+  {
+    "number": 114,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 115,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 116,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 117,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 118,
+    "tier": "F",
+    "powerup": 14
+  },
+  {
+    "number": 119,
+    "tier": "A",
+    "powerup": 29
+  },
+  {
+    "number": 120,
+    "tier": "F",
+    "powerup": 12
+  },
+  {
+    "number": 121,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 122,
+    "tier": "B",
+    "powerup": 21
+  },
+  {
+    "number": 123,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 124,
+    "tier": "B",
+    "powerup": 22
+  },
+  {
+    "number": 125,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 126,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 127,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 128,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 129,
+    "tier": "F",
+    "powerup": 3
+  },
+  {
+    "number": 130,
+    "tier": "S",
+    "powerup": 39
+  },
+  {
+    "number": 131,
+    "tier": "S",
+    "powerup": 43
+  },
+  {
+    "number": 132,
+    "tier": "F",
+    "powerup": 10
+  },
+  {
+    "number": 133,
+    "tier": "B",
+    "powerup": 17
+  },
+  {
+    "number": 134,
+    "tier": "S",
+    "powerup": 40
+  },
+  {
+    "number": 135,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 136,
+    "tier": "S",
+    "powerup": 37
+  },
+  {
+    "number": 137,
+    "tier": "B",
+    "powerup": 24
+  },
+  {
+    "number": 138,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 139,
+    "tier": "A",
+    "powerup": 32
+  },
+  {
+    "number": 140,
+    "tier": "B",
+    "powerup": 16
+  },
+  {
+    "number": 141,
+    "tier": "A",
+    "powerup": 30
+  },
+  {
+    "number": 142,
+    "tier": "A",
+    "powerup": 31
+  },
+  {
+    "number": 143,
+    "tier": "S",
+    "powerup": 45
+  },
+  {
+    "number": 144,
+    "tier": "S",
+    "powerup": 37
+  },
+  {
+    "number": 145,
+    "tier": "S",
+    "powerup": 39
+  },
+  {
+    "number": 146,
+    "tier": "S",
+    "powerup": 41
+  },
+  {
+    "number": 147,
+    "tier": "F",
+    "powerup": 13
+  },
+  {
+    "number": 148,
+    "tier": "B",
+    "powerup": 25
+  },
+  {
+    "number": 149,
+    "tier": "S",
+    "powerup": 50
+  },
+  {
+    "number": 150,
+    "tier": "S",
+    "powerup": 53
+  },
+  {
+    "number": 151,
+    "tier": "S",
+    "powerup": 42
+  }
+]
