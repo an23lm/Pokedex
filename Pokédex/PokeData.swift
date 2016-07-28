@@ -195,13 +195,13 @@ private func baseInfo() -> [Pokemon] {
     
     var baseInfoPokemonList: [Pokemon] = []
     
-    let file1 = Bundle.main().pathForResource("pokemon", ofType: "json")
-    let url1 = URL(fileURLWithPath: file1!)
+    let file1 = NSBundle.mainBundle().pathForResource("pokemon", ofType: "json")
     
     do {
-        let jsonData = try Data(contentsOf: url1, options: .dataReadingMappedIfSafe)
+        let jsonData = try NSData(contentsOfFile: file1!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
         do {
-            let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            //let jsonResult: NSArray = try NSJSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
             for poke in jsonResult {
                 var tempPokemon = Pokemon()
                 if let id = poke["Number"] as? String {
@@ -215,19 +215,19 @@ private func baseInfo() -> [Pokemon] {
                 }
                 if let type1 = poke["Type I"] as? [String] {
                     for type in type1 {
-                        let poketype: Type = selectType(string: type)
+                        let poketype: Type = selectType(type)
                         tempPokemon.type.append(poketype)
                     }
                 }
                 if let type2 = poke["Type II"] as? [String] {
                     for type in type2 {
-                        let poketype: Type = selectType(string: type)
+                        let poketype: Type = selectType(type)
                         tempPokemon.type.append(poketype)
                     }
                 }
                 if let weekness = poke["Weaknesses"] as? [String] {
                     for type in weekness {
-                        let poketype: Type = selectType(string: type)
+                        let poketype: Type = selectType(type)
                         tempPokemon.weekness.append(poketype)
                     }
                 }
@@ -264,19 +264,21 @@ private func baseInfo() -> [Pokemon] {
 
 func moreInfo(pokeData: [Pokemon]) -> [Pokemon] {
     
-    let file2 = Bundle.main().pathForResource("pokejson2", ofType: "json")
-    let url2 = URL(fileURLWithPath: file2!)
+    //let file2 = Bundle.main().pathForResource("pokejson2", ofType: "json")
+    let file2 = NSBundle.mainBundle().pathForResource("pokejson2", ofType: "json")
+    //let url2 = URL(fileURLWithPath: file2!)
     var pokeData = pokeData
     
     do {
-        let jsonData = try Data(contentsOf: url2, options: .dataReadingMappedIfSafe)
+        //let jsonData = try Data(contentsOf: url2, options: .dataReadingMappedIfSafe)
+        let jsonData = try NSData(contentsOfFile: file2!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
         do {
-            let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
             for poke in jsonResult {
                 var tempPokemon = Pokemon()
                 var index: Int = 0
                 if let id = poke["PkMn"] as? Int {
-                    for (i, pokemon) in pokeData.enumerated() {
+                    for (i, pokemon) in pokeData.enumerate() {
                         if pokemon.id == id {
                             tempPokemon = pokemon
                             index = i
@@ -323,21 +325,21 @@ func moreInfo(pokeData: [Pokemon]) -> [Pokemon] {
 }
 
 func evolInfo(pokeData: [Pokemon]) -> [Pokemon] {
-    
-    let file3 = Bundle.main().pathForResource("multiplier", ofType: "json")
-    let url3 = URL(fileURLWithPath: file3!)
+  
+    let file3 = NSBundle.mainBundle().pathForResource("multiplier", ofType: "json")
+    //let url3 = URL(fileURLWithPath: file3!)
     
     var pokeData = pokeData
     
     do {
-        let jsonData = try Data(contentsOf: url3, options: .dataReadingMappedIfSafe)
+        let jsonData = try NSData(contentsOfFile: file3!, options: .DataReadingMappedIfSafe)
         do {
-            let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
             for poke in jsonResult {
                 var tempPokemon = Pokemon()
                 var index: Int = 0
                 if let id = poke["pokemon"] as? Int {
-                    for (i, pokemon) in pokeData.enumerated() {
+                    for (i, pokemon) in pokeData.enumerate() {
                         if pokemon.id == id {
                             tempPokemon = pokemon
                             index = i
@@ -367,20 +369,21 @@ func evolInfo(pokeData: [Pokemon]) -> [Pokemon] {
 }
 
 private func lvlInfo(pokeData: [Pokemon]) -> [Pokemon] {
-    let file3 = Bundle.main().pathForResource("pokelevel", ofType: "json")
-    let url3 = URL(fileURLWithPath: file3!)
+    let file3 = NSBundle.mainBundle().pathForResource("pokelevel", ofType: "json")
+    //let url3 = URL(fileURLWithPath: file3!)
     
     var pokeData = pokeData
     
     do {
-        let jsonData = try Data(contentsOf: url3, options: .dataReadingMappedIfSafe)
+        //let jsonData = try Data(contentsOf: url3, options: .dataReadingMappedIfSafe)
+        let jsonData = try NSData(contentsOfFile: file3!, options: .DataReadingMappedIfSafe)
         do {
-            let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
             for poke in jsonResult {
                 var tempPokemon = Pokemon()
                 var index: Int = 0
                 if let id = poke["number"] as? Int {
-                    for (i, pokemon) in pokeData.enumerated() {
+                    for (i, pokemon) in pokeData.enumerate() {
                         if pokemon.id == id {
                             tempPokemon = pokemon
                             index = i
@@ -415,11 +418,11 @@ private func pass1() -> [Pokemon] {
     
     pokemonList = baseInfo()
     
-    pokemonList = moreInfo(pokeData: pokemonList)
+    pokemonList = moreInfo(pokemonList)
     
-    pokemonList = evolInfo(pokeData: pokemonList)
+    pokemonList = evolInfo(pokemonList)
     
-    pokemonList = lvlInfo(pokeData: pokemonList)
+    pokemonList = lvlInfo(pokemonList)
     
     return pokemonList
     
@@ -427,22 +430,24 @@ private func pass1() -> [Pokemon] {
 
 private func pass2(pokeData: [Pokemon]) -> [Pokemon] {
     
-    let file1 = Bundle.main().pathForResource("pokemon", ofType: "json")
-    let url1 = URL(fileURLWithPath: file1!)
+    let file1 = NSBundle.mainBundle().pathForResource("pokemon", ofType: "json")
+    //let url1 = URL(fileURLWithPath: file1!)
     
     var pokeData = pokeData
     
     do {
-        let jsonData = try Data(contentsOf: url1, options: .dataReadingMappedIfSafe)
+        //let jsonData = try Data(contentsOf: url1, options: .dataReadingMappedIfSafe)
+        let jsonData = try NSData(contentsOfFile: file1!, options: .DataReadingMappedIfSafe)
         do {
-            let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            //let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! [NSDictionary]
+            let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
             for poke in jsonResult {
                 
                 var tempPokemon = Pokemon()
                 var index: Int = 0
                 
                 if let id = poke["Number"] as? String {
-                    for (i, pokemon) in pokeData.enumerated() {
+                    for (i, pokemon) in pokeData.enumerate() {
                         if pokemon.id == Int(id)! {
                             tempPokemon = pokemon
                             index = i
@@ -453,7 +458,7 @@ private func pass2(pokeData: [Pokemon]) -> [Pokemon] {
                 if let nextEvol = poke["Next evolution(s)"] as? [NSDictionary] {
                     for evol in nextEvol {
                         if let id = evol["Number"] as? String {
-                            for (i, pokemon) in pokeData.enumerated() {
+                            for (i, pokemon) in pokeData.enumerate() {
                                 if pokemon.id == Int(id)! {
                                     tempPokemon.nextEvolution.append(pokeData[i])
                                     break
@@ -465,7 +470,7 @@ private func pass2(pokeData: [Pokemon]) -> [Pokemon] {
                 if let nextEvol = poke["Previous evolution(s)"] as? [NSDictionary] {
                     for evol in nextEvol {
                         if let id = evol["Number"] as? String {
-                            for (i, pokemon) in pokeData.enumerated() {
+                            for (i, pokemon) in pokeData.enumerate() {
                                 if pokemon.id == Int(id)! {
                                     tempPokemon.previousEvolution.append(pokeData[i])
                                     break
@@ -491,15 +496,30 @@ private func pass2(pokeData: [Pokemon]) -> [Pokemon] {
 public class PokeData {
     
     var pokemon: [Pokemon] = []
-    
+    var trainerLevel: Int = 1 {
+        didSet {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setInteger(trainerLevel, forKey: "trainerLevel")
+        }
+    }
+    var levelInfo: [Double] = [0.094, 0.16639787, 0.21573247, 0.25572005, 0.29024988,
+                               0.3210876, 0.34921268, 0.37523559, 0.39956728, 0.4225,
+                               0.44310755, 0.46279839, 0.48168495, 0.49985844, 0.51739395,
+                               0.53435433, 0.55079269, 0.56675452, 0.58227891, 0.5974, 0.61215729,
+                               0.62656713, 0.64065295, 0.65443563, 0.667934, 0.68116492,
+                               0.69414365, 0.70688421, 0.71939909, 0.7317, 0.73776948,
+                               0.74378943, 0.74976104, 0.75568551, 0.76156384, 0.76739717,
+                               0.7731865, 0.77893275, 0.784637, 0.7903]
+
     init() {
         populatePokemonDS()
+        print(levelInfo)
     }
     
     private func populatePokemonDS() {
         var pokeList: [Pokemon]
         pokeList = pass1()
-        pokeList = pass2(pokeData: pokeList)
+        pokeList = pass2(pokeList)
         pokemon = pokeList
     }
     
