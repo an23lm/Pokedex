@@ -36,6 +36,8 @@ class PowerUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         plusTrainerButton.isAddButton = true
+        minusTrainerButton.isAddButton = false
+        
         pokeImageView.image = UIImage(named: "\((pokemon?.id)!)")
         pokeImageView.contentMode = UIViewContentMode.ScaleAspectFit
         trainerLevel.text = "\((pokeData?.trainerLevel)!)"
@@ -114,5 +116,9 @@ extension PowerUpViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         currentCP = Int(textField.text!)!
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
 }

@@ -34,11 +34,23 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var pokeEvolutionView: UIView!
 
+    @IBOutlet weak var typeView: UIView!
+    @IBOutlet weak var typeViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var weeknessView: UIView!
+    @IBOutlet weak var weeknessViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var evolutionView: UIView!
+    @IBOutlet weak var evolutionViewConstraint: NSLayoutConstraint!
+    
     var pokeNumber = 1
     var pokemon = Pokemon()
     var pokeData: PokeData? = nil
     var selectedEvol: [Int] = []
     var evolutionPokemon: Pokemon? = nil
+    
+    var capBars: [UIView] = []
+    var fleeBars: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +93,12 @@ class DetailViewController: UIViewController {
             print(error)
         }
          */
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.rotate), name: UIDeviceOrientationDidChangeNotification, object: nil)
+        
+        pokeCaptureChanceView.alpha = 0
+        pokeFleeChanceView.alpha = 0
+        
         pokeName.text = pokemon.name.uppercaseString
         pokeID.text = "#\(pokemon.id)"
         pokeClassification.text = pokemon.classification
@@ -88,10 +106,23 @@ class DetailViewController: UIViewController {
         pokeImageView.image = pokeImage
         setType()
         setWeekness()
-        setCaptureChance()
-        setFleeChance()
         setFastAttacks()
         setEvolution()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        setCaptureChance()
+        setFleeChance()
+        UIView.animateWithDuration(0.2, animations: {
+            self.pokeCaptureChanceView.alpha = 1
+            self.pokeFleeChanceView.alpha = 1
+        })
+    }
+    
+    func rotate() {
+        setCaptureChance()
+        setFleeChance()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -115,31 +146,41 @@ class DetailViewController: UIViewController {
         
         view.layoutIfNeeded()
         pokeTypeView.layoutIfNeeded()
+        typeView.layoutIfNeeded()
         
         if pokemon.type.count == 1 {
-            let typeImageView1: UIImageView = UIImageView(frame: CGRect(x: pokeTypeView.frame.width/2, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
-            typeImageView1.frame.origin.x -=  typeImageView1.frame.width/2
-            let typeArray: [Type] = pokemon.type
-            typeImageView1.image = selectImage(typeArray.first!)
-            pokeTypeView.addSubview(typeImageView1)
-        }
-        else {
-            let typeImageView1: UIImageView = UIImageView(frame: CGRect(x: pokeTypeView.frame.width/2, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
-            typeImageView1.frame.origin.x -=  typeImageView1.frame.width + 10
+            let width = pokeTypeView.frame.height * 1.6
+            typeViewConstraint.constant = width
+            print(width)
+            
+            let typeImageView1: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
             let typeArray: [Type] = pokemon.type
             typeImageView1.image = selectImage(typeArray.first!)
             
-            let typeImageView2: UIImageView = UIImageView(frame: CGRect(x: pokeTypeView.frame.width/2, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
-            typeImageView2.frame.origin.x +=  10
+            typeView.addSubview(typeImageView1)
+        }
+        else {
+            let width = pokeTypeView.frame.height * 1.6 * 2 + 10
+            typeViewConstraint.constant = width
+            
+            let typeImageView1: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
+   
+            let typeArray: [Type] = pokemon.type
+            typeImageView1.image = selectImage(typeArray.first!)
+            
+            let typeImageView2: UIImageView = UIImageView(frame: CGRect(x: (pokeTypeView.frame.height * 1.6) + 10, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
+
             typeImageView2.image = selectImage(typeArray[1])
-            pokeTypeView.addSubview(typeImageView1)
-            pokeTypeView.addSubview(typeImageView2)
+            
+            typeView.addSubview(typeImageView1)
+            typeView.addSubview(typeImageView2)
         }
     }
     
     func setWeekness() {
         view.layoutIfNeeded()
         pokeWeeknessView.layoutIfNeeded()
+        weeknessView.layoutIfNeeded()
         
         let count = pokemon.weekness.count
         var height = pokeWeeknessView.frame.height
@@ -153,11 +194,15 @@ class DetailViewController: UIViewController {
             height = width / 1.6
             totalWidth = (width * CGFloat(count)) + CGFloat((count - 1) * 10)
         }
-        var originX = pokeWeeknessView.frame.width/2 - totalWidth/2
+        
+        weeknessViewConstraint.constant = totalWidth
+        
+        var originX: CGFloat = 0
+        
         for week in pokemon.weekness {
             let imageView = UIImageView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             imageView.image = selectImage(week)
-            pokeWeeknessView.addSubview(imageView)
+            weeknessView.addSubview(imageView)
             originX += width + 10
         }
     }
@@ -165,18 +210,28 @@ class DetailViewController: UIViewController {
     func setCaptureChance() {
         view.layoutIfNeeded()
         pokeCaptureChanceView.layoutIfNeeded()
+        
         var width = pokeCaptureChanceView.frame.width
         let height = pokeCaptureChanceView.frame.height
         width = (width/12) - (5)
         var originX: CGFloat = 0
-        var bars: [UIView] = []
+        
+        func reset() {
+            for bar in capBars {
+                bar.removeFromSuperview()
+            }
+            capBars.removeAll()
+        }
+        
+        reset()
+        
         for _ in 0...11 {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
             self.pokeCaptureChanceView.addSubview(view)
             originX += width + 5
-            bars.append(view)
+            capBars.append(view)
         }
         var highlight = 0;
         var color = UIColor.redColor()
@@ -230,7 +285,7 @@ class DetailViewController: UIViewController {
             color = UIColor.greenColor()
         }
         
-        for (index, view) in bars.enumerate() {
+        for (index, view) in capBars.enumerate() {
             if index + 1 <= highlight {
                 view.backgroundColor = color
             }
@@ -243,18 +298,28 @@ class DetailViewController: UIViewController {
     func setFleeChance() {
         view.layoutIfNeeded()
         pokeFleeChanceView.layoutIfNeeded()
+        
         var width = pokeFleeChanceView.frame.width
         let height = pokeFleeChanceView.frame.height
         width = (width/6) - (5)
         var originX: CGFloat = 0
-        var bars: [UIView] = []
+        
+        func reset() {
+            for bar in fleeBars {
+                bar.removeFromSuperview()
+            }
+            fleeBars.removeAll()
+        }
+        
+        reset()
+        
         for _ in 0...5 {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
             self.pokeFleeChanceView.addSubview(view)
             originX += width + 5
-            bars.append(view)
+            fleeBars.append(view)
         }
         var highlight = 0;
         var color = UIColor.redColor()
@@ -284,7 +349,7 @@ class DetailViewController: UIViewController {
             color = UIColor.greenColor()
         }
         
-        for (index, view) in bars.enumerate() {
+        for (index, view) in fleeBars.enumerate() {
             if index + 1 <= highlight {
                 view.backgroundColor = color
             }
@@ -312,6 +377,7 @@ class DetailViewController: UIViewController {
     func setEvolution() {
         view.layoutIfNeeded()
         pokeEvolutionView.layoutIfNeeded()
+        evolutionView.layoutIfNeeded()
         
         var evol: [Pokemon] = pokemon.previousEvolution
         evol.append(pokemon)
@@ -329,7 +395,9 @@ class DetailViewController: UIViewController {
             totalWidth = (width * CGFloat(count)) + CGFloat((count - 1) * 20)
         }
         
-        var originX = pokeEvolutionView.frame.width/2 - totalWidth/2
+        evolutionViewConstraint.constant = totalWidth
+        
+        var originX: CGFloat = 0
         
         for poke in evol {
             if poke.id == pokemon.id {
@@ -340,7 +408,7 @@ class DetailViewController: UIViewController {
                 button.setImage(UIImage(named: "\(poke.id)"), forState: [])
                 button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
                 holderView.addSubview(button)
-                pokeEvolutionView.addSubview(holderView)
+                evolutionView.addSubview(holderView)
                 if !selectedEvol.contains(poke.id) {
                     selectedEvol.append(poke.id)
                 }
@@ -350,7 +418,7 @@ class DetailViewController: UIViewController {
                 button.setImage(UIImage(named: "\(poke.id)"), forState: [])
                 button.tag = poke.id
                 button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-                pokeEvolutionView.addSubview(button)
+                evolutionView.addSubview(button)
                 button.addTarget(self, action: #selector(self.selectEvolution), forControlEvents: .TouchUpInside)
                 if selectedEvol.contains(poke.id) {
                     button.enabled = false
@@ -404,7 +472,11 @@ class DetailViewController: UIViewController {
             optionMenu.addAction(jolt)
             optionMenu.addAction(fla)
             optionMenu.addAction(cancelAction)
+            optionMenu.modalInPopover = true
             
+            let popup = optionMenu.popoverPresentationController
+            popup?.sourceRect = pokeEvolMultiButton.bounds
+            popup?.sourceView = pokeEvolMultiButton
             self.presentViewController(optionMenu, animated: true, completion: nil)
         }
         else {

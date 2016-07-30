@@ -80,9 +80,9 @@ class EvolutionMultViewController: UIViewController {
         }
         
         currentImageView.image = UIImage(named: "\(pokemon!.id)")
-        currentImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        currentImageView.contentMode = UIViewContentMode.ScaleAspectFit
         
-        evolutionImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        evolutionImageView.contentMode = UIViewContentMode.ScaleAspectFit
         
         currentCPView.maxCP = pokemon!.maxCP
         let lev = pokeData!.levelInfo[pokeData!.trainerLevel - 1]
@@ -190,5 +190,9 @@ extension EvolutionMultViewController: UITextFieldDelegate {
             textField.textColor = UIColor.whiteColor()
         })
         update()
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
 }
