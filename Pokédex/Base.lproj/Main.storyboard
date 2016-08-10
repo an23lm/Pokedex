@@ -837,10 +837,10 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="8jl-Pd-l8f"/>
-                                                <exclude reference="MLZ-vi-kL9"/>
                                                 <exclude reference="84i-qh-Nbk"/>
                                                 <exclude reference="BXj-JK-RnG"/>
+                                                <exclude reference="8jl-Pd-l8f"/>
+                                                <exclude reference="MLZ-vi-kL9"/>
                                             </mask>
                                         </variation>
                                         <connections>
