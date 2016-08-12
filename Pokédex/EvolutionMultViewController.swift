@@ -26,10 +26,17 @@ class EvolutionMultViewController: UIViewController {
     
     @IBOutlet weak var evoutionCP: UILabel!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var combatPointsLabel: UILabel!
+    @IBOutlet weak var trainerLevelLabel: UILabel!
+    
+    @IBOutlet weak var disclamerView: UIView!
+    @IBOutlet weak var disclamerText: UILabel!
+    
     @IBOutlet weak var trainerLevelUp: CounterButton!
     @IBOutlet weak var trainerLevelDown: CounterButton!
     @IBOutlet weak var trainerLevel: UILabel!
-    
     
     var pokemon: Pokemon? = nil
     var pokeData: PokeData? = nil
@@ -38,6 +45,41 @@ class EvolutionMultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.view.backgroundColor = pokemon!.primaryColor
+        self.titleBar.backgroundColor = pokemon!.secondaryColor
+        
+        titleLabel.textColor = pokemon?.tertiaryColor
+        backButton.setTitleColor(pokemon?.tertiaryColor, forState: .Normal)
+        currentName.textColor = pokemon?.tertiaryColor
+        currentId.textColor = pokemon?.tertiaryColor
+        
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        pokemon?.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let textColor = UIColor(red: r, green: g, blue: b, alpha: a)
+        combatPointsLabel.textColor = textColor
+        trainerLevelLabel.textColor = textColor
+        trainerLevelUp.fillColor = (pokemon?.secondaryColor)!
+        trainerLevelDown.fillColor = (pokemon?.secondaryColor)!
+        trainerLevelUp.strokeColor = textColor
+        trainerLevelDown.strokeColor = textColor
+        
+        trainerLevel.textColor = pokemon?.tertiaryColor
+        
+        combatPoint.backgroundColor = pokemon?.secondaryColor
+        combatPoint.textColor = pokemon?.tertiaryColor
+        
+        evolutionName.textColor = pokemon?.tertiaryColor
+        evolutionID.textColor = pokemon?.tertiaryColor
+        
+        evoutionCP.textColor = pokemon?.tertiaryColor
+        
+        disclamerText.textColor = textColor
+        disclamerView.backgroundColor = pokemon?.secondaryColor
+        currentCPView.color1 = (pokemon?.tertiaryColor)!
+        currentCPView.color2 = (pokemon?.secondaryColor)!
+        evolutionCPView.color1 = (pokemon?.tertiaryColor)!
+        evolutionCPView.color2 = (pokemon?.secondaryColor)!
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +90,15 @@ class EvolutionMultViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setup()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        currentCPView.animateCircles(1.0)
+        evolutionCPView.animateCircles(1.0)
+        currentCPView.animateCpCapCircle(1.0)
+        evolutionCPView.animateCpCapCircle(1.0)
     }
    
     @IBAction func backButton(sender: AnyObject) {
@@ -109,10 +160,6 @@ class EvolutionMultViewController: UIViewController {
         currentCPView.currentCP = 0
         evolutionCPView.currentCP = 0
         
-        currentCPView.setNeedsDisplay()
-        evolutionCPView.setNeedsDisplay()
-        
-        print("lvl \(pokeData!.trainerLevel)")
         trainerLevel.text = "\(pokeData!.trainerLevel)"
     }
     
@@ -123,8 +170,8 @@ class EvolutionMultViewController: UIViewController {
             let multi = (pokemon?.evolutionMultiplier)! * Float(currentCP!)
             evolutionCPView.currentCP = Int(multi)
             evoutionCP.text = "\(Int(multi)) CP"
-            currentCPView.setNeedsDisplay()
-            evolutionCPView.setNeedsDisplay()
+            currentCPView.animateCurrentCpCircle(1)
+            evolutionCPView.animateCurrentCpCircle(1)
         }
         else {
             currentCPView.currentCP = 0
@@ -132,8 +179,8 @@ class EvolutionMultViewController: UIViewController {
             let multi = (pokemon?.evolutionMultiplier)! * Float(currentCP)
             evolutionCPView.currentCP = Int(multi)
             evoutionCP.text = "??? CP"
-            currentCPView.setNeedsDisplay()
-            evolutionCPView.setNeedsDisplay()
+            currentCPView.animateCurrentCpCircle(1)
+            evolutionCPView.animateCurrentCpCircle(1)
         }
     }
     
@@ -154,8 +201,8 @@ class EvolutionMultViewController: UIViewController {
         
         cap = Double((pokemon!.nextEvolution.first!.maxCP)) * lev
         evolutionCPView.levelCap = Int(cap)
-        currentCPView.setNeedsDisplay()
-        evolutionCPView.setNeedsDisplay()
+        currentCPView.animateCpCapCircle(0.3)
+        evolutionCPView.animateCpCapCircle(0.3)
         trainerLevel.text = "\((pokeData?.trainerLevel)!)"
     }
     
@@ -170,8 +217,8 @@ class EvolutionMultViewController: UIViewController {
         
         cap = Double((pokemon!.nextEvolution.first!.maxCP)) * lev
         evolutionCPView.levelCap = Int(cap)
-        currentCPView.setNeedsDisplay()
-        evolutionCPView.setNeedsDisplay()
+        currentCPView.animateCpCapCircle(0.3)
+        evolutionCPView.animateCpCapCircle(0.3)
         trainerLevel.text = "\((pokeData?.trainerLevel)!)"
     }
     
@@ -186,8 +233,8 @@ extension EvolutionMultViewController: UITextFieldDelegate {
     }
     func textFieldDidEndEditing(textField: UITextField) {
         UIView.animateWithDuration( 0.1, animations: {
-            textField.backgroundColor = self.titleBar.backgroundColor
-            textField.textColor = UIColor.whiteColor()
+            textField.backgroundColor = self.pokemon?.secondaryColor
+            textField.textColor = self.pokemon?.tertiaryColor
         })
         update()
     }

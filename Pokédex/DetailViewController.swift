@@ -11,6 +11,14 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var titleBarView: UIView!
+    @IBOutlet weak var titleBarLabel: UILabel!
+    @IBOutlet weak var backButtonLabel: UIButton!
+    
+    @IBOutlet weak var weeknessLabel: UILabel!
+    @IBOutlet weak var fastAttackLabel: UILabel!
+    @IBOutlet weak var capChanceLabel: UILabel!
+    @IBOutlet weak var fleeChanceLabel: UILabel!
+    
     
     @IBOutlet weak var pokeScrollView: UIScrollView!
     @IBOutlet weak var pokeContentView: UIView!
@@ -31,6 +39,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pokeButtonsView: UIView!
     @IBOutlet weak var pokePowerUpButton: UIButton!
     @IBOutlet weak var pokeEvolMultiButton: UIButton!
+    @IBOutlet weak var classificationView: UIView!
     
     @IBOutlet weak var pokeEvolutionView: UIView!
 
@@ -42,6 +51,11 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var evolutionView: UIView!
     @IBOutlet weak var evolutionViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var capChanceTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var eggView: UIView!
+    @IBOutlet weak var eggDistLabel: UILabel!
     
     var pokeNumber = 1
     var pokemon = Pokemon()
@@ -96,14 +110,62 @@ class DetailViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.rotate), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
+        self.view.backgroundColor = pokemon.primaryColor
+        titleBarView.backgroundColor = pokemon.secondaryColor
+        pokeScrollView.backgroundColor = pokemon.primaryColor
+        titleBarLabel.textColor = pokemon.tertiaryColor
+        backButtonLabel.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
+        
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        pokemon.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let labelColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        weeknessLabel.textColor = labelColor
+        fastAttackLabel.textColor = labelColor
+        capChanceLabel.textColor = labelColor
+        fleeChanceLabel.textColor = labelColor
+        
+        pokeEvolMultiButton.layer.cornerRadius = 5
+        pokeEvolMultiButton.backgroundColor = pokemon.secondaryColor
+        pokeEvolMultiButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
+        pokeEvolMultiButton.layer.shadowColor = UIColor.blackColor().CGColor
+        pokeEvolMultiButton.layer.shadowOpacity = 0.5
+        pokeEvolMultiButton.layer.shadowRadius = 5
+        pokeEvolMultiButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        
+        pokePowerUpButton.layer.cornerRadius = 5
+        pokePowerUpButton.backgroundColor = pokemon.secondaryColor
+        pokePowerUpButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
+        pokePowerUpButton.layer.shadowColor = UIColor.blackColor().CGColor
+        pokePowerUpButton.layer.shadowOpacity = 0.5
+        pokePowerUpButton.layer.shadowRadius = 5
+        pokePowerUpButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        
         pokeCaptureChanceView.alpha = 0
         pokeFleeChanceView.alpha = 0
         
         pokeName.text = pokemon.name.uppercaseString
+        pokeName.textColor = pokemon.tertiaryColor
+        
         pokeID.text = "#\(pokemon.id)"
+        pokeID.textColor = pokemon.tertiaryColor
+        
+        classificationView.backgroundColor = pokemon.secondaryColor
         pokeClassification.text = pokemon.classification
+        pokeClassification.textColor = pokemon.tertiaryColor
+        
         let pokeImage = UIImage(named: "\(pokeNumber)")
         pokeImageView.image = pokeImage
+        pokeImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        eggView.backgroundColor = pokemon.secondaryColor
+        eggDistLabel.textColor = pokemon.tertiaryColor
+        if pokemon.eggDistance == nil {
+            eggView.hidden = true
+        }
+        else {
+            eggDistLabel.text = "\(pokemon.eggDistance!)"
+        }
+        
         setType()
         setWeekness()
         setFastAttacks()
@@ -136,9 +198,7 @@ class DetailViewController: UIViewController {
             let destvc = segue.destinationViewController as? EvolutionMultViewController
             destvc?.pokemon = pokemon
             destvc?.pokeData = pokeData
-            if evolutionPokemon != nil {
-                destvc?.evolutionPokemon = evolutionPokemon
-            }
+            destvc?.evolutionPokemon = evolutionPokemon
         }
     }
     
@@ -290,7 +350,8 @@ class DetailViewController: UIViewController {
                 view.backgroundColor = color
             }
             else {
-                view.backgroundColor = UIColor.clearColor()
+                view.backgroundColor = pokemon.secondaryColor
+                view.alpha = 0.4
             }
         }
     }
@@ -301,7 +362,7 @@ class DetailViewController: UIViewController {
         
         var width = pokeFleeChanceView.frame.width
         let height = pokeFleeChanceView.frame.height
-        width = (width/6) - (5)
+        width = (width/12) - (5)
         var originX: CGFloat = 0
         
         func reset() {
@@ -313,7 +374,7 @@ class DetailViewController: UIViewController {
         
         reset()
         
-        for _ in 0...5 {
+        for _ in 0...11 {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
@@ -349,17 +410,25 @@ class DetailViewController: UIViewController {
             color = UIColor.greenColor()
         }
         
+        highlight *= 2
+        
         for (index, view) in fleeBars.enumerate() {
             if index + 1 <= highlight {
                 view.backgroundColor = color
             }
             else {
-                view.backgroundColor = UIColor.clearColor()
+                view.backgroundColor = pokemon.secondaryColor
+                view.alpha = 0.4
             }
         }
     }
     
     func setFastAttacks() {
+        pokeFastAttackLabel1View.backgroundColor = pokemon.secondaryColor
+        pokeFastAttackLabel2View.backgroundColor = pokemon.secondaryColor
+        pokeFastAttackLable1.textColor = pokemon.tertiaryColor
+        pokeFastAttackLabel2.textColor = pokemon.tertiaryColor
+        
         let fastAttacks = pokemon.attacks
         pokeFastAttackLable1.text = fastAttacks.first!
         if fastAttacks.count == 2 {
@@ -370,6 +439,7 @@ class DetailViewController: UIViewController {
         }
         else {
             pokeFastAttackLabel2View.layer.opacity = 0
+            capChanceTopConstraint.constant = -10
         }
         pokeFastAttacksView.layoutSubviews()
     }
@@ -402,7 +472,7 @@ class DetailViewController: UIViewController {
         for poke in evol {
             if poke.id == pokemon.id {
                 let holderView = UIView(frame: CGRect(x: originX - 10, y: 0, width: width + 20, height: height + 20))
-                holderView.backgroundColor = self.titleBarView.backgroundColor
+                holderView.backgroundColor = pokemon.secondaryColor
                 holderView.layer.cornerRadius = 5
                 let button = UIButton(frame: CGRect(x: 10, y: 10, width: width, height: height))
                 button.setImage(UIImage(named: "\(poke.id)"), forState: [])

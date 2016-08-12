@@ -58,7 +58,8 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             let baseViewY = baseView?.frame.height
             baseView?.frame.origin.y += baseViewY!
             
-            let backViewTitleBarColor = fromViewController.pokeTitleBar.backgroundColor
+            let backViewTitleBarColor = UIColor(red: 35/255, green: 53/255, blue: 145/255, alpha: 1)
+            let backViewColor = UIColor(red: 53/255, green: 74/255, blue: 164/255, alpha: 1)
             let backViewTransform = CGAffineTransformMakeScale(0.9, 0.9)
             
             let cell = fromViewController.pokeCollectionView.cellForItemAtIndexPath(cellIndexPath) as? PokeCollectionViewCell
@@ -86,7 +87,7 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                             _ in
                             cellImage?.hidden = false
                             fromViewController.pokeTitleBar.backgroundColor = backViewTitleBarColor
-                            fromViewController.pokeCollectionView.backgroundColor = viewColor
+                            fromViewController.pokeCollectionView.backgroundColor = backViewColor
                             fromView.transform = CGAffineTransformIdentity
                             toView.backgroundColor = viewColor
                             toViewController.pokeImageView.alpha = 1
