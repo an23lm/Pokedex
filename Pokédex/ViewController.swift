@@ -53,20 +53,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pokeCollectionView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
         
         if segue.identifier == "PokeDetails" {
-            print("segue")
+            //print("segue")
             let destvc = segue.destinationViewController as? DetailViewController
             destvc?.transitioningDelegate = self
             destvc?.pokeNumber = pokeSelected
             destvc?.pokeData = data
+            destvc?.isFirstDetailVC = true
         }
     }
 
@@ -112,7 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 pokeSearchResult.append(poke)
             }
         }
-        print(pokeSearchResult.count)
+        //print(pokeSearchResult.count)
     }
     func searchPokemon(withPartialNumber number: Int) {
         for poke in pokemon {
@@ -121,6 +117,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        super.unwindForSegue(unwindSegue, towardsViewController: subsequentVC)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -160,7 +161,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.layoutIfNeeded()
         if indexPath.item == 1 {
             let cel = cell as? PokeCollectionViewCell
-            print(cel?.pokeImageView.frame)
+            //print(cel?.pokeImageView.frame)
         }
     }
     
@@ -183,7 +184,7 @@ extension ViewController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.originFrame = pokeCollectionView.convertRect(rect, toView: pokeCollectionView.superview)
-        print(transition.originFrame)
+        //print(transition.originFrame)
         transition.presenting = true
         transition.pokeNumber = pokeSelected
         transition.cellIndexPath = cellIndexPath

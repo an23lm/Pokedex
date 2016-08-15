@@ -151,6 +151,7 @@ public struct Pokemon {
     var type: [Type] = []
     var weekness: [Type] = []
     var attacks: [String] = []
+    var specialAttacks: [String] = []
     var candyName: String? = ""
     var candyAmount: Int? = 0
     var nextEvolution: [Pokemon] = []

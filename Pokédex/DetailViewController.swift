@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pokePowerUpButton: UIButton!
     @IBOutlet weak var pokeEvolMultiButton: UIButton!
     @IBOutlet weak var classificationView: UIView!
+    @IBOutlet weak var fightButton: UIButton!
     
     @IBOutlet weak var pokeEvolutionView: UIView!
 
@@ -57,11 +58,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var eggView: UIView!
     @IBOutlet weak var eggDistLabel: UILabel!
     
+    var isEvolutionSelected: Bool = false
+    
     var pokeNumber = 1
     var pokemon = Pokemon()
     var pokeData: PokeData? = nil
     var selectedEvol: [Int] = []
     var evolutionPokemon: Pokemon? = nil
+    var baseViewController: DetailViewController? = nil
+    var isFirstDetailVC: Bool = false
     
     var capBars: [UIView] = []
     var fleeBars: [UIView] = []
@@ -81,10 +86,27 @@ class DetailViewController: UIViewController {
             pokeEvolMultiButton.hidden = true
         }
         
+        if isFirstDetailVC {
+            baseViewController = self
+        }
+        
     }
 
     @IBAction func backButton(sender: AnyObject) {
+        
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        /*
+        if isEvolutionSelected {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            baseViewController!.dismissViewControllerAnimated(true, completion: {
+                Void in
+                self.baseViewController!.dismissViewControllerAnimated(true, completion: nil)
+            })
+        }
+        */
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,7 +139,7 @@ class DetailViewController: UIViewController {
         backButtonLabel.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
         
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        pokemon.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        pokemon.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
         let labelColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
         weeknessLabel.textColor = labelColor
         fastAttackLabel.textColor = labelColor
@@ -144,14 +166,23 @@ class DetailViewController: UIViewController {
         pokeFleeChanceView.alpha = 0
         
         pokeName.text = pokemon.name.uppercaseString
-        pokeName.textColor = pokemon.tertiaryColor
+        pokeName.textColor = pokemon.secondaryColor
+        
+        fightButton.backgroundColor = pokemon.secondaryColor
+        fightButton.layer.cornerRadius = 5
+        fightButton.layer.shadowColor = UIColor.blackColor().CGColor
+        fightButton.layer.shadowOpacity = 0.5
+        fightButton.layer.shadowRadius = 5
+        fightButton.layer.shadowOffset = CGSize(width: 0, height: 1)
         
         pokeID.text = "#\(pokemon.id)"
-        pokeID.textColor = pokemon.tertiaryColor
+        pokeID.textColor = pokemon.secondaryColor
         
         classificationView.backgroundColor = pokemon.secondaryColor
         pokeClassification.text = pokemon.classification
         pokeClassification.textColor = pokemon.tertiaryColor
+        
+        fightButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
         
         let pokeImage = UIImage(named: "\(pokeNumber)")
         pokeImageView.image = pokeImage
@@ -170,6 +201,10 @@ class DetailViewController: UIViewController {
         setWeekness()
         setFastAttacks()
         setEvolution()
+        
+        if !isEvolutionSelected {
+            backButtonLabel.setTitle("< Home", forState: .Normal)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -194,11 +229,16 @@ class DetailViewController: UIViewController {
             destvc?.pokeData = pokeData
             destvc?.pokemon = pokemon
         }
-        if segue.identifier == "showEvolMultiSegue" {
+        else if segue.identifier == "showEvolMultiSegue" {
             let destvc = segue.destinationViewController as? EvolutionMultViewController
             destvc?.pokemon = pokemon
             destvc?.pokeData = pokeData
             destvc?.evolutionPokemon = evolutionPokemon
+        }
+        else if segue.identifier == "showAttackStats" {
+            let destvc = segue.destinationViewController as? AttackStatsViewController
+            destvc?.pokemon = pokemon
+            destvc?.pokeData = pokeData
         }
     }
     
@@ -211,7 +251,7 @@ class DetailViewController: UIViewController {
         if pokemon.type.count == 1 {
             let width = pokeTypeView.frame.height * 1.6
             typeViewConstraint.constant = width
-            print(width)
+            //print(width)
             
             let typeImageView1: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: pokeTypeView.frame.height * 1.6, height: pokeTypeView.frame.height))
             let typeArray: [Type] = pokemon.type
@@ -504,10 +544,26 @@ class DetailViewController: UIViewController {
         vc!.pokeNumber = sender.tag
         vc!.pokeData = pokeData
         vc!.selectedEvol = selectedEvol
+        vc!.isEvolutionSelected = true
+        vc!.baseViewController = self.baseViewController
         self.presentViewController(vc!, animated: true, completion: nil)
     }
+    
     @IBAction func edgeSwipeDismiss(sender: AnyObject) {
+        
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        /*
+        if isEvolutionSelected {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            baseViewController!.dismissViewControllerAnimated(true, completion: {
+                Void in
+                self.baseViewController!.dismissViewControllerAnimated(true, completion: nil)
+            })
+        }
+        */
     }
     
     @IBAction func evolButtonPress(sender: AnyObject) {
@@ -518,24 +574,24 @@ class DetailViewController: UIViewController {
                 (alert: UIAlertAction!) -> Void in
                 self.evolutionPokemon = self.pokemon.nextEvolution[0]
                 self.performSegueWithIdentifier("showEvolMultiSegue", sender: nil)
-                print("Vap")
+                //print("Vap")
             })
             let jolt = UIAlertAction(title: "Jolteon", style: .Default, handler: {
                 (alert: UIAlertAction!) -> Void in
                 self.evolutionPokemon = self.pokemon.nextEvolution[1]
                 self.performSegueWithIdentifier("showEvolMultiSegue", sender: nil)
-                print("Jolt")
+                //print("Jolt")
             })
             let fla = UIAlertAction(title: "Flareon", style: .Default, handler: {
                 (alert: UIAlertAction!) -> Void in
                 self.evolutionPokemon = self.pokemon.nextEvolution[2]
                 self.performSegueWithIdentifier("showEvolMultiSegue", sender: nil)
-                print("Flare")
+                //print("Flare")
             })
             
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
-                print("Cancelled")
+                //print("Cancelled")
             })
             
             optionMenu.addAction(vap)
@@ -554,5 +610,39 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func swipeRight(sender: AnyObject) {
+        /*
+        print("right")
+        if pokemon.id + 1 <= 151 {
+            let sb = self.storyboard
+            let vc = sb?.instantiateViewControllerWithIdentifier("DVC") as? DetailViewController
+            vc!.pokeNumber = pokemon.id + 1
+            vc!.pokeData = pokeData
+            vc!.baseViewController = self.baseViewController
+            self.presentViewController(vc!, animated: true, completion: nil)
+         }
+        */
+    }
     
+    @IBAction func swipeLeft(sender: AnyObject) {
+        /*
+        print("left")
+         if pokemon.id + 1 > 0 {
+            let sb = self.storyboard
+            let vc = sb?.instantiateViewControllerWithIdentifier("DVC") as? DetailViewController
+            vc!.pokeNumber = pokemon.id + 1
+            vc!.pokeData = pokeData
+            vc!.baseViewController = self.baseViewController
+            self.presentViewController(vc!, animated: true, completion: nil)
+         }
+         */
+    }
+    
+    @IBAction func fightButtonClick(sender: AnyObject) {
+        
+        
+        
+    }
+    
+ 
 }

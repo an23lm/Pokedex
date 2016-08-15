@@ -137,7 +137,7 @@ class EvolutionMultViewController: UIViewController {
         
         currentCPView.maxCP = pokemon!.maxCP
         let lev = pokeData!.levelInfo[pokeData!.trainerLevel - 1]
-        print("lev: \(lev)")
+        //print("lev: \(lev)")
         var cap = Double((pokemon?.maxCP)!) * lev
         currentCPView.levelCap = (Int(cap))
         currentCPView.maxCP = (pokemon?.maxCP)!
@@ -146,15 +146,15 @@ class EvolutionMultViewController: UIViewController {
             cap = Double((pokemon!.nextEvolution.first!.maxCP)) * lev
             evolutionCPView.levelCap = (Int(cap))
             evolutionCPView.maxCP = (pokemon!.nextEvolution.first!.maxCP)
-            print("1: \(Int(cap))")
-            print("1: \(pokemon!.nextEvolution.first!.maxCP)")
+            //print("1: \(Int(cap))")
+            //print("1: \(pokemon!.nextEvolution.first!.maxCP)")
         }
         else {
             cap = Double(evolutionPokemon!.maxCP) * lev
             evolutionCPView.levelCap = Int(cap)
             evolutionCPView.maxCP = (evolutionPokemon!.maxCP)
-            print("1: \(Int(cap))")
-            print("1: \(evolutionPokemon!.maxCP)")
+            //print("1: \(Int(cap))")
+            //print("1: \(evolutionPokemon!.maxCP)")
         }
         
         currentCPView.currentCP = 0
@@ -191,7 +191,7 @@ class EvolutionMultViewController: UIViewController {
     }
     
     @IBAction func trainerLevelUpButton(sender: AnyObject) {
-        print("up")
+        //print("up")
         if pokeData!.trainerLevel < 40 {
             pokeData!.trainerLevel += 1
         }
@@ -207,7 +207,7 @@ class EvolutionMultViewController: UIViewController {
     }
     
     @IBAction func trainerLevelDownButton(sender: AnyObject) {
-        print("down")
+        //print("down")
         if pokeData!.trainerLevel > 1 {
             pokeData!.trainerLevel -= 1
         }

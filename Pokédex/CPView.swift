@@ -84,7 +84,6 @@ import UIKit
                                    endAngle: endAngle,
                                    clockwise: true)
         
-        
         cpCapCircleLayer = CAShapeLayer()
         cpCapCircleLayer.path = circlePath.CGPath
         cpCapCircleLayer.fillColor = UIColor.clearColor().CGColor
@@ -122,7 +121,7 @@ import UIKit
         animation.fromValue = currentPositionCpCap
         animation.toValue = currentValue
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        
+    
         cpCapCircleLayer.strokeEnd = currentValue
         cpCapCircleLayer.addAnimation(animation, forKey: "animateCpCapCircle")
         

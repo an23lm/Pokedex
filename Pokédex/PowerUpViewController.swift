@@ -113,10 +113,10 @@ class PowerUpViewController: UIViewController {
     }
     
     @IBAction func tapOutside(sender: AnyObject) {
-        print("resign")
+        //print("resign")
         if cpTextField.isFirstResponder() {
             cpTextField.resignFirstResponder()
-            print("resign")
+            //print("resign")
         }
     }
     

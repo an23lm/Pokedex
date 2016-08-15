@@ -15,6 +15,7 @@ import UIKit
     @IBInspectable var isAddButton: Bool = false
     
     override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
         
         let path = UIBezierPath(ovalInRect: rect)
         fillColor.setFill()

@@ -61,7 +61,7 @@ public class PokeData {
                     var tempPokemon: Pokemon = Pokemon()
                     if let id = poke["number"] as? Int {
                         tempPokemon.id = id
-                        print(id)
+                        //print(id)
                     }
                     if let name = poke["Name"] as? String {
                         tempPokemon.name = name
@@ -88,7 +88,19 @@ public class PokeData {
                         }
                     }
                     if let attacks = poke["Fast Attack(s)"] as? [String] {
-                        tempPokemon.attacks = attacks
+                        for att in attacks {
+                            if att != "" {
+                                tempPokemon.attacks.append(att)
+                            }
+                        }
+                    }
+                    if let special = poke["Charge Attack(s)"] as? [String] {
+                        //print(special)
+                        for att in special {
+                            if att != "" {
+                                tempPokemon.specialAttacks.append(att)
+                            }
+                        }
                     }
                     if let nextEvol = poke["Next Evolution Requirements"] as? NSDictionary {
                         if let candy = nextEvol["Amount"] as? Int {
@@ -142,15 +154,12 @@ public class PokeData {
                         tempPokemon.powerCP = pow
                     }
                     if let primary = poke["primaryColor"] as? String {
-                        print(primary)
                         tempPokemon.primaryColor = UIColor.colorWithHexString(hexString: primary)
                     }
                     if let secondary = poke["secondaryColor"] as? String {
-                        print(secondary)
                         tempPokemon.secondaryColor = UIColor.colorWithHexString(hexString: secondary)
                     }
                     if let text = poke["textColor"] as? String {
-                        print(text)
                         tempPokemon.tertiaryColor = UIColor.colorWithHexString(hexString: text)
                     }
                     if let egg = poke["pokeegg"] as? String {
@@ -279,11 +288,12 @@ extension UIColor {
             return UIColor.grayColor()
         }
         
-        let index = cString.startIndex.advancedBy(2)
+        var index = cString.startIndex.advancedBy(2)
         var range = cString.startIndex..<index
         let rString = cString.substringWithRange(range)
         range = index..<(index.advancedBy(2))
         let gString = cString.substringWithRange(range)
+        index = index.advancedBy(2)
         range = index..<(index.advancedBy(2))
         let bString = cString.substringWithRange(range)
         

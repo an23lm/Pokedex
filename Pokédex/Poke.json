@@ -1,5 +1,6 @@
 [
  {
+  
    "primaryColor" : "#399494", 
    "secondaryColor" : "#184a4a", 
    "textColor" : "#ffffff", 
@@ -39,7 +40,8 @@
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
-   "Fast Attack(s)":["Tackle","Vine Whip",""],
+   "Fast Attack(s)":["Tackle","Vine Whip"],
+   "Charge Attack(s)":["Power Whip","Sludge Bomb","Seed Bomb"],
    "Weight":"6.9 kg",
    "Height":"0.7 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Bulbasaur candies"},
@@ -51,6 +53,7 @@
  },
 
  {
+   
    "primaryColor" : "#209483", 
    "secondaryColor" : "#10414a", 
    "textColor" : "#ffffff", 
@@ -91,6 +94,7 @@
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Razor Leaf","Vine Whip"],
+   "Charge Attack(s)":["Power Whip","Solar Beam","Sludge Bomb"],
    "Weight":"13.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"001","Name":"Bulbasaur"}],
@@ -104,6 +108,7 @@
 
 
  {
+  
    "primaryColor" : "#20b49c", 
    "secondaryColor" : "#105241", 
    "textColor" : "#ffffff", 
@@ -144,6 +149,7 @@
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Razor Leaf","Vine Whip"],
+   "Charge Attack(s)":["Power Whip","Solar Beam","Petal Blizzard"],
    "Weight":"100.0 kg",
    "Height":"2.0 m",
    "Previous evolution(s)":[{"Number":"001","Name":"Bulbasaur"},{"Number":"002","Name":"Ivysaur"}], 
@@ -155,6 +161,7 @@
 
 
  {
+   
    "primaryColor" : "#ff9441", 
    "secondaryColor" : "#8b2900", 
    "textColor" : "#ffffff", 
@@ -189,12 +196,12 @@
    "MaxCP": 955,
    "AvgHP": 67,
    "MaxHP": 73,
-   
    "Name":"Charmander",
    "Classification":"Lizard Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Ember","Scratch"],
+   "Charge Attack(s)":["Flamethrower","Flame Burst","Flame Charge"],
    "Weight":"8.5 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Charmander candies"},
@@ -207,6 +214,7 @@
 
 
  {
+  
    "primaryColor" : "#cd3939", 
    "secondaryColor" : "#942010", 
    "textColor" : "#ffffff", 
@@ -245,7 +253,8 @@
    "Classification":"Flame Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
-   "Fast Attack(s)":["Ember"],
+   "Fast Attack(s)":["Ember","Scratch"],
+   "Charge Attack(s)":["Flamethrower","Flame Burst","Fire Punch"],
    "Weight":"19.0 kg",
    "Height":"1.1 m",
    "Previous evolution(s)":[{"Number":"004","Name":"Charmander"}],
@@ -260,6 +269,7 @@
 
 
  {
+   
    "primaryColor" : "#ee8329", 
    "secondaryColor" : "#833118", 
    "textColor" : "#ffffff", 
@@ -300,6 +310,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Water","Electric","Rock"],
    "Fast Attack(s)":["Ember","Wing Attack"],
+   "Charge Attack(s)":["Fire Blast","Dragon Claw","Flamethrower"],
    "Weight":"90.5 kg",
    "Height":"1.7 m",
    "Previous evolution(s)":[{"Number":"004","Name":"Charmander"},{"Number":"005","Name":"Charmeleon"}],
@@ -311,6 +322,7 @@
  }, 
 
  {
+   
    "primaryColor" : "#5a9ca4", 
    "secondaryColor" : "#297383", 
    "textColor" : "#ffffff",
@@ -350,6 +362,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Tackle","Bubble"],
+   "Charge Attack(s)":["Aqua Tail","Aqua Jet","Aqua Pulse"],
    "Weight":"9.0 kg",
    "Height":"0.5 m","Next Evolution Requirements":{"Amount":25,"Name":"Squirtle candies"},
    "Next evolution(s)":[{"Number":"008","Name":"Wartortle"},{"Number":"009","Name":"Blastoise"}],
@@ -363,8 +376,8 @@
  {
    
    "primaryColor" : "#8bacf6", 
-   "secondaryColor" : "#ffffff", 
-   "textColor" : "#29416a",  
+   "secondaryColor" : "#29416a", 
+   "textColor" : "#ffffff",  
    "pokeegg" : "null",
    "EvolvesFromId": 7,
    "EvolutionChainId": 3,
@@ -396,12 +409,12 @@
    "MaxCP": 1582,
    "AvgHP": 99,
    "MaxHP": 105,
-   
    "Name":"Wartortle",
    "Classification":"Turtle Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bite","Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Ice Beam","Aqua Jet"],
    "Weight":"22.5 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"007","Name":"Squirtle"}],
@@ -417,8 +430,8 @@
  {
    
    "primaryColor" : "#5a8bcd",
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#083962",
+   "secondaryColor" : "#083962",
+   "textColor" : "#ffffff",
    "pokeegg" : "null", 
    "EvolvesFromId": 8,
    "EvolutionChainId": 3,
@@ -450,12 +463,12 @@
    "MaxCP": 2542,
    "AvgHP": 130,
    "MaxHP": 136,
-   
    "Name":"Blastoise",
    "Classification":"Shellfish Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bite","Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Ice Beam","Flash Cannon"],
    "Weight":"85.5 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"007","Name":"Squirtle"},{"Number":"008","Name":"Wartortle"}],
@@ -469,9 +482,9 @@
  
  {
   
-   "primaryColor" : "#31ac41",
-   "secondaryColor" : "acf641",
-   "textColor" : "#185a41",
+   "primaryColor" : "#4ac529",
+   "secondaryColor" : "#185a41",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 4,
@@ -503,12 +516,12 @@
    "MaxCP": 443,
    "AvgHP": 77,
    "MaxHP": 82,
-   
    "Name":"Caterpie",
    "Classification":"Worm Pokémon",
    "Type I":["Bug"],
    "Weaknesses":["Fire","Flying","Rock"],
    "Fast Attack(s)":["Bug Bite","Tackle"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"2.9 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":12,"Name":"Caterpie candies"},
@@ -558,12 +571,12 @@
    "MaxCP": 477,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Metapod",
    "Classification":"Cocoon Pokémon",
    "Type I":["Bug"],
    "Weaknesses":["Fire","Flying","Rock"],
    "Fast Attack(s)":["Bug Bite","Tackle"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"9.9 kg","Height":"0.7 m",
    "Previous evolution(s)":[{"Number":"010","Name":"Caterpie"}],
    "Next Evolution Requirements":{"Amount":50,"Name":"Caterpie candies"},
@@ -579,8 +592,8 @@
  {
  
    "primaryColor" : "#eeeeff",
-   "secondaryColor" : "#bdbde6",
-   "textColor" : "#313152",
+   "secondaryColor" : "#313152",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 11,
    "EvolutionChainId": 4,
@@ -612,13 +625,13 @@
    "MaxCP": 1454,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Butterfree",
    "Classification":"Butterfly Pokémon",
    "Type I":["Bug"],
    "Type II":["Flying"],
    "Weaknesses":["Fire","Electric","Ice","Flying","Rock"],
    "Fast Attack(s)":["Bug Bite","Confusion"],
+   "Charge Attack(s)":["Psychic","Bug Buzz","Signal Beam"],
    "Weight":"32.0 kg",
    "Height":"1.1 m",
    "Previous evolution(s)":[{"Number":"010","Name":"Caterpie"},{"Number":"011","Name":"Metapod"}],
@@ -634,8 +647,8 @@
    
 
    "primaryColor" : "#cd7310", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#6a3908",
+   "secondaryColor" : "#6a3908",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 5,
@@ -667,13 +680,13 @@
    "MaxCP": 449,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Weedle",
    "Classification":"Hairy Pokémon",
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
    "Fast Attack(s)":["Bug Bite","Poison Sting"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"3.2 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":12,"Name":"Weedle candies"},
@@ -688,8 +701,8 @@
 
  {
    "primaryColor" : "#cd9c10", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a3900",
+   "secondaryColor" : "#4a3900",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 13,
    "EvolutionChainId": 5,
@@ -721,13 +734,13 @@
    "MaxCP": 485,
    "AvgHP": 77,
    "MaxHP": 82,
-   
    "Name":"Kakuna",
    "Classification":"Cocoon Pokémon",
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
    "Fast Attack(s)":["Bug Bite","Posion Sting"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"10.0 kg",
    "Height":"0.6 m",
    "Previous evolution(s)":[{"Number":"013","Name":"Weedle"}],
@@ -743,9 +756,9 @@
 
 
  {
-   "primaryColor" : "#ffffff", 
-   "secondaryColor" : "#eee6ff",
-   "textColor" : "#834a00",
+   "primaryColor" : "#e69420", 
+   "secondaryColor" : "#834a00",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 14,
    "EvolutionChainId": 5,
@@ -777,13 +790,13 @@
    "MaxCP": 1439,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Beedrill",
    "Classification":"Poison Bee Pokémon",  
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
    "Fast Attack(s)":["Bug Bite","Poison Jab"],
+   "Charge Attack(s)":["Sludge Bomb","X Scissor","Aerial Ace"],
    "Weight":"29.5 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"013","Name":"Weedle"},{"Number":"014","Name":"Kakuna"}], 
@@ -799,8 +812,8 @@
  {
 
    "primaryColor" : "#a4625a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#412918",
+   "secondaryColor" : "#412918",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 6,
@@ -832,14 +845,13 @@
    "MaxCP": 679,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Pidgey",
    "Classification":"Tiny Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Quick Attack","Tackle"],
-   "Special Attack(s)":["Aerial Ace","Air Cutter","Twister"],
+   "Charge Attack(s)":["Aerial Ace","Air Cutter","Twister"],
    "Weight":"1.8 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":12,"Name":"Pidgey candies"},
@@ -854,9 +866,9 @@
 
  {
  
-   "primaryColor" : "#ffe68b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#412920",
+   "primaryColor" : "#e6bd5a", 
+   "secondaryColor" : "#412920",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 16,
    "EvolutionChainId": 6,
@@ -888,14 +900,13 @@
    "MaxCP": 1223,
    "AvgHP": 105,
    "MaxHP": 111,
-   
    "Name":"Pidgeotto",
    "Classification":"Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Steel Wing","Wing Attack"],
-   "Special Attack(s)":["Aerial Ace","Air Cutter","Twister"],
+   "Charge Attack(s)":["Aerial Ace","Air Cutter","Twister"],
    "Weight":"30.0 kg",
    "Height":"1.1 m",
    "Previous evolution(s)":[{"Number":"016","Name":"Pidgey"}],
@@ -912,9 +923,9 @@
 
  {
 
-   "primaryColor" : "#e6b462", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a3929",
+   "primaryColor" : "#ffe68b", 
+   "secondaryColor" : "#5a3929",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 17,
    "EvolutionChainId": 6,
@@ -946,14 +957,13 @@
    "MaxCP": 2091,
    "AvgHP": 137,
    "MaxHP": 143,
-   
    "Name":"Pidgeot",
    "Classification":"Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"], 
    "Fast Attack(s)":["Steel Wing","Wing Attack"],
-   "Special Attack(s)":["Hurricane"],
+   "Charge Attack(s)":["Hurricane","Aerial Ace","Air Cutter"],
    "Weight":"39.5 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"016","Name":"Pidgey"},{"Number":"017","Name":"Pidgeotto"}],
@@ -968,9 +978,9 @@
 
  {
 
-   "primaryColor" : "#b473bd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a2941",
+   "primaryColor" : "#d59cd5", 
+   "secondaryColor" : "#4a2941",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 7,
@@ -1002,13 +1012,12 @@
    "MaxCP": 581,
    "AvgHP": 53,
    "MaxHP": 59,
-   
    "Name":"Rattata",
    "Classification":"Mouse Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Quick Attack","Tackle"],
-   "Special Attack(s)":["Body Slam","Dig","Hyper Fang"],
+   "Charge Attack(s)":["Body Slam","Dig","Hyper Fang"],
    "Weight":"3.5 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Rattata candies"},
@@ -1058,13 +1067,12 @@
    "MaxCP": 1444,
    "AvgHP": 92,
    "MaxHP": 98,
-   
    "Name":"Raticate",
    "Classification":"Mouse Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Bite","Quick Attack"],
-   "Special Attack(s)":["Dig","Hyper Beam","Hyper Fang"],
+   "Charge Attack(s)":["Dig","Hyper Beam","Hyper Fang"],
    "Weight":"18.5 kg",
    "Height":"0.7 m",
    "Previous evolution(s)":[{"Number":"019","Name":"Rattata"}],
@@ -1115,13 +1123,13 @@
    "MaxCP": 686,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Spearow",
    "Classification":"Tiny Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Peck","Quick Attack"],
+   "Charge Attack(s)":["Drill Peck","Aerial Ace","Twister"],
    "Weight":"2.0 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Spearow candies"},
@@ -1171,13 +1179,13 @@
    "MaxCP": 1746,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Fearow",
    "Classification":"Beak Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Peck","Steel Wing"],
+   "Charge Attack(s)":["Drill Run","Aerial Ace","Twister"],
    "Weight":"38.0 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"021","Name":"Spearow"}],
@@ -1191,9 +1199,9 @@
 
  {
   
-   "primaryColor" : "#cd62b4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a104a",
+   "primaryColor" : "#eea4d5", 
+   "secondaryColor" : "#5a104a",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 9,
@@ -1225,12 +1233,12 @@
    "MaxCP": 824,
    "AvgHP": 61,
    "MaxHP": 67,
-   
    "Name":"Ekans",
    "Classification":"Snake Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Acid","Poison Sting"],
+   "Charge Attack(s)":["Gunk Shot","Sludge Bomb","Wrap"],
    "Weight":"6.9 kg",
    "Height":"2.0 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Ekans candies"},
@@ -1245,9 +1253,9 @@
 
  {
 
-   "primaryColor" : "#a483c5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#52397b",
+   "primaryColor" : "#7b62ac", 
+   "secondaryColor" : "#52397b",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 23,
    "EvolutionChainId": 9,
@@ -1279,12 +1287,12 @@
    "MaxCP": 1767,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Arbok",
    "Classification":"Cobra Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Acid","Bite"], 
+   "Charge Attack(s)":["Gunk Shot","Sludge Bomb","Dark Pulse"],
    "Weight":"65.0 kg",
    "Height":"3.5 m",
    "Previous evolution(s)":[{"Number":"023","Name":"Ekans"}],
@@ -1298,13 +1306,10 @@
 
 
  {
-
-   "primaryColor" : "#f6e652", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#292929",
+   "primaryColor" : "#f6e652",
+   "secondaryColor" : "#9c5200",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
-   "PkMn": 25,
-   "Identifier": "pikachu",
    "EvolvesFromId": 172,
    "EvolutionChainId": 10,
    "Level": 1,
@@ -1335,12 +1340,12 @@
    "MaxCP": 887,
    "AvgHP": 61,
    "MaxHP": 67,
-   
    "Name":"Pikachu",
    "Classification":"Mouse Pokémon",
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
    "Fast Attack(s)":["Quick Attack","Thunder Shock"],
+   "Charge Attack(s)":["Thunder","ThunderBolt","Discharge"],
    "Weight":"6.0 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Pikachu candies"},
@@ -1355,9 +1360,9 @@
 
  {
    
-   "primaryColor" : "#f6ac29", 
-   "secondaryColor" : "#ffeed5",
-   "textColor" : "#5a2929",
+   "primaryColor" : "#ffbd00", 
+   "secondaryColor" : "#bd5a31",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 25,
    "EvolutionChainId": 10,
@@ -1389,12 +1394,12 @@
    "MaxCP": 2028,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Raichu",
    "Classification":"Mouse Pokémon",
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
    "Fast Attack(s)":["Thunder Shock","Spark"],
+   "Charge Attack(s)":["Thunder","Brick Break","Thunder Punch"],
    "Weight":"30.0 kg",
    "Height":"0.8 m",
    "Previous evolution(s)":[{"Number":"025","Name":"Pikachu"}],
@@ -1410,8 +1415,8 @@
  {
    
    "primaryColor" : "#cdb400", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#734a18",
+   "secondaryColor" : "#b48310",
+   "textColor" : "#ffffff",
    "pokeegg" : "5", 
    "EvolvesFromId": 0,
    "EvolutionChainId": 11,
@@ -1443,12 +1448,12 @@
    "MaxCP": 798,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Sandshrew",
    "Classification":"Mouse Pokémon",
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Mud Shot","Scratch"],
+   "Charge Attack(s)":["Rock Slide","Dig","Rock Tomb"],
    "Weight":"12.0 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Sandshrew candies"},
@@ -1497,12 +1502,12 @@
    "MaxCP": 1810,
    "AvgHP": 124,
    "MaxHP": 130,
-   
    "Name":"Sandslash",
    "Classification":"Mouse Pokémon",
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Metal Claw","Mud Shot"],
+   "Charge Attack(s)":["Earthquake","Bulldoze","Rock Tomb"],
    "Weight":"29.5 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"027","Name":"Sandshrew"}],
@@ -1518,8 +1523,8 @@
  {
    
    "primaryColor" : "#d5d5ff", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#414183",
+   "secondaryColor" : "#414183",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 12,
@@ -1551,12 +1556,12 @@
    "MaxCP": 876,
    "AvgHP": 92,
    "MaxHP": 98,
-   
    "Name":"Nidoran F",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Bite","Poison Sting"],
+   "Charge Attack(s)":["Body Slam","Sludge Bomb","Posion Fang"],
    "Weight":"7.0 kg",
    "Height":"0.4 m",
    "Next evolution(s)":[{"Number":"030","Name":"Nidorina"},{"Number":"031","Name":"Nidoqueen"}],
@@ -1573,8 +1578,8 @@
  {
    
    "primaryColor" : "#8bc5cd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#183973",
+   "secondaryColor" : "#183973",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 29,
    "EvolutionChainId": 12,
@@ -1606,12 +1611,12 @@
    "MaxCP": 1404,
    "AvgHP": 116,
    "MaxHP": 122,
-   
    "Name":"Nidorina",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Bite","Poison Sting"],
+   "Charge Attack(s)":["Sludge Bomb","Dig","Poison Fang"],
    "Weight":"20.0 kg",
    "Height":"0.8 m",
    "Previous evolution(s)":[{"Number":"029","Name":"Nidoran  F"}],
@@ -1661,13 +1666,13 @@
    "MaxCP": 2485,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Nidoqueen",
    "Classification":"Drill Pokémon",
    "Type I":["Poison"],
    "Type II":["Ground"],
    "Weaknesses":["Water","Ice","Ground","Psychic"],
    "Fast Attack(s)":["Bite","Poison Jab"],
+   "Charge Attack(s)":["Stone Edge","Earthquake","Sludge Wave"],
    "Weight":"60.0 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"029","Name":"Nidoran F"},{"Number":"030","Name":"Nidorina"}],
@@ -1683,7 +1688,7 @@
  {
 
    "primaryColor" : "#bd62c5", 
-   "secondaryColor" : "#ffffff",
+   "secondaryColor" : "#006241",
    "textColor" : "#62416a",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -1716,12 +1721,12 @@
    "MaxCP": 843,
    "AvgHP": 78,
    "MaxHP": 84,
-   
    "Name":"Nidoran M",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Peck","Poison Sting"],
+   "Charge Attack(s)":["Body Slam","Sludge Bomb","Horn Attack"],
    "Weight":"9.0 kg",
    "Height":"0.5 m",
    "Next evolution(s)":[{"Number":"033","Name":"Nidorino"},{"Number":"034","Name":"Nidoking"}],
@@ -1770,12 +1775,12 @@
    "MaxCP": 1372,
    "AvgHP": 102,
    "MaxHP": 108,
-   
    "Name":"Nidorino",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Bite","Poison Jab"],
+   "Charge Attack(s)":["Sludge Bomb","Dig","Horn Attack"],
    "Weight":"19.5 kg",
    "Height":"0.9 m",
    "Previous evolution(s)":[{"Number":"032","Name":"Nidoran M"}],
@@ -1791,7 +1796,7 @@
 
  {
   
-   "primaryColor" : "#a45214", 
+   "primaryColor" : "#a45294",
    "secondaryColor" : "#5a296a",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
@@ -1825,13 +1830,13 @@
    "MaxCP": 2475,
    "AvgHP": 133,
    "MaxHP": 139,
-   
    "Name":"Nidoking",
    "Classification":"Drill Pokémon",
    "Type I":["Poison"],
    "Type II":["Ground"],
    "Weaknesses":["Water","Ice","Ground","Psychic"],
    "Fast Attack(s)":["Fury Cutter","Poison Jab"],
+   "Charge Attack(s)":["Megahorn","Earthquake","Sludge Wave"],
    "Weight":"62.0 kg",
    "Height":"1.4 m",
    "Previous evolution(s)":[{"Number":"032","Name":"Nidoran M"},{"Number":"033","Name":"Nidorino"}],
@@ -1846,8 +1851,8 @@
  {
 
    "primaryColor" : "#ffd5bd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#9c5252",
+   "secondaryColor" : "#9c5252",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 173,
    "EvolutionChainId": 14,
@@ -1879,12 +1884,12 @@
    "MaxCP": 1200,
    "AvgHP": 116,
    "MaxHP": 122,
-   
    "Name":"Clefairy",
    "Classification":"Fairy Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Pound","Zen Headbutt"],
+   "Charge Attack(s)":["Body Slam","Moonblast","Disarming Voice"],
    "Weight":"7.5 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Clefairy candies"},
@@ -1900,8 +1905,8 @@
  {
    
    "primaryColor" : "#ffc5b4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#52314a",
+   "secondaryColor" : "#52314a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 35,
    "EvolutionChainId": 14,
@@ -1932,13 +1937,13 @@
    "AvgCP": 2217,
    "MaxCP": 2397,
    "AvgHP": 156,
-   "MaxHP": 162,
-    
+   "MaxHP": 162, 
    "Name":"Clefable",
    "Classification":"Fairy Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Pound","Zen Headbutt"],
+   "Charge Attack(s)":["Moonblast","Psychic","Dazzling Gleam"],
    "Weight":"40.0 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"035","Name":"Clefairy"}],
@@ -1953,8 +1958,8 @@
  {
    
    "primaryColor" : "#e6946a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#732000",
+   "secondaryColor" : "#732000",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 15,
@@ -1986,12 +1991,12 @@
    "MaxCP": 831,
    "AvgHP": 65,
    "MaxHP": 71,
-   
    "Name":"Vulpix",
    "Classification":"Fox Pokémon", 
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Ember","Quick Attack"],
+   "Charge Attack(s)":["Body Slam","Flamethrower","Flame Charge"],
    "Weight":"9.9 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Vulpix candies"},
@@ -2007,8 +2012,8 @@
  {
     
    "primaryColor" : "#e6c552", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#836218",
+   "secondaryColor" : "#826318",
+   "textColor" : "#668329",
    "pokeegg" : "null",
    "EvolvesFromId": 37,
    "EvolutionChainId": 15,
@@ -2040,12 +2045,12 @@
    "MaxCP": 2188,
    "AvgHP": 121,
    "MaxHP": 127,
-   
    "Name":"Ninetales",
    "Classification":"Fox Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
-   "Fast Attack(s)":["Ember","Quick Attack"], 
+   "Fast Attack(s)":["Ember","Feint Attack"], 
+   "Charge Attack(s)":["Fire Blast","Heat Wave","Flamethrower"],
    "Weight":"19.9 kg",
    "Height":"1.1 m",
    "Previous evolution(s)":[{"Number":"037","Name":"Vulpix"}],
@@ -2060,8 +2065,8 @@
  {
    
    "primaryColor" : "#ffaca4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#a41020",
+   "secondaryColor" : "#a41020",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 174,
    "EvolutionChainId": 16,
@@ -2093,12 +2098,12 @@
    "MaxCP": 917,
    "AvgHP": 187,
    "MaxHP": 193,
-   
    "Name":"Jigglypuff",
    "Classification":"Balloon Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Feint Attack","Pound"],
+   "Charge Attack(s)":["Body Slam","Play Rough","Disarming Voice"],
    "Weight":"5.5 kg",
    "Height":"0.5 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Jigglypuff candies"},
@@ -2115,8 +2120,8 @@
  {
     
    "primaryColor" : "#f67b94", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#8b4141",
+   "secondaryColor" : "#8b4141",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 39,
    "EvolutionChainId": 16,
@@ -2148,12 +2153,12 @@
    "MaxCP": 2177,
    "AvgHP": 227,
    "MaxHP": 233,
-   
    "Name":"Wigglytuff",
    "Classification":"Balloon Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Feint Attack","Pound"],
+   "Charge Attack(s)":["Hyper Beam","Play Rough","Dazzling Gleam"],
    "Weight":"12.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"039","Name":"Jigglypuff"}],
@@ -2168,8 +2173,8 @@
  {
    
    "primaryColor" : "#8bb4ee", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#73205a",
+   "secondaryColor" : "#b4529c",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 17,
@@ -2201,13 +2206,13 @@
    "MaxCP": 642,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Zubat",
    "Classification":"Bat Pokémon",
    "Type I":["Poison"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Ice","Psychic","Rock"],
    "Fast Attack(s)":["Bite","Quick Attack"],
+   "Charge Attack(s)":["Sludge Bomb","Poison Fang","Air Cutter"],
    "Weight":"7.5 kg",
    "Height":"0.8 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Zubat candies"},
@@ -2257,13 +2262,13 @@
    "MaxCP": 1921,
    "AvgHP": 124,
    "MaxHP": 130,
-   
    "Name":"Golbat",
    "Classification":"Bat Pokémon",
    "Type I":["Poison"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Ice","Psychic","Rock"],
    "Fast Attack(s)":["Bite","Wing Attack"],
+   "Charge Attack(s)":["Posion Fang","Ominous Wind","Air Cutter"],
    "Weight":"55.0 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"041","Name":"Zubat"}],
@@ -2280,8 +2285,8 @@
 
     
    "primaryColor" : "#8bac31", 
-   "secondaryColor" : "#9cd54a",
-   "textColor" : "#29394a",
+   "secondaryColor" : "#29394a",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 18,
@@ -2313,13 +2318,13 @@
    "MaxCP": 1148,
    "AvgHP": 77,
    "MaxHP": 82,
-   
    "Name":"Oddish",
    "Classification":"Weed Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Acid","Razor Leaf"],
+   "Charge Attack(s)":["Sludge Bomb","Moonblast","Seed Bomb"],
    "Weight":"5.4 kg",
    "Height":"0.5 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Oddish candies"},
@@ -2337,7 +2342,7 @@
 
    
    "primaryColor" : "#4a6a7b", 
-   "secondaryColor" : "#10314a",
+   "secondaryColor" : "#833918",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 43,
@@ -2370,13 +2375,13 @@
    "MaxCP": 1689,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Gloom",
    "Classification":"Weed Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Acid","Razor Leaf"],
+   "Charge Attack(s)":["Sludge Bomb","Moonblast","Petal Blizzard"],
    "Weight":"8.6 kg",
    "Height":"0.8 m",
    "Previous evolution(s)":[{"Number":"043","Name":"Oddish"}],
@@ -2394,8 +2399,8 @@
  {
 
    "primaryColor" : "#de4a5a", 
-   "secondaryColor" : "#ffcdd5",
-   "textColor" : "#18294a",
+   "secondaryColor" : "#18294a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 44,
    "EvolutionChainId": 18,
@@ -2427,13 +2432,13 @@
    "MaxCP": 2492,
    "AvgHP": 124,
    "MaxHP": 130,
-   
    "Name":"Vileplume",
    "Classification":"Flower Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
-   "Fast Attack(s)":["Acid",""],
+   "Fast Attack(s)":["Acid","Razor Leaf"],
+   "Charge Attack(s)":["Solar Beam","Sludge Bomb","Moonblast"],
    "Weight":"18.6 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"043","Name":"Oddish"},{"Number":"044","Name":"Gloom"}],
@@ -2450,8 +2455,8 @@
  {
     
    "primaryColor" : "#ffac52", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#392910",
+   "secondaryColor" : "#bd4141",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 19,
@@ -2483,13 +2488,13 @@
    "MaxCP": 916,
    "AvgHP": 61,
    "MaxHP": 67,
-   
    "Name":"Paras",
    "Classification":"Mushroom Pokémon",
    "Type I":["Bug"],
    "Type II":["Grass"],
    "Weaknesses":["Fire","Ice","Poison","Flying","Bug","Rock"],
    "Fast Attack(s)":["Bug Bite","Scratch"],
+   "Charge Attack(s)":["Seed Bomb","Cross Poison","X Scissor"],
    "Weight":"5.4 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Paras candies"},
@@ -2539,13 +2544,13 @@
    "MaxCP": 1747,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Parasect",
    "Classification":"Mushroom Pokémon",
    "Type I":["Bug"],
    "Type II":["Grass"],
    "Weaknesses":["Fire","Ice","Poison","Flying","Bug","Rock"],
    "Fast Attack(s)":["Bug Bite","Fury Cutter"],
+   "Charge Attack(s)":["Solar Beam","Cross Poison","X Scissor"],
    "Weight":"29.5 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"046","Name":"Paras"}],
@@ -2560,8 +2565,8 @@
  {
 
    "primaryColor" : "#8b6aa4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#312952",
+   "secondaryColor" : "#312952",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 20,
@@ -2593,13 +2598,13 @@
    "MaxCP": 1029,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Venonat",
    "Classification":"Insect Pokémon",
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
    "Fast Attack(s)":["Bug Bite","Confusion"],
+   "Charge Attack(s)":["Signal Beam","Psybeam","Poison Fang"],
    "Weight":"30.0 kg",
    "Height":"1.0 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Venonat candies"},
@@ -2616,8 +2621,8 @@
  {
 
    "primaryColor" : "#f6deff", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#624a73",
+   "secondaryColor" : "#624a73",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 48,
    "EvolutionChainId": 20,
@@ -2649,13 +2654,13 @@
    "MaxCP": 1890,
    "AvgHP": 116,
    "MaxHP": 122,
-   
    "Name":"Venomoth",
    "Classification":"Poison Moth Pokémon",
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
    "Fast Attack(s)":["Bug Bite","Confusion"],
+   "Charge Attack(s)":["Psychic","Bug Buzz","Poison Fang"],
    "Weight":"12.5 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"048","Name":"Venonat"}],
@@ -2671,8 +2676,8 @@
   
     
    "primaryColor" : "#b4ac73", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a5220",
+   "secondaryColor" : "#a45a5a",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 21,
@@ -2704,12 +2709,12 @@
    "MaxCP": 456,
    "AvgHP": 21,
    "MaxHP": 27,
-   
    "Name":"Diglett",
    "Classification":"Mole Pokémon",
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Mud Shot","Scratch"],
+   "Charge Attack(s)":["Dig","Mud Bomb","Rock Tomb"],
    "Weight":"0.8 kg",
    "Height":"0.2 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Diglett candies"},
@@ -2759,12 +2764,12 @@
    "MaxCP": 1168,
    "AvgHP": 61,
    "MaxHP": 67,
-   
    "Name":"Dugtrio",
    "Classification":"Mole Pokémon",
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Mud Shot","Sucker Punch"],
+   "Charge Attack(s)":["Stone Edge","Earthquake","Mud Bomb"],
    "Weight":"33.3 kg",
    "Height":"0.7 m",
    "Previous evolution(s)":[{"Number":"050","Name":"Diglett"}],
@@ -2780,8 +2785,8 @@
  {
 
    "primaryColor" : "#ffe683", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#8b6a00",
+   "secondaryColor" : "#8b6a00",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 22,
@@ -2813,12 +2818,12 @@
    "MaxCP": 756,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Meowth",
    "Classification":"Scratch Cat Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Bite","Scratch"],
+   "Charge Attack(s)":["Body Slam","Dark Pulse","Night Slash"],
    "Weight":"4.2 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Meowth candies"},
@@ -2869,12 +2874,12 @@
    "MaxCP": 1631,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Persian",
    "Classification":"Classy Cat Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Feint Attack","Scratch"],
+   "Charge Attack(s)":["Play Rough","Power Gem","Night Slash"],
    "Weight":"32.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"052","Name":"Meowth"}],
@@ -2890,8 +2895,8 @@
  {
 
    "primaryColor" : "#ffd54a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#945a10",
+   "secondaryColor" : "#e6a452",
+   "textColor" : "#ffeebd",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 23,
@@ -2923,12 +2928,12 @@
    "MaxCP": 1109,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Psyduck",
    "Classification":"Duck Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Water Gun","Zen Headbutt"],
+   "Charge Attack(s)":["Cross Chop","Aqua Tail","Psybeam"],
    "Weight":"19.6 kg",
    "Height":"0.8 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Psyduck candies"},
@@ -2946,8 +2951,8 @@
 
    
    "primaryColor" : "#8bacd5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#31526a",
+   "secondaryColor" : "#31526a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 54,
    "EvolutionChainId": 23,
@@ -2979,12 +2984,12 @@
    "MaxCP": 2386,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Golduck",
    "Classification":"Duck Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
-   "Fast Attack(s)":["Confusion","Zen Headbutt"],
+   "Fast Attack(s)":["Confusion","Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Psychic","Ice Beam"],
    "Weight":"76.6 kg",
    "Height":"1.7 m",
    "Previous evolution(s)":[{"Number":"054","Name":"Psyduck"}],
@@ -2999,8 +3004,8 @@
  {
 
    "primaryColor" : "#d5ac9c", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#6a4a29",
+   "secondaryColor" : "#6a4a29",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 24,
@@ -3032,12 +3037,12 @@
    "MaxCP": 878,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Mankey",
    "Classification":"Pig Monkey Pokémon",
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Karate Chop","Scratch"],
+   "Charge Attack(s)":["Cross Chop","Brick Break","Low Sweep"],
    "Weight":"28.0 kg",
    "Height":"0.5 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Mankey candies"},
@@ -3053,8 +3058,8 @@
  {
 
    "primaryColor" : "#e6bd9c", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a3100",
+   "secondaryColor" : "#9c6a6a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 56,
    "EvolutionChainId": 24,
@@ -3086,12 +3091,12 @@
    "MaxCP": 1864,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Primeape",
    "Classification":"Pig Monkey Pokémon",
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Karate Chop","Low Kick"],
+   "Charge Attack(s)":["Cross Chop","Low Sweep","Night Slash"],
    "Weight":"32.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"056","Name":"Mankey"}],
@@ -3107,8 +3112,8 @@
  {
    
    "primaryColor" : "#fff6a4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#c55252",
+   "secondaryColor" : "#c55252",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 25,
@@ -3140,12 +3145,12 @@
    "MaxCP": 1335,
    "AvgHP": 92,
    "MaxHP": 98,
-   
    "Name":"Growlithe",
    "Classification":"Puppy Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Bite","Ember"],
+   "Charge Attack(s)":["Body Slam","Flamethrower","Flame Wheel"],
    "Weight":"19.0 kg",
    "Height":"0.7 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Growlithe candies"},
@@ -3162,8 +3167,8 @@
  {
 
    "primaryColor" : "#d5a48b", 
-   "secondaryColor" : "#ffdeac",
-   "textColor" : "#c5525a",
+   "secondaryColor" : "#c5525a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 58,
    "EvolutionChainId": 25,
@@ -3195,12 +3200,12 @@
    "MaxCP": 2983,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Arcanine",
    "Classification":"Legendary Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Bite","Fire Fang"],
+   "Charge Attack(s)":["Fire Blast","Flamethrower","Bulldoze"],
    "Weight":"155.0 kg",
    "Height":"1.9 m",
    "Previous evolution(s)":[{"Number":"058","Name":"Growlithe"}],
@@ -3216,8 +3221,8 @@
  {
 
    "primaryColor" : "#5283c5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#183973",
+   "secondaryColor" : "#183973",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 26,
@@ -3249,12 +3254,12 @@
    "MaxCP": 795,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Poliwag",
    "Classification":"Tadpole Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bubble","Mud Shot"],
+   "Charge Attack(s)":["Body Slam","Mud Bomb","Bubble Beam"],
    "Weight":"12.4 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Poliwag candies"},
@@ -3270,9 +3275,9 @@
 
  {
     
-   "primaryColor" : "#395a83", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#183973",
+   "primaryColor" : "#5283c5",
+   "secondaryColor" : "#183973",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 60,
    "EvolutionChainId": 26,
@@ -3304,12 +3309,12 @@
    "MaxCP": 1340,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Poliwhirl",
    "Classification":"Tadpole Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bubble","Mud Shot"],
+   "Charge Attack(s)":["Scald","Mud Bomb","Bubble Beam"],
    "Weight":"20.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"060","Name":"Poliwag"}],
@@ -3326,8 +3331,8 @@
  {
 
    "primaryColor" : "#395a83", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#183973",
+   "secondaryColor" : "#183973",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 61,
    "EvolutionChainId": 26,
@@ -3359,13 +3364,13 @@
    "MaxCP": 2505,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Poliwrath",
    "Classification":"Tadpole Pokémon",
    "Type I":["Water"],
    "Type II":["Fighting"],
    "Weaknesses":["Electric","Grass","Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Bubble","Mud Shot"],
+   "Charge Attack(s)":["Hydro Pump","Submission","Ice Punch"],
    "Weight":"54.0 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"060","Name":"Poliwag"},{"Number":"061","Name":"Poliwhirl"}],
@@ -3381,7 +3386,7 @@
  {
    
    "primaryColor" : "#ffe629", 
-   "secondaryColor" : "#f6f6a4",
+   "secondaryColor" : "#cdbd20",
    "textColor" : "#5a3908",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -3414,12 +3419,12 @@
    "MaxCP": 600,
    "AvgHP": 45,
    "MaxHP": 51,
-   
    "Name":"Abra",
    "Classification":"Psi Pokémon",
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
-   "Fast Attack(s)":["Zen Headbutt",""],
+   "Fast Attack(s)":["Zen Headbutt"],
+   "Charge Attack(s)":["Psyshock","Shadow Ball","Signal Beam"],
    "Weight":"19.5 kg",
    "Height":"0.9 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Abra candies"},
@@ -3436,8 +3441,8 @@
  {
 
    "primaryColor" : "#d5bd08", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#624a08",
+   "secondaryColor" : "#7b5208",
+   "textColor" : "#ffffbd",
    "pokeegg" : "null",
    "EvolvesFromId": 63,
    "EvolutionChainId": 27,
@@ -3469,12 +3474,12 @@
    "MaxCP": 1131,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Kadabra",
    "Classification":"Psi Pokémon",
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Psycho Cut"],
+   "Charge Attack(s)":["Shadow Ball","Dazzling Gleam","Psybeam"],
    "Weight":"56.5 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"063","Name":"Abra"}],
@@ -3492,7 +3497,7 @@
  {
 
    "primaryColor" : "#ffee18", 
-   "secondaryColor" : "#ffffff",
+   "secondaryColor" : "#cdb410",
    "textColor" : "#735a08",
    "pokeegg" : "null",
    "EvolvesFromId": 64,
@@ -3525,12 +3530,12 @@
    "MaxCP": 1813,
    "AvgHP": 92,
    "MaxHP": 98,
-   
    "Name":"Alakazam",
    "Classification":"Psi Pokémon",
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Psycho Cut"],
+   "Charge Attack(s)":["Psychic","Shadow Ball","Dazzling Gleam"],
    "Weight":"48.0 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"063","Name":"Abra"},{"Number":"064","Name":"Kadabra"}],
@@ -3546,8 +3551,8 @@
  {
   
    "primaryColor" : "#94bdbd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#294a52",
+   "secondaryColor" : "#294a52",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 28,
@@ -3579,12 +3584,12 @@
    "MaxCP": 1089,
    "AvgHP": 116,
    "MaxHP": 122,
-   
    "Name":"Machop",
    "Classification":"Superpower Pokémon",
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Karate Chop","Low Kick"],
+   "Charge Attack(s)":["Cross Chop","Brick Break","Low Sweep"],
    "Weight":"19.5 kg",
    "Height":"0.8 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Machop candies"},
@@ -3601,8 +3606,8 @@
  {
    
    "primaryColor" : "#bd9ce5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a4a62",
+   "secondaryColor" : "#c50000",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 66,
    "EvolutionChainId": 28,
@@ -3634,12 +3639,12 @@
    "MaxCP": 1760,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Machoke",
    "Classification":"Superpower Pokémon",
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Karate Chop","Low Kick"],
+   "Charge Attack(s)":["Cross Chop","Brick Break","Submission"],
    "Weight":"70.5 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"066","Name":"Machop"}],
@@ -3690,12 +3695,12 @@
    "MaxCP": 2594,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Machamp",
    "Classification":"Superpower Pokémon",
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Bullet Punch","Karate Chop"],
+   "Charge Attack(s)":["Cross Chop","Stone Edge","Submission"],
    "Weight":"130.0 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"066","Name":"Machop"},{"Number":"067","Name":"Machoke"}],
@@ -3711,8 +3716,8 @@
 
  {
 
-   "primaryColor" : "#5a3900", 
-   "secondaryColor" : "#732000",
+   "primaryColor" : "#f6e673",
+   "secondaryColor" : "#416a10",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -3745,13 +3750,13 @@
    "MaxCP": 1117,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Bellsprout",
    "Classification":"Flower Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Acid","Vine Whip"],
+   "Charge Attack(s)":["Power Whip","Sludge Bomb","Wrap"],
    "Weight":"4.0 kg",
    "Height":"0.7 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Bellsprout candies"},
@@ -3767,8 +3772,8 @@
  {
    
    "primaryColor" : "#6ac552", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#624a31",
+   "secondaryColor" : "#624a31",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 69,
    "EvolutionChainId": 29,
@@ -3800,13 +3805,13 @@
    "MaxCP": 1723,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Weepinbell",
    "Classification":"Flycatcher Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Acid","Razor Leaf"],
+   "Charge Attack(s)":["Power Whip","Sludge Bomb","Seed Bomb"],
    "Weight":"6.4 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"069","Name":"Bellsprout"}],
@@ -3824,8 +3829,8 @@
  {
     
    "primaryColor" : "#4aa47b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#831800",
+   "secondaryColor" : "#debd52",
+   "textColor" : "#625229",
    "pokeegg" : "null",
    "EvolvesFromId": 70,
    "EvolutionChainId": 29,
@@ -3857,13 +3862,13 @@
    "MaxCP": 2530,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Victreebel",
    "Classification":"Flycatcher Pokémon",
    "Type I":["Grass"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Ice","Flying","Psychic"],
    "Fast Attack(s)":["Acid","Razor Leaf"],
+   "Charge Attack(s)":["Solar Beam","Sludge Bomb","Leaf Blade"],
    "Weight":"15.5 kg",
    "Height":"1.7 m",
    "Previous evolution(s)":[{"Number":"069","Name":"Bellsprout"},{"Number":"070","Name":"Weepinbell"}],
@@ -3879,8 +3884,8 @@
  {
 
    "primaryColor" : "#6ab4e6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#6a1010",
+   "secondaryColor" : "#b42920",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 30,
@@ -3912,13 +3917,13 @@
    "MaxCP": 905,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Tentacool",
    "Classification":"Jellyfish Pokémon",
    "Type I":["Water"],
    "Type II":["Poison"],
    "Weaknesses":["Electric","Ground","Psychic"],
    "Fast Attack(s)":["Bubble","Poison Sting"],
+   "Charge Attack(s)":["Water Pulse","Bubble Beam","Wrap"],
    "Weight":"45.5 kg",
    "Height":"0.9 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Tentacool candies"},
@@ -3935,8 +3940,8 @@
  {
     
    "primaryColor" : "#6ab4e6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#831010",
+   "secondaryColor" : "#b42920",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 72,
    "EvolutionChainId": 30,
@@ -3968,13 +3973,13 @@
    "MaxCP": 2220,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Tentacruel",
    "Classification":"Jellyfish Pokémon",
    "Type I":["Water"],
    "Type II":["Poison"],
    "Weaknesses":["Electric","Ground","Psychic"],
    "Fast Attack(s)":["Acid","Poison Jab"],
+   "Charge Attack(s)":["Blizzard","Hydro Pump","Sludge Wave"],
    "Weight":"55.0 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"072","Name":"Tentacool"}],
@@ -3990,8 +3995,8 @@
  {
 
    "primaryColor" : "#9c9483", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#413931",
+   "secondaryColor" : "#413931",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 31,
@@ -4023,13 +4028,13 @@
    "MaxCP": 849,
    "AvgHP": 69,
    "MaxHP": 75,
-   
    "Name":"Geodude",
    "Classification":"Rock Pokémon",
    "Type I":["Rock"],
    "Type II":["Ground"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Rock Throw","Tackle"],
+   "Charge Attack(s)":["Rock Slide","Dig","Rock Tomb"],
    "Weight":"20.0 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Geodude candies"},
@@ -4046,8 +4051,8 @@
  {
 
    "primaryColor" : "#b4b49c", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a4131",
+   "secondaryColor" : "#4a4131",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 74,
    "EvolutionChainId": 31,
@@ -4079,13 +4084,13 @@
    "MaxCP": 1433,
    "AvgHP": 92,
    "MaxHP": 98,
-   
    "Name":"Graveler",
    "Classification":"Rock Pokémon",
    "Type I":["Rock"],
    "Type II":["Ground"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Mud Shot","Rock Throw"],
+   "Charge Attack(s)":["Stone Edge","Rock Slide","Dig"],
    "Weight":"105.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"074","Name":"Geodude"}],
@@ -4136,13 +4141,13 @@
    "MaxCP": 2303,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Golem",
    "Classification":"Megaton Pokémon",
    "Type I":["Rock"],
    "Type II":["Ground"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Mud Shot","Rock Throw"],
+   "Charge Attack(s)":["Stone Edge","Earthquake","Ancient Power"],
    "Weight":"300.0 kg",
    "Height":"1.4 m",
    "Previous evolution(s)":[{"Number":"074","Name":"Geodude"},{"Number":"075","Name":"Graveler"}],
@@ -4157,8 +4162,8 @@
 
  {
  
-   "primaryColor" : "#e65a29", 
-   "secondaryColor" : "#733131",
+   "primaryColor" : "#ff9c18",
+   "secondaryColor" : "#414a83",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -4191,12 +4196,12 @@
    "MaxCP": 1516,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Ponyta",
    "Classification":"Fire Horse Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Ember","Tackle"],
+   "Charge Attack(s)":["Fire Blast","Flame Wheel","Flame Charge"],
    "Weight":"30.0 kg",
    "Height":"1.0 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Ponyta candies"},
@@ -4214,8 +4219,8 @@
  {
    
    "primaryColor" : "#ff9c18", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#733131",
+   "secondaryColor" : "#de1010",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 77,
    "EvolutionChainId": 32,
@@ -4247,12 +4252,12 @@
    "MaxCP": 2199,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Rapidash",
    "Classification":"Fire Horse Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Ember","Low Kick"],
+   "Charge Attack(s)":["Fire Blast","Heat Wave","Drill Run"],
    "Weight":"95.0 kg",
    "Height":"1.7 m",
    "Previous evolution(s)":[{"Number":"077","Name":"Ponyta"}],
@@ -4268,8 +4273,8 @@
  {
 
    "primaryColor" : "#de627b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#7b2031",
+   "secondaryColor" : "#7b2031",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 33,
@@ -4301,13 +4306,13 @@
    "MaxCP": 1218,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Slowpoke",
    "Classification":"Dopey Pokémon",
    "Type I":["Water"],
    "Type II":["Psychic"],
    "Weaknesses":["Electric","Grass","Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Water Gun"],
+   "Charge Attack(s)":["Psychic","Water Pulse","Psybeam"],
    "Weight":"36.0 kg",
    "Height":"1.2 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Slowpoke candies"},
@@ -4324,8 +4329,8 @@
  {
    
    "primaryColor" : "#e66a7b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#7b3131",
+   "secondaryColor" : "#8b9494",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 79,
    "EvolutionChainId": 33,
@@ -4357,13 +4362,13 @@
    "MaxCP": 2597,
    "AvgHP": 156,
    "MaxHP": 162,
-   
    "Name":"Slowbro",
    "Classification":"Hermit Crab Pokémon",
    "Type I":["Water"],
    "Type II":["Psychic"],
    "Weaknesses":["Electric","Grass","Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Water Gun"],
+   "Charge Attack(s)":["Psychic","Ice Beam","Water Pulse"],
    "Weight":"78.5 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"079","Name":"Slowpoke"}],
@@ -4379,8 +4384,8 @@
  {
 
    "primaryColor" : "#8bb4a4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#393131",
+   "secondaryColor" : "#393131",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 34,
@@ -4412,13 +4417,13 @@
    "MaxCP": 890,
    "AvgHP": 45,
    "MaxHP": 51,
-   
    "Name":"Magnemite",
    "Classification":"Magnet Pokémon",
    "Type I":["Electric"],
    "Type II":["Steel"],
    "Weaknesses":["Fire","Water","Ground"],
    "Fast Attack(s)":["Spark","Thunder Shock"],
+   "Charge Attack(s)":["ThunderBolt","Discharge","Magnet Bomb"],
    "Weight":"6.0 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Magnemite candies"},
@@ -4434,8 +4439,8 @@
 
  {
    
-   "primaryColor" : "#393131", 
-   "secondaryColor" : "#524a4a",
+   "primaryColor" : "#8bb4a4",
+   "secondaryColor" : "#393131",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 81,
@@ -4468,13 +4473,13 @@
    "MaxCP": 1879,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Magneton",
    "Classification":"Magnet Pokémon",
    "Type I":["Electric"],
    "Type II":["Steel"],
    "Weaknesses":["Fire","Water","Ground"],
    "Fast Attack(s)":["Spark","Thunder Shock"],
+   "Charge Attack(s)":["Flash Cannon","Discharge","Magnet Bomb"],
    "Weight":"60.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"081","Name":"Magnemite"}],
@@ -4490,8 +4495,8 @@
  {
    
    "primaryColor" : "#e6e6a4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a3900",
+   "secondaryColor" : "#5a3900",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 35,
@@ -4523,14 +4528,13 @@
    "MaxCP": 1263,
    "AvgHP": 88,
    "MaxHP": 94,
-   
    "Name":"Farfetch'd",
    "Classification":"Wild Duck Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Cut","Fury Cutter"],
+   "Charge Attack(s)":["Leaf Blade","Aerial Ace","Air Cutter"],
    "Weight":"15.0 kg",
    "Height":"0.8 m",
    "multiplier": null,
@@ -4578,13 +4582,13 @@
    "MaxCP": 855,
    "AvgHP": 61,
    "MaxHP": 67,
-   
    "Name":"Doduo",
    "Classification":"Twin Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Peck","Quick Attack"],
+   "Charge Attack(s)":["Drill Peck","Aerial Ace","Swift"],
    "Weight":"39.2 kg",
    "Height":"1.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Doduo candies"},
@@ -4634,13 +4638,13 @@
    "MaxCP": 1836,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Dodrio",
    "Classification":"Triple Bird Pokémon",
    "Type I":["Normal"],
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Feint Attack","Steel Wing"],
+   "Charge Attack(s)":["Drill Peck","Aerial Ace","Air Cutter"],
    "Weight":"85.2 kg",
    "Height":"1.8 m",
    "Previous evolution(s)":[{"Number":"084","Name":"Doduo"}],
@@ -4657,8 +4661,8 @@
  {
    
    "primaryColor" : "#d5cdee", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#415283",
+   "secondaryColor" : "#415283",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 37,
@@ -4690,12 +4694,12 @@
    "MaxCP": 1107,
    "AvgHP": 108,
    "MaxHP": 114,
-   
    "Name":"Seel",
    "Classification":"Sea Lion Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Ice Shard","Water Gun"],
+   "Charge Attack(s)":["Aqua Tail","Aqua Jet","Icy Wind"],
    "Weight":"90.0 kg",
    "Height":"1.1 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Seel candies"},
@@ -4713,8 +4717,8 @@
  {
 
    "primaryColor" : "#e6e6f6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#415262",
+   "secondaryColor" : "#415262",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 86,
    "EvolutionChainId": 37,
@@ -4746,13 +4750,13 @@
    "MaxCP": 2145,
    "AvgHP": 148,
    "MaxHP": 154,
-   
    "Name":"Dewgong",
    "Classification":"Sea Lion Pokémon",
    "Type I":["Water"],
    "Type II":["Ice"],
    "Weaknesses":["Electric","Grass","Fighting","Rock"],
    "Fast Attack(s)":["Frost Breath","Ice Shard"],
+   "Charge Attack(s)":["Blizzard","Aqua Jet","Icy Wind"],
    "Weight":"120.0 kg",
    "Height":"1.7 m",
    "Previous evolution(s)":[{"Number":"086","Name":"Seel"}],
@@ -4801,12 +4805,12 @@
    "MaxCP": 1284,
    "AvgHP": 132,
    "MaxHP": 138,
-   
    "Name":"Grimer",
    "Classification":"Sludge Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Acid","Mud Slap"],
+   "Charge Attack(s)":["Sludge Bomb","Sludge","Sludge Bomb"],
    "Weight":"30.0 kg",
    "Height":"0.9 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Grimer candies"},
@@ -4856,12 +4860,12 @@
    "MaxCP": 2602,
    "AvgHP": 171,
    "MaxHP": 177,
-   
    "Name":"Muk",
    "Classification":"Sludge Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
-   "Fast Attack(s)":["Poison Jab",""],
+   "Fast Attack(s)":["Poison Jab","Acid"],
+   "Charge Attack(s)":["Dark Pulse","Sludge","Sludge Bomb"],
    "Weight":"30.0 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"088","Name":"Grimer"}],
@@ -4877,8 +4881,8 @@
 
  {
    "primaryColor" : "#9c8bc5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a3962",
+   "secondaryColor" : "#4a3962",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 39,
@@ -4910,12 +4914,12 @@
    "MaxCP": 822,
    "AvgHP": 53,
    "MaxHP": 59,
-   
    "Name":"Shellder",
    "Classification":"Bivalve Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Ice Shard","Tackle"],
+   "Charge Attack(s)":["Water Pulse","Bubble Beam","Icy Wind"],
    "Weight":"4.0 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Shellder candies"},
@@ -4965,13 +4969,13 @@
    "MaxCP": 2052,
    "AvgHP": 84,
    "MaxHP": 90,
-   
    "Name":"Cloyster",
    "Classification":"Bivalve Pokémon",
    "Type I":["Water"],
    "Type II":["Ice"],
    "Weaknesses":["Electric","Grass","Fighting","Rock"],
    "Fast Attack(s)":["Frost Breath","Ice Shard"],
+   "Charge Attack(s)":["Water Pulse","Bubble Beam","Icy Wind"],
    "Weight":"132.5 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"090","Name":"Shellder"}],
@@ -4988,7 +4992,7 @@
  {
     
    "primaryColor" : "#d5accd", 
-   "secondaryColor" : "#ffffff",
+   "secondaryColor" : "#8b6283",
    "textColor" : "#392939",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -5021,13 +5025,13 @@
    "MaxCP": 804,
    "AvgHP": 53,
    "MaxHP": 59,
-   
    "Name":"Gastly",
    "Classification":"Gas Pokémon",
    "Type I":["Ghost"],
    "Type II":["Poison"],
    "Weaknesses":["Ground","Psychic","Ghost","Dark"],
    "Fast Attack(s)":["Lick","Sucker Punch"],
+   "Charge Attack(s)":["Sludge Bomb","Dark Pulse","Ominous Wind"],
    "Weight":"0.1 kg",
    "Height":"1.3 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Gastly candies"},
@@ -5043,8 +5047,8 @@
 
  {
   
-   "primaryColor" : "#835a6a", 
-   "secondaryColor" : "#524162",
+   "primaryColor" : "#ac6acd",
+   "secondaryColor" : "#b41818",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 92,
@@ -5077,13 +5081,13 @@
    "MaxCP": 1380,
    "AvgHP": 77,
    "MaxHP": 82,
-   
    "Name":"Haunter",
    "Classification":"Gas Pokémon",
    "Type I":["Ghost"],
    "Type II":["Poison"],
    "Weaknesses":["Ground","Psychic","Ghost","Dark"],
    "Fast Attack(s)":["Lick","Shadow Claw"],
+   "Charge Attack(s)":["Sludge Bomb","Shadow Ball","Dark Pulse"],
    "Weight":"0.1 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"092","Name":"Gastly"}],
@@ -5102,8 +5106,8 @@
  {
    
    "primaryColor" : "#9473b4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a294a",
+   "secondaryColor" : "#ff5a5a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 93,
    "EvolutionChainId": 40,
@@ -5135,13 +5139,13 @@
    "MaxCP": 2078,
    "AvgHP": 100,
    "MaxHP": 106,
-   
    "Name":"Gengar",
    "Classification":"Shadow Pokémon",
    "Type I":["Ghost"],
    "Type II":["Poison"],
    "Weaknesses":["Ground","Psychic","Ghost","Dark"],
    "Fast Attack(s)":["Shadow Claw","Sucker Punch"],
+   "Charge Attack(s)":["Sludge Wave","Shadow Ball","Dark Pulse"],
    "Weight":"40.5 kg",
    "Height":"1.5 m",
    "Previous evolution(s)":[{"Number":"092","Name":"Gastly"},{"Number":"093","Name":"Haunter"}],
@@ -5196,6 +5200,7 @@
    "Type II":["Ground"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Rock Throw","Tackle"],
+   "Charge Attack(s)":["Stone Edge","Rock Slide","Iron Head"],
    "Weight":"210.0 kg",
    "Height":"8.8 m",
    "multiplier": null,
@@ -5210,8 +5215,8 @@
  {
    
    "primaryColor" : "#f6de00", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#523920",
+   "secondaryColor" : "#835a41",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 42,
@@ -5248,6 +5253,7 @@
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Pound"],
+   "Charge Attack(s)":["Psychic","Psyshock","Psybeam"],
    "Weight":"32.4 kg",
    "Height":"1.0 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Drowzee candies"},
@@ -5266,8 +5272,8 @@
      
    
    "primaryColor" : "#f6de00", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a4129",
+   "secondaryColor" : "#b49420",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 96,
    "EvolutionChainId": 42,
@@ -5304,6 +5310,7 @@
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Zen Headbutt"],
+   "Charge Attack(s)":["Psychic","Psyshock","Shadow Ball"],
    "Weight":"75.6 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"096","Name":"Drowzee"}],
@@ -5358,6 +5365,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bubble","Mud Shot"],
+   "Charge Attack(s)":["Vice Grip","Water Pulse","Bubble Beam"],
    "Weight":"6.5 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Krabby candies"},
@@ -5375,8 +5383,8 @@
  {
     
    "primaryColor" : "#c56a5a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a3120",
+   "secondaryColor" : "#4a3120",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 98,
    "EvolutionChainId": 43,
@@ -5413,6 +5421,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Metal Claw","Mud Shot"],
+   "Charge Attack(s)":["X Scissor","Vice Grip","Water Pulse"],
    "Weight":"60.0 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"098","Name":"Krabby"}],
@@ -5467,6 +5476,7 @@
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
    "Fast Attack(s)":["Spark","Tackle"],
+   "Charge Attack(s)":["ThunderBolt","Signal Beam","Discharge"],
    "Weight":"10.4 kg",
    "Height":"0.5 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Voltorb candies"},
@@ -5483,8 +5493,8 @@
  {
 
    "primaryColor" : "#eeeeee", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#831010",
+   "secondaryColor" : "#831010",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 100,
    "EvolutionChainId": 44,
@@ -5520,7 +5530,8 @@
    "Classification":"Ball Pokémon",
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
-   "Fast Attack(s)":["Spark",""],
+   "Fast Attack(s)":["Spark","Tackle"],
+   "Charge Attack(s)":["Hyper Beam","ThunderBolt","Discharge"],
    "Weight":"66.6 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"100","Name":"Voltorb"}],
@@ -5537,8 +5548,8 @@
  {
 
    "primaryColor" : "#ffd5ac", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#943131",
+   "secondaryColor" : "#943131",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 45,
@@ -5575,7 +5586,8 @@
    "Type I":["Grass"],
    "Type II":["Psychic"],
    "Weaknesses":["Fire","Ice","Poison","Flying","Bug","Ghost","Dark"],
-   "Fast Attack(s)":["Confusion",""],
+   "Fast Attack(s)":["Confusion"],
+   "Charge Attack(s)":["Psychic","Seed Bomb","Ancient Power"],
    "Weight":"2.5 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"E"},
@@ -5592,8 +5604,8 @@
  {
     
    "primaryColor" : "#73ac31", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#524110",
+   "secondaryColor" : "#524110",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 102,
    "EvolutionChainId": 45,
@@ -5631,6 +5643,7 @@
    "Type II":["Psychic"],
    "Weaknesses":["Fire","Ice","Poison","Flying","Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Zen Headbutt"],
+   "Charge Attack(s)":["Solar Beam","Psychic","Seed Bomb"],
    "Weight":"120.0 kg",
    "Height":"2.0 m",
    "Previous evolution(s)":[{"Number":"102","Name":"Exeggcute"}],
@@ -5684,6 +5697,7 @@
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Mud Slap","Rock Smash"],
+   "Charge Attack(s)":["Bone Club","Dig","Bulldoze"],
    "Weight":"6.5 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Cubone candies"},
@@ -5739,6 +5753,7 @@
    "Type I":["Ground"],
    "Weaknesses":["Water","Grass","Ice"],
    "Fast Attack(s)":["Mud Slap","Rock Smash"],
+   "Charge Attack(s)":["Earthquake","Bone Club","Dig"],
    "Weight":"45.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"104","Name":"Cubone"}],
@@ -5755,8 +5770,8 @@
  {
 
    "primaryColor" : "#cda483", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#292929",
+   "secondaryColor" : "#292929",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 47,
@@ -5793,6 +5808,7 @@
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Low Kick","Rock Smash"],
+   "Charge Attack(s)":["Stone Edge","Stomp","Low Sweep"],
    "Weight":"49.8 kg",
    "Height":"1.5 m",
    "multiplier": null,
@@ -5807,8 +5823,8 @@
  {
    
    "primaryColor" : "#cdb47b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a4110",
+   "secondaryColor" : "#5a4110",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 47,
@@ -5845,6 +5861,7 @@
    "Type I":["Fighting"],
    "Weaknesses":["Flying","Psychic","Fairy"],
    "Fast Attack(s)":["Bullet Punch","Rock Smash"],
+   "Charge Attack(s)":["Brick Break","Thunder Punch","Fire Punch","Ice Punch"],
    "Weight":"50.2 kg",
    "Height":"1.4 m",
    "multiplier": null,
@@ -5860,8 +5877,8 @@
  {
 
    "primaryColor" : "#ee736a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#7b1810",
+   "secondaryColor" : "#7b1810",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 48,
@@ -5898,6 +5915,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Lick","Zen Headbutt"],
+   "Charge Attack(s)":["Power Whip","Hyper Beam","Stomp"],
    "Weight":"65.5 kg",
    "Height":"1.2 m",
    "multiplier": null,
@@ -5912,8 +5930,8 @@
  {
   
    "primaryColor" : "#eed56a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a2952",
+   "secondaryColor" : "#5a2952",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 49,
@@ -5950,6 +5968,7 @@
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Acid","Tackle"],
+   "Charge Attack(s)":["Sludge Bomb","Dark Pulse","Sludge"],
    "Weight":"1.0 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Koffing candies"},
@@ -5967,8 +5986,8 @@
  {
     
    "primaryColor" : "#bd8bcd", 
-   "secondaryColor" : "ffffff",
-   "textColor" : "#a42000",
+   "secondaryColor" : "#62317b",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 109,
    "EvolutionChainId": 49,
@@ -6005,6 +6024,7 @@
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Acid","Tackle"],
+   "Charge Attack(s)":["Sludge Bomb","Shadow Ball","Dark Pulse"],
    "Weight":"9.5 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"109","Name":"Koffing"}],
@@ -6059,6 +6079,7 @@
    "Type II":["Rock"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Mud Slap","Rock Smash"],
+   "Charge Attack(s)":["Stomp","Horn Attack","Bulldoze"],
    "Weight":"115.0 kg",
    "Height":"1.0 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Rhyhorn candies"},
@@ -6115,6 +6136,7 @@
    "Type II":["Rock"],
    "Weaknesses":["Water","Grass","Ice","Fighting","Ground","Steel"],
    "Fast Attack(s)":["Mud Slap","Rock Smash"],
+   "Charge Attack(s)":["Stone Edge","Megahorn","Earthquake"],
    "Weight":"120.0 kg",
    "Height":"1.9 m",
    "Previous evolution(s)":[{"Number":"111","Name":"Rhyhorn"}],
@@ -6131,8 +6153,8 @@
  {
 
    "primaryColor" : "#ffd5d5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#8b4141",
+   "secondaryColor" : "#8b4141",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 440,
    "EvolutionChainId": 51,
@@ -6169,6 +6191,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Pound","Zen Headbutt"],
+   "Charge Attack(s)":["Psychic","Dazzling Gleam","Psybeam"],
    "Weight":"34.6 kg",
    "Height":"1.1 m",
    "multiplier": null,
@@ -6221,7 +6244,8 @@
    "Classification":"Vine Pokémon",
    "Type I":["Grass"],
    "Weaknesses":["Fire","Ice","Poison","Flying","Bug"],
-   "Fast Attack(s)":["Vine Whip",""],
+   "Fast Attack(s)":["Vine Whip"],
+   "Charge Attack(s)":["Power Whip","Solar Beam","Sludge Bomb"],
    "Weight":"35.0 kg",
    "Height":"1.0 m",
    "multiplier": null,
@@ -6275,7 +6299,8 @@
    "Classification":"Parent Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
-   "Fast Attack(s)":["Low Kick",""],
+   "Fast Attack(s)":["Low Kick","Mud Slap"],
+   "Charge Attack(s)":["Earthquake","Brick Break","Stomp"],
    "Weight":"80.0 kg",
    "Height":"2.2 m",
    "multiplier": null,
@@ -6290,8 +6315,8 @@
  {
 
    "primaryColor" : "#6a94b4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#395262",
+   "secondaryColor" : "#395262",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 54,
@@ -6323,10 +6348,12 @@
    "MaxCP": 794,
    "AvgHP": 53,
    "MaxHP": 59,
+   "Name":"Horsea",
    "Classification":"Dragon Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Bubble","Water Gun"],
+   "Charge Attack(s)":["Dragon Pulse","Flash Cannon","Bubble Beam"],
    "Weight":"8.0 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Horsea candies"},
@@ -6382,6 +6409,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Dragon Breath","Water Gun"],
+   "Charge Attack(s)":["Blizzard","Hydro Pump","Dragon Pulse"],
    "Weight":"25.0 kg",
    "Height":"1.2 m",
    "Previous evolution(s)":[{"Number":"116","Name":"Horsea"}],
@@ -6398,8 +6426,8 @@
  {
    
    "primaryColor" : "#ffffff", 
-   "secondaryColor" : "#eeeeee",
-   "textColor" : "#ac1000",
+   "secondaryColor" : "#ac1000",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "Identifier": "goldeen",
    "EvolvesFromId": 0,
@@ -6437,6 +6465,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Peck","Mud Shot"],
+   "Charge Attack(s)":["Aqua Tail","Horn Attack","Water Pulse"],
    "Weight":"15.0 kg",
    "Height":"0.6 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Goldeen candies"},
@@ -6454,8 +6483,8 @@
  {
 
    "primaryColor" : "#f6f6ff", 
-   "secondaryColor" : "#dedee6",
-   "textColor" : "#943118",
+   "secondaryColor" : "#943118",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 118,
    "EvolutionChainId": 55,
@@ -6491,7 +6520,8 @@
    "Classification":"Goldfish Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
-   "Fast Attack(s)":["Peck","Poison Jab"],
+   "Fast Attack(s)":["Water Gun","Quick Attack"],
+   "Charge Attack(s)":["Megahorn","Drill Run","Icy Wind"],
    "Weight":"39.0 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"118","Name":"Goldeen"}],
@@ -6508,7 +6538,7 @@
  {
   
    "primaryColor" : "#9c6a39", 
-   "secondaryColor" : "#623131",
+   "secondaryColor" : "#ac2010",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -6546,6 +6576,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Quick Attack","Water Gun"],
+   "Charge Attack(s)":["Power Gem","Bubble Beam","Swift"],
    "Weight":"34.5 kg",
    "Height":"0.8 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Staryu candies"},
@@ -6563,7 +6594,7 @@
  {
    
    "primaryColor" : "#5a529c", 
-   "secondaryColor" : "#5a4131",
+   "secondaryColor" : "#cd205a",
    "textColor" : "#eeb4cd",
    "pokeegg" : "null",
    "EvolvesFromId": 120,
@@ -6602,6 +6633,7 @@
    "Type II":["Psychic"],
    "Weaknesses":["Electric","Grass","Bug","Ghost","Dark"],
    "Fast Attack(s)":["Quick Attack","Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Power Gem","Psybeam"],
    "Weight":"80.0 kg",
    "Height":"1.1 m",
    "Previous evolution(s)":[{"Number":"120","Name":"Staryu"}],
@@ -6617,8 +6649,8 @@
 
  {
 
-   "primaryColor" : "#104a73", 
-   "secondaryColor" : "#6a3931",
+   "primaryColor" : "#ff5a6a",
+   "secondaryColor" : "#104a73",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 439,
@@ -6656,6 +6688,7 @@
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
    "Fast Attack(s)":["Confusion","Zen Headbutt"],
+   "Charge Attack(s)":["Psychic","Shadow Ball","Psybeam"],
    "Weight":"54.5 kg",
    "Height":"1.3 m",
    "multiplier": null,
@@ -6672,8 +6705,8 @@
  {
 
    "primaryColor" : "#8bcd73", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#415a20",
+   "secondaryColor" : "#405a20",
+   "textColor" : "#e6d5ac",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 58,
@@ -6711,6 +6744,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Fire","Electric","Ice","Flying","Rock"],
    "Fast Attack(s)":["Fury Cutter","Steel Wing"],
+   "Charge Attack(s)":["Bug Buzz","X Scissor","Night Slash"],
    "Weight":"56.0 kg",
    "Height":"1.5 m",
    "multiplier": null,
@@ -6764,7 +6798,10 @@
    "Type I":["Ice"],
    "Type II":["Psychic"],
    "Weaknesses":["Fire","Bug","Rock","Ghost","Dark","Steel"],
-   "Fast Attack(s)":["Frost Breath","Pound"],"Weight":"40.6 kg","Height":"1.4 m",
+   "Fast Attack(s)":["Frost Breath","Pound"],
+   "Charge Attack(s)":["Psyshock","Psybeam","Draining Kiss"],
+   "Weight":"40.6 kg",
+   "Height":"1.4 m",
    "multiplier": null,
    "number": 124,
    "tier": "B",
@@ -6778,8 +6815,8 @@
  {
   
    "primaryColor" : "#c5a410", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#292920", 
+   "secondaryColor" : "#292920",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 239,
    "EvolutionChainId": 60,
@@ -6816,6 +6853,7 @@
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
    "Fast Attack(s)":["Low Kick","Thunder Shock"],
+   "Charge Attack(s)":["Thunder","ThunderBolt","Thunder Punch"],
    "Weight":"30.0 kg",
    "Height":"1.1 m",
    "multiplier": null,
@@ -6831,8 +6869,8 @@
  {
 
    "primaryColor" : "#ff4a31", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#6a2020",
+   "secondaryColor" : "#6a2020",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 240,
    "EvolutionChainId": 61,
@@ -6869,6 +6907,7 @@
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
    "Fast Attack(s)":["Ember","Karate Chop"],
+   "Charge Attack(s)":["Fire Blast","Flamethrower","Fire Punch"],
    "Weight":"44.5 kg",
    "Height":"1.3 m",
    "multiplier": null,
@@ -6885,8 +6924,8 @@
 
     
    "primaryColor" : "#c5ac8b", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a4131",
+   "secondaryColor" : "#5a4131",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 62,
@@ -6923,6 +6962,7 @@
    "Type I":["Bug"],
    "Weaknesses":["Fire","Flying","Rock"],
    "Fast Attack(s)":["Fury Cutter","Rock Smash"],
+   "Charge Attack(s)":["X Scissor","Submission","Vice Grip"],
    "Weight":"55.0 kg",
    "Height":"1.5 m",
    "multiplier": null,
@@ -6938,8 +6978,8 @@
  {
 
    "primaryColor" : "#dea44a", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a3929",
+   "secondaryColor" : "#4a3929",
+   "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
    "EvolutionChainId": 63,
@@ -6976,6 +7016,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Tackle","Zen Headbutt"],
+   "Charge Attack(s)":["Earthquake","Iron Head","Horn Attack"],
    "Weight":"88.4 kg",
    "Height":"1.4 m",
    "multiplier": null,
@@ -6990,9 +7031,9 @@
 
  {
 
-   "primaryColor" : "#f66218", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#830041",
+   "primaryColor" : "#ffde29",
+   "secondaryColor" : "#f66218",
+   "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 0,
    "EvolutionChainId": 64,
@@ -7028,7 +7069,8 @@
    "Classification":"Fish Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
-   "Fast Attack(s)":["Splash",""],
+   "Fast Attack(s)":["Splash"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"10.0 kg",
    "Height":"0.9 m",
    "Next Evolution Requirements":{"Amount":400,"Name":"Magikarp candies"},
@@ -7047,8 +7089,8 @@
 
    
    "primaryColor" : "#208bac", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#6a1820",
+   "secondaryColor" : "#184173",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 129,
    "EvolutionChainId": 64,
@@ -7086,6 +7128,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Bite","Dragon Breath"],
+   "Charge Attack(s)":["Hydro Pump","Dragon Pulse","Twister"],
    "Weight":"235.0 kg",
    "Height":"6.5 m",
    "Previous evolution(s)":[{"Number":"129","Name":"Magikarp"}],
@@ -7102,8 +7145,8 @@
 
 
    "primaryColor" : "#397ba4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#184152",
+   "secondaryColor" : "#184152",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 65,
@@ -7141,6 +7184,7 @@
    "Type II":["Ice"],
    "Weaknesses":["Electric","Grass","Fighting","Rock"],
    "Fast Attack(s)":["Frost Breath","Ice Shard"],
+   "Charge Attack(s)":["Blizzard","Dragon Pulse","Ice Beam"],
    "Weight":"220.0 kg",
    "Height":"2.5 m",
    "multiplier": null,
@@ -7157,8 +7201,8 @@
 
 
    "primaryColor" : "#c57be6", 
-   "secondaryColor" : "#ffcdff",
-   "textColor" : "#5a1894",
+   "secondaryColor" : "#5a1849",
+   "textColor" : "#ffcdff",
    "pokeegg" : "null", 
    "EvolvesFromId": 0,
    "EvolutionChainId": 66,
@@ -7194,8 +7238,8 @@
    "Classification":"Transform Pokémon",
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Pound"],
+   "Charge Attack(s)":["Struggle"],
    "Weight":"4.0 kg",
    "Height":"0.3 m",
    "multiplier": null,
@@ -7249,6 +7293,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Quick Attack","Tackle"],
+   "Charge Attack(s)":["Body Slam","Dig","Swift"],
    "Weight":"6.5 kg",
    "Height":"0.3 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Eevee candies"},
@@ -7265,8 +7310,8 @@
  {
 
    "primaryColor" : "#5ac5e6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#104a62",
+   "secondaryColor" : "#104a62",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 133,
    "EvolutionChainId": 67,
@@ -7302,7 +7347,8 @@
    "Classification":"Bubble Jet Pokémon",
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
-   "Fast Attack(s)":["Water Gun",""],
+   "Fast Attack(s)":["Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Aqua Tail","Water Pulse"],
    "Weight":"29.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"133","Name":"Eevee"}],
@@ -7320,8 +7366,8 @@
    
     
    "primaryColor" : "#ffde52", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a4a10",
+   "secondaryColor" : "#4a087b",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "Identifier": "jolteon",
    "EvolvesFromId": 133,
@@ -7358,7 +7404,8 @@
    "Classification":"Lightning Pokémon",
    "Type I":["Electric"],
    "Weaknesses":["Ground"],
-   "Fast Attack(s)":["Thunder Shock",""],
+   "Fast Attack(s)":["Thunder Shock"],
+   "Charge Attack(s)":["Thunder","ThunderBolt","Discharge"],
    "Weight":"24.5 kg",
    "Height":"0.8 m",
    "Previous evolution(s)":[{"Number":"133","Name":"Eevee"}],
@@ -7375,9 +7422,9 @@
  {
    
    
-   "primaryColor" : "#ffeea4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#732018",
+   "primaryColor" : "#d54152",
+   "secondaryColor" : "#20206a",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 133,
    "EvolutionChainId": 67,
@@ -7413,7 +7460,8 @@
    "Classification":"Flame Pokémon",
    "Type I":["Fire"],
    "Weaknesses":["Water","Ground","Rock"],
-   "Fast Attack(s)":["Ember",""],
+   "Fast Attack(s)":["Ember"],
+   "Charge Attack(s)":["Fire Blast","Heat Wave","Flamethrower"],
    "Weight":"25.0 kg",
    "Height":"0.9 m",
    "Previous evolution(s)":[{"Number":"133","Name":"Eevee"}],
@@ -7431,7 +7479,7 @@
  {
 
    "primaryColor" : "#0883a4", 
-   "secondaryColor" : "#7b2941",
+   "secondaryColor" : "#c5395a",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -7469,6 +7517,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Quick Attack","Tackle"],
+   "Charge Attack(s)":["Signal Beam","Discharge","Psybeam"],
    "Weight":"36.5 kg",
    "Height":"0.8 m",
    "multiplier": null,
@@ -7485,8 +7534,8 @@
  {
 
    
-   "primaryColor" : "#9c836a", 
-   "secondaryColor" : "#625231",
+   "primaryColor" : "#399ccd",
+   "secondaryColor" : "#416aac",
    "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
@@ -7524,7 +7573,8 @@
    "Type I":["Rock"],
    "Type II":["Water"],
    "Weaknesses":["Electric","Grass","Fighting","Ground"],
-   "Fast Attack(s)":["Water Gun",""],
+   "Fast Attack(s)":["Water Gun","Mud Shot"],
+   "Charge Attack(s)":["Brine","Ancient Power","Rock Tomb"],
    "Weight":"7.5 kg",
    "Height":"0.4 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Omanyte candies"},
@@ -7543,8 +7593,8 @@
  {
    
    "primaryColor" : "#399ccd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#625241",
+   "secondaryColor" : "#416aac",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 138,
    "EvolutionChainId": 69,
@@ -7582,6 +7632,7 @@
    "Type II":["Water"],
    "Weaknesses":["Electric","Grass","Fighting","Ground"],
    "Fast Attack(s)":["Rock Throw","Water Gun"],
+   "Charge Attack(s)":["Hydro Pump","Rock Slide","Ancient Power"],
    "Weight":"35.0 kg",
    "Height":"1.0 m",
    "Previous evolution(s)":[{"Number":"138","Name":"Omanyte"}],
@@ -7599,8 +7650,8 @@
     
 
    "primaryColor" : "#c58329", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#4a2900",
+   "secondaryColor" : "#4a2900",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 70,
@@ -7638,6 +7689,7 @@
    "Type II":["Water"],
    "Weaknesses":["Electric","Grass","Fighting","Ground"],
    "Fast Attack(s)":["Mud Shot","Scratch"],
+   "Charge Attack(s)":["Aqua Jet","Ancient Power","Rock Tomb"],
    "Weight":"11.5 kg",
    "Height":"0.5 m",
    "Next Evolution Requirements":{"Amount":50,"Name":"Kabuto candies"},
@@ -7655,8 +7707,8 @@
  {
    
    "primaryColor" : "#bd8b41", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#523118",
+   "secondaryColor" : "#523118",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 140,
    "EvolutionChainId": 70,
@@ -7694,6 +7746,7 @@
    "Type II":["Water"],
    "Weaknesses":["Electric","Grass","Fighting","Ground"],
    "Fast Attack(s)":["Fury Cutter","Mud Shot"],
+   "Charge Attack(s)":["Stone Edge","Water Pulse","Ancient Power"],
    "Weight":"40.5 kg",
    "Height":"1.3 m",
    "Previous evolution(s)":[{"Number":"140","Name":"Kabuto"}],
@@ -7710,8 +7763,8 @@
  {
 
    "primaryColor" : "#9483a4", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#31186a",
+   "secondaryColor" : "#31186a",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 71,
@@ -7749,6 +7802,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Water","Electric","Ice","Rock","Steel"],
    "Fast Attack(s)":["Bite","Steel Wing"],
+   "Charge Attack(s)":["Hyper Beam","Iron Head","Ancient Power"],
    "Weight":"59.0 kg",
    "Height":"1.8 m",
    "multiplier": null,
@@ -7766,8 +7820,8 @@
    
 
    "primaryColor" : "#f6e6bd", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#103941",
+   "secondaryColor" : "#103941",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 446,
    "EvolutionChainId": 72,
@@ -7804,6 +7858,7 @@
    "Type I":["Normal"],
    "Weaknesses":["Fighting"],
    "Fast Attack(s)":["Lick","Zen Headbutt"],
+   "Charge Attack(s)":["Body Slam","Hyper Beam","Earthquake"],
    "Weight":"460.0 kg",
    "Height":"2.1 m",
    "multiplier": null,
@@ -7819,8 +7874,8 @@
  {
  
    "primaryColor" : "#6aacf6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#003152",
+   "secondaryColor" : "#003152",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,
    "EvolutionChainId": 73,
@@ -7857,8 +7912,8 @@
    "Type I":["Ice"],
    "Type II":["Flying"],
    "Weaknesses":["Fire","Electric","Rock","Steel"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Frost Breath"],
+   "Charge Attack(s)":["Blizzard","Ice Beam","Icy Wind"],
    "Weight":"55.4 kg",
    "Height":"1.7 m",
    "multiplier": null,
@@ -7873,9 +7928,9 @@
 
  {
 
-   "primaryColor" : "#d5ac08", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#523910",
+   "primaryColor" : "#ffd541",
+   "secondaryColor" : "#d5ac08",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,
    "EvolutionChainId": 74,
@@ -7912,8 +7967,8 @@
    "Type I":["Electric"],
    "Type II":["Flying"],
    "Weaknesses":["Ice","Rock"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Thunder Shock"],
+   "Charge Attack(s)":["Thunder","ThunderBolt","Discharge"],
    "Weight":"52.6 kg",
    "Height":"1.6 m",
    "multiplier": null,
@@ -7928,8 +7983,8 @@
  {
 
    "primaryColor" : "#ee6239", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#523929",
+   "secondaryColor" : "#d50808",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,
    "EvolutionChainId": 75,
@@ -7966,8 +8021,8 @@
    "Type I":["Fire"],
    "Type II":["Flying"],
    "Weaknesses":["Water","Electric","Rock"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Ember"],
+   "Charge Attack(s)":["Fire Blast","Heat Wave","Flamethrower"],
    "Weight":"60.0 kg",
    "Height":"2.0 m",
    "multiplier": null,
@@ -7978,10 +8033,13 @@
  },
 
 
+
+
  {
+
    "primaryColor" : "#ffffff", 
-   "secondaryColor" : "#ded5de",
-   "textColor" : "#293183",
+   "secondaryColor" : "#293183",
+   "textColor" : "#ffffff",
    "pokeegg" : "10",
    "EvolvesFromId": 0,
    "EvolutionChainId": 76,
@@ -8017,7 +8075,8 @@
    "Classification":"Dragon Pokémon",
    "Type I":["Dragon"],
    "Weaknesses":["Ice","Dragon","Fairy"],
-   "Fast Attack(s)":["Dragon Breath",""],
+   "Fast Attack(s)":["Dragon Breath"],
+   "Charge Attack(s)":["Aqua Tail","Twister","Wrap"],
    "Weight":"3.3 kg",
    "Height":"1.8 m",
    "Next Evolution Requirements":{"Amount":25,"Name":"Dratini candies"},
@@ -8036,8 +8095,8 @@
    
    
    "primaryColor" : "#5a8bee", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#18297b",
+   "secondaryColor" : "#18297b",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 147,
    "EvolutionChainId": 76,
@@ -8073,7 +8132,8 @@
    "Classification":"Dragon Pokémon",
    "Type I":["Dragon"],
    "Weaknesses":["Ice","Dragon","Fairy"],
-   "Fast Attack(s)":["Dragon Breath",""],
+   "Fast Attack(s)":["Dragon Breath"],
+   "Charge Attack(s)":["Dragon Pulse","Aqua Tail","Wrap"],
    "Weight":"16.5 kg",
    "Height":"4.0 m",
    "Next Evolution Requirements":{"Amount":100,"Name":"Dratini candies"},
@@ -8092,8 +8152,8 @@
  {
    
    "primaryColor" : "#de7339", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a3920",
+   "secondaryColor" : "#186a62",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 148,
    "EvolutionChainId": 76,
@@ -8131,6 +8191,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Ice","Rock","Dragon","Fairy"],
    "Fast Attack(s)":["Dragon Breath","Steel Wing"],
+   "Charge Attack(s)":["Hyper Beam","Dragon Claw","Dragon Pulse"],
    "Weight":"210.0 kg",
    "Height":"2.2 m",
    "Previous evolution(s)":[{"Number": "147", "Name": "Dratini"}, {"Number":"148","Name":"Dragonair"}],
@@ -8138,15 +8199,18 @@
    "number": 149,
    "tier": "S",
    "powerup": 50
+
+
  },
 
 
 
 
  {
+
    "primaryColor" : "#ded5e6", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#392052",
+   "secondaryColor" : "#392052",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,
    "EvolutionChainId": 77,
@@ -8182,8 +8246,8 @@
    "Classification":"Genetic Pokémon",
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Psycho Cut","Confusion"],
+   "Charge Attack(s)":["Hyper Beam","Psychic","Shadow Ball"],
    "Weight":"122.0 kg",
    "Height":"2.0 m",
    "multiplier": null,
@@ -8194,11 +8258,14 @@
 
  },
 
+
+
+
  {
   
    "primaryColor" : "#ffb4d5", 
-   "secondaryColor" : "#ffffff",
-   "textColor" : "#5a2952",
+   "secondaryColor" : "#5a2952",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,
    "EvolutionChainId": 78,
@@ -8234,8 +8301,8 @@
    "Classification":"New Species Pokémon",
    "Type I":["Psychic"],
    "Weaknesses":["Bug","Ghost","Dark"],
-   "Fast Attack(s)":["Unknown"],
-   "Special Attack(s)":["Unknown"],
+   "Fast Attack(s)":["Pound"],
+   "Charge Attack(s)":["Hurricane","Solar Beam","Fire Blast","Hyper Beam","Earthquake","Thunder","Moonblast","Psychic","Dragon Pulse"],
    "Weight":"4.0 kg",
    "Height":"0.4 m",
    "multiplier": null,
