@@ -31,8 +31,30 @@ class AttackStatsViewController: UIViewController {
     var fastAttackButtons: [UIView] = []
     var fastAttackLabels: [UILabel] = []
     
+    var fastAttackButtonTopConstriant: [NSLayoutConstraint] = []
+    var fastAttackButtonCenterXConstriant: [NSLayoutConstraint] = []
+    var fastAttackButtonWidthConstraint: [NSLayoutConstraint!] = []
+    var fastAttackButtonOriginalWidth: CGFloat = 0
+    
+    var fastAttackLabelTopConstraint: [NSLayoutConstraint] = []
+    var fastAttackLabelLeftConstraint: [NSLayoutConstraint] = []
+    var fastAttackLabelBottomConstraint: [NSLayoutConstraint] = []
+    var fastAttackLabelRigthConstraint: [NSLayoutConstraint] = []
+    var fastAttackLabelCenterXConstriant: [NSLayoutConstraint] = []
+    
     var specialAttackButtons: [UIView] = []
     var specialAttackLabels: [UILabel] = []
+    
+    var specialAttackButtonTopConstraint: [NSLayoutConstraint] = []
+    var specialAttackButtonCenterXConstraint: [NSLayoutConstraint] = []
+    var specialAttackButtonWidthConstraint: [NSLayoutConstraint!] = []
+    var specialAttackButtonOriginalWidth: CGFloat = 0
+    
+    var specialAttackLabelTopConstraint: [NSLayoutConstraint] = []
+    var specialAttackLabelLeftConstraint: [NSLayoutConstraint] = []
+    var specialAttackLabelBottomConstraint: [NSLayoutConstraint] = []
+    var specialAttackLabelRigthConstraint: [NSLayoutConstraint] = []
+    var specialAttackLabelCenterXConstriant: [NSLayoutConstraint] = []
     
     var lightSecondaryColor = UIColor()
     
@@ -46,7 +68,7 @@ class AttackStatsViewController: UIViewController {
         specialAttackContainerView.backgroundColor = UIColor.clearColor()
         
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        pokemon.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        pokemon.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
         let lightTextColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
         
         pokemon.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
@@ -97,6 +119,10 @@ class AttackStatsViewController: UIViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             
             label.text = fa
+            label.textColor = pokemon.tertiaryColor
+            label.font = UIFont.systemFontOfSize(30)
+            let scale = CGAffineTransformMakeScale(0.5, 0.5)
+            label.transform = scale
             
             let gest = UITapGestureRecognizer(target: self, action: #selector(self.selectFastAttack))
             view.addGestureRecognizer(gest)
@@ -111,15 +137,27 @@ class AttackStatsViewController: UIViewController {
             }
             let centerX = NSLayoutConstraint(item: view, attribute: .CenterX, relatedBy: .Equal, toItem: fastAttacksContainerView, attribute: .CenterX, multiplier: 1, constant: 0)
             
-            let labLeft = NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .Leading, multiplier: 1, constant: 8)
-            let labTop = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 8)
-            let labRight = NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: label, attribute: .Trailing, multiplier: 1, constant: 8)
-            let labBottom = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: label, attribute: .Bottom, multiplier: 1, constant: 8)
+            let labLeft = NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .Leading, multiplier: 1, constant: 0)
+            let labTop = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 0)
+            let labRight = NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: label, attribute: .Trailing, multiplier: 1, constant: 0)
+            let labBottom = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: label, attribute: .Bottom, multiplier: 1, constant: 0)
+            let labCenterX = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
+            
             fastAttacksContainerView.addConstraints([top, centerX])
-            view.addConstraints([labLeft, labTop, labRight, labBottom])
+            view.addConstraints([labLeft, labTop, labRight, labBottom, labCenterX])
             
             fastAttackButtons.append(view)
             fastAttackLabels.append(label)
+            
+            fastAttackButtonTopConstriant.append(top)
+            fastAttackButtonCenterXConstriant.append(centerX)
+            fastAttackButtonWidthConstraint.append(nil)
+            
+            fastAttackLabelTopConstraint.append(labTop)
+            fastAttackLabelLeftConstraint.append(labLeft)
+            fastAttackLabelRigthConstraint.append(labRight)
+            fastAttackLabelBottomConstraint.append(labBottom)
+            fastAttackLabelCenterXConstriant.append(labCenterX)
         }
 
         let bottom = NSLayoutConstraint(item: fastAttacksContainerView, attribute: .Bottom, relatedBy: .Equal, toItem: fastAttackButtons.last!, attribute: .Bottom, multiplier: 1, constant: 8)
@@ -156,6 +194,11 @@ class AttackStatsViewController: UIViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             
             label.text = fa
+            label.textColor = pokemon.tertiaryColor
+            label.font = UIFont.systemFontOfSize(30)
+            label.textAlignment = NSTextAlignment.Center
+            let scale = CGAffineTransformMakeScale(0.5, 0.5)
+            label.transform = scale
             
             let gest = UITapGestureRecognizer(target: self, action: #selector(self.selectSpecialAttack))
             view.addGestureRecognizer(gest)
@@ -171,15 +214,27 @@ class AttackStatsViewController: UIViewController {
             let centerX = NSLayoutConstraint(item: view, attribute: .CenterX, relatedBy: .Equal, toItem: specialAttackContainerView, attribute: .CenterX, multiplier: 1, constant: 0)
             
             let labLeft = NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: .Equal, toItem: view, attribute: .Leading, multiplier: 1, constant: 8)
-            let labTop = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 8)
+            let labTop = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: 0)
             let labRight = NSLayoutConstraint(item: view, attribute: .Trailing, relatedBy: .Equal, toItem: label, attribute: .Trailing, multiplier: 1, constant: 8)
-            let labBottom = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: label, attribute: .Bottom, multiplier: 1, constant: 8)
+            let labBottom = NSLayoutConstraint(item: view, attribute: .Bottom, relatedBy: .Equal, toItem: label, attribute: .Bottom, multiplier: 1, constant: 0)
+            let labCenterX = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
             
             specialAttackContainerView.addConstraints([top, centerX])
-            view.addConstraints([labLeft, labTop, labRight, labBottom])
+            view.addConstraints([labLeft, labTop, labRight, labBottom, labCenterX])
             
             specialAttackButtons.append(view)
             specialAttackLabels.append(label)
+            
+            specialAttackButtonTopConstraint.append(top)
+            specialAttackButtonCenterXConstraint.append(centerX)
+            specialAttackButtonWidthConstraint.append(nil)
+            
+            specialAttackLabelTopConstraint.append(labTop)
+            specialAttackLabelLeftConstraint.append(labLeft)
+            specialAttackLabelRigthConstraint.append(labRight)
+            specialAttackLabelBottomConstraint.append(labBottom)
+            specialAttackLabelCenterXConstriant.append(labCenterX)
+            
         }
         
         let bottom = NSLayoutConstraint(item: specialAttackContainerView, attribute: .Bottom, relatedBy: .Equal, toItem: specialAttackButtons.last!, attribute: .Bottom, multiplier: 1, constant: 8)
@@ -192,41 +247,144 @@ class AttackStatsViewController: UIViewController {
     
     func selectFastAttack(sender: UITapGestureRecognizer) {
         
-        if selectedFastAttack != nil {
-            UIView.animateWithDuration(0.1, animations: {
-                self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.lightSecondaryColor
-                self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 0.5
-            })
-            if selectedFastAttack == sender.view!.tag {
-                selectedFastAttack = nil
-                return
+        if selectedFastAttack == nil {
+            
+            selectedFastAttack = sender.view!.tag
+    
+            fastAttackButtons[selectedFastAttack].layoutIfNeeded()
+            let width = fastAttackButtons[selectedFastAttack].frame.width
+            let widthConst = NSLayoutConstraint(item: fastAttackButtons[selectedFastAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
+            
+            fastAttackButtonOriginalWidth = fastAttackButtons[selectedFastAttack].frame.width
+            
+            fastAttackButtons[selectedFastAttack].addConstraint(widthConst)
+            fastAttackButtonWidthConstraint[selectedFastAttack] = widthConst
+        
+            fastAttackLabelLeftConstraint[selectedFastAttack].active = false
+            fastAttackLabelRigthConstraint[selectedFastAttack].active = false
+            
+            self.view.layoutIfNeeded()
+            
+            fastAttacksContainerView.bringSubviewToFront(fastAttackButtons[selectedFastAttack])
+            
+            let height = fastAttackButtons[selectedFastAttack].frame.height
+            
+            for index in 1 ..< fastAttackButtons.count {
+                fastAttackButtonTopConstriant[index].constant = -height
             }
-            selectedFastAttack = nil
+ 
+            fastAttackLabelTopConstraint[selectedFastAttack].constant = 8
+            fastAttackLabelBottomConstraint[selectedFastAttack].constant = 8
+            widthConst.constant = self.fastAttacksContainerView.frame.width
+            
+            let scaleLabel = CGAffineTransformMakeScale(1, 1)
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
+                    self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.pokemon.secondaryColor
+                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 1
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+            
         }
-        selectedFastAttack = sender.view!.tag
-        UIView.animateWithDuration(0.1, animations: {
-            sender.view?.backgroundColor = self.pokemon.secondaryColor
-            sender.view?.layer.shadowOpacity = 1
-        })
+        else {
+            
+            for index in 1 ..< fastAttackButtons.count {
+                fastAttackButtonTopConstriant[index].constant = 8
+            }
+            let scaleLabel = CGAffineTransformMakeScale(0.5, 0.5)
+            self.fastAttackButtonWidthConstraint[selectedFastAttack].constant = fastAttackButtonOriginalWidth
+            fastAttackLabelTopConstraint[selectedFastAttack].constant = 0
+            fastAttackLabelBottomConstraint[selectedFastAttack].constant = 0
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
+                    self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.lightSecondaryColor
+                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 0.5
+                    self.view.layoutIfNeeded()
+                }, completion: {
+                    void in
+                    self.fastAttackButtonOriginalWidth = 0
+                    self.fastAttackLabelLeftConstraint[self.selectedFastAttack].active = true
+                    self.fastAttackLabelRigthConstraint[self.selectedFastAttack].active = true
+                    self.fastAttackButtons[self.selectedFastAttack].removeConstraint(self.fastAttackButtonWidthConstraint[self.selectedFastAttack])
+                    self.fastAttackButtonWidthConstraint[self.selectedFastAttack] = nil
+                    self.selectedFastAttack = nil
+            })
+            
+            
+        }
+        
     }
     
     func selectSpecialAttack(sender: UITapGestureRecognizer) {
-        if selectedSpecialAttack != nil {
-            UIView.animateWithDuration(0.1, animations: {
+        
+        if selectedSpecialAttack == nil {
+            
+            selectedSpecialAttack = sender.view!.tag
+            
+            specialAttackButtons[selectedSpecialAttack].layoutIfNeeded()
+            let width = specialAttackButtons[selectedSpecialAttack].frame.width
+            let widthConst = NSLayoutConstraint(item: specialAttackButtons[selectedSpecialAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
+            
+            specialAttackButtonOriginalWidth = specialAttackButtons[selectedSpecialAttack].frame.width
+            
+            specialAttackButtons[selectedSpecialAttack].addConstraint(widthConst)
+            specialAttackButtonWidthConstraint[selectedSpecialAttack] = widthConst
+            
+            specialAttackLabelLeftConstraint[selectedSpecialAttack].active = false
+            specialAttackLabelRigthConstraint[selectedSpecialAttack].active = false
+            
+            self.view.layoutIfNeeded()
+            
+            specialAttackContainerView.bringSubviewToFront(specialAttackButtons[selectedSpecialAttack])
+            
+            let height = specialAttackButtons[selectedSpecialAttack].frame.height
+            
+            for index in 1 ..< specialAttackButtons.count {
+                specialAttackButtonTopConstraint[index].constant = -height
+            }
+            
+            specialAttackLabelTopConstraint[selectedSpecialAttack].constant = 8
+            specialAttackLabelBottomConstraint[selectedSpecialAttack].constant = 8
+            widthConst.constant = self.specialAttackContainerView.frame.width
+            
+            let scaleLabel = CGAffineTransformMakeScale(1, 1)
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                self.specialAttackLabels[self.selectedSpecialAttack].transform = scaleLabel
+                self.specialAttackButtons[self.selectedSpecialAttack].backgroundColor = self.pokemon.secondaryColor
+                self.specialAttackButtons[self.selectedSpecialAttack].layer.shadowOpacity = 1
+                self.view.layoutIfNeeded()
+                }, completion: nil)
+            
+        }
+        
+        else {
+            
+            for index in 1 ..< specialAttackButtons.count {
+                specialAttackButtonTopConstraint[index].constant = 8
+            }
+            let scaleLabel = CGAffineTransformMakeScale(0.5, 0.5)
+            self.specialAttackButtonWidthConstraint[selectedSpecialAttack].constant = specialAttackButtonOriginalWidth
+            specialAttackLabelTopConstraint[selectedSpecialAttack].constant = 0
+            specialAttackLabelBottomConstraint[selectedSpecialAttack].constant = 0
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                self.specialAttackLabels[self.selectedSpecialAttack].transform = scaleLabel
                 self.specialAttackButtons[self.selectedSpecialAttack].backgroundColor = self.lightSecondaryColor
                 self.specialAttackButtons[self.selectedSpecialAttack].layer.shadowOpacity = 0.5
+                self.view.layoutIfNeeded()
+                }, completion: {
+                    void in
+                    self.specialAttackButtonOriginalWidth = 0
+                    self.specialAttackLabelLeftConstraint[self.selectedSpecialAttack].active = true
+                    self.specialAttackLabelRigthConstraint[self.selectedSpecialAttack].active = true
+                    self.specialAttackButtons[self.selectedSpecialAttack].removeConstraint(self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack])
+                    self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack] = nil
+                    self.selectedSpecialAttack = nil
             })
-            if selectedSpecialAttack == sender.view!.tag {
-                selectedSpecialAttack = nil
-                return
-            }
-            selectedSpecialAttack = nil
         }
-        selectedSpecialAttack = sender.view!.tag
-        UIView.animateWithDuration(0.1, animations: {
-            sender.view?.backgroundColor = self.pokemon.secondaryColor
-            sender.view?.layer.shadowOpacity = 1
-        })
     }
     
 }
