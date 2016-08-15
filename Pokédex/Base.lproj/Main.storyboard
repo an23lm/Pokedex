@@ -374,16 +374,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANJ-2D-sH0">
-                                                <rect key="frame" x="296" y="94" width="77" height="140"/>
+                                                <rect key="frame" x="303" y="94" width="70" height="140"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GbB-Wo-oLb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="100"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GbB-Wo-oLb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="pu9-yi-rt9"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KE-Pd-KPU">
-                                                        <rect key="frame" x="16" y="84" width="45" height="48"/>
+                                                        <rect key="frame" x="12.5" y="84" width="45" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -397,7 +397,7 @@
                                                     <constraint firstItem="GbB-Wo-oLb" firstAttribute="leading" secondItem="ANJ-2D-sH0" secondAttribute="leading" id="TjG-7A-Oej"/>
                                                     <constraint firstAttribute="bottom" secondItem="8KE-Pd-KPU" secondAttribute="bottom" constant="8" id="Y6G-80-yM2"/>
                                                     <constraint firstAttribute="trailing" secondItem="GbB-Wo-oLb" secondAttribute="trailing" id="n9O-rh-hWr"/>
-                                                    <constraint firstAttribute="width" constant="77" id="pcr-Hu-MnU"/>
+                                                    <constraint firstAttribute="width" constant="70" id="pcr-Hu-MnU"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

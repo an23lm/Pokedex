@@ -51,28 +51,31 @@ class EvolutionMultViewController: UIViewController {
         
         titleLabel.textColor = pokemon?.tertiaryColor
         backButton.setTitleColor(pokemon?.tertiaryColor, forState: .Normal)
-        currentName.textColor = pokemon?.tertiaryColor
-        currentId.textColor = pokemon?.tertiaryColor
+        currentName.textColor = pokemon?.secondaryColor
+        currentId.textColor = pokemon?.secondaryColor
         
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
         pokemon?.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
-        let textColor = UIColor(red: r, green: g, blue: b, alpha: a)
-        combatPointsLabel.textColor = textColor
-        trainerLevelLabel.textColor = textColor
+        let textColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        pokemon?.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+
+        let lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        combatPointsLabel.textColor = lightSecondaryColor
+        trainerLevelLabel.textColor = lightSecondaryColor
         trainerLevelUp.fillColor = (pokemon?.secondaryColor)!
         trainerLevelDown.fillColor = (pokemon?.secondaryColor)!
         trainerLevelUp.strokeColor = textColor
         trainerLevelDown.strokeColor = textColor
         
-        trainerLevel.textColor = pokemon?.tertiaryColor
+        trainerLevel.textColor = pokemon?.secondaryColor
         
         combatPoint.backgroundColor = pokemon?.secondaryColor
         combatPoint.textColor = pokemon?.tertiaryColor
         
-        evolutionName.textColor = pokemon?.tertiaryColor
-        evolutionID.textColor = pokemon?.tertiaryColor
+        evolutionName.textColor = pokemon?.secondaryColor
+        evolutionID.textColor = pokemon?.secondaryColor
         
-        evoutionCP.textColor = pokemon?.tertiaryColor
+        evoutionCP.textColor = pokemon?.secondaryColor
         
         disclamerText.textColor = textColor
         disclamerView.backgroundColor = pokemon?.secondaryColor

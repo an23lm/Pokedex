@@ -51,8 +51,7 @@ class PowerUpViewController: UIViewController {
         
         pokeTitleView.backgroundColor = pokemon?.secondaryColor
         self.view.backgroundColor = pokemon?.primaryColor
-        trainerLevelLabel.textColor = pokemon?.tertiaryColor
-        combatPointsLabel.textColor = pokemon?.tertiaryColor
+        
         plusTrainerButton.fillColor = (pokemon?.secondaryColor)!
         minusTrainerButton.fillColor = (pokemon?.secondaryColor)!
         pokeTitleLabel.textColor = pokemon?.tertiaryColor
@@ -65,6 +64,12 @@ class PowerUpViewController: UIViewController {
         maxCPLabel.textColor = lightTextColor
         levelCapLabel.textColor = lightTextColor
         cpPerLevelUpLabel.textColor = lightTextColor
+        
+        pokemon!.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        trainerLevelLabel.textColor = lightSecondaryColor
+        combatPointsLabel.textColor = lightSecondaryColor
+        trainerLevel.textColor = pokemon?.secondaryColor
         
         plusTrainerButton.strokeColor = lightTextColor
         minusTrainerButton.strokeColor = lightTextColor
