@@ -35,6 +35,8 @@ class AttackStatsViewController: UIViewController {
     var fastAttackButtonCenterXConstriant: [NSLayoutConstraint] = []
     var fastAttackButtonWidthConstraint: [NSLayoutConstraint!] = []
     var fastAttackButtonOriginalWidth: CGFloat = 0
+    var fastAttackButtonLeftConstraint: NSLayoutConstraint! = nil
+    var fastAttackButtonRigthConstraint: NSLayoutConstraint! = nil
     
     var fastAttackLabelTopConstraint: [NSLayoutConstraint] = []
     var fastAttackLabelLeftConstraint: [NSLayoutConstraint] = []
@@ -49,6 +51,8 @@ class AttackStatsViewController: UIViewController {
     var specialAttackButtonCenterXConstraint: [NSLayoutConstraint] = []
     var specialAttackButtonWidthConstraint: [NSLayoutConstraint!] = []
     var specialAttackButtonOriginalWidth: CGFloat = 0
+    var specialAttackButtonLeftConstraint: NSLayoutConstraint! = nil
+    var specialAttackButtonRightConstraint: NSLayoutConstraint! = nil
     
     var specialAttackLabelTopConstraint: [NSLayoutConstraint] = []
     var specialAttackLabelLeftConstraint: [NSLayoutConstraint] = []
@@ -252,13 +256,26 @@ class AttackStatsViewController: UIViewController {
             selectedFastAttack = sender.view!.tag
     
             fastAttackButtons[selectedFastAttack].layoutIfNeeded()
+            
             let width = fastAttackButtons[selectedFastAttack].frame.width
-            let widthConst = NSLayoutConstraint(item: fastAttackButtons[selectedFastAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
+            let totalWidth = fastAttacksContainerView.frame.width
+            let constWidth = (totalWidth - width)/2
+            
+            let left = NSLayoutConstraint(item: self.fastAttackButtons[self.selectedFastAttack], attribute: .Leading, relatedBy: .Equal, toItem: self.fastAttacksContainerView, attribute: .Leading, multiplier: 1, constant: constWidth)
+            let right = NSLayoutConstraint(item: self.fastAttacksContainerView, attribute: .Trailing, relatedBy: .Equal, toItem: self.fastAttackButtons[self.selectedFastAttack], attribute: .Trailing, multiplier: 1, constant: constWidth)
+            
+            fastAttackButtonRigthConstraint = right
+            fastAttackButtonLeftConstraint = left
+            
+            //let widthConst = NSLayoutConstraint(item: fastAttackButtons[selectedFastAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
             
             fastAttackButtonOriginalWidth = fastAttackButtons[selectedFastAttack].frame.width
             
-            fastAttackButtons[selectedFastAttack].addConstraint(widthConst)
-            fastAttackButtonWidthConstraint[selectedFastAttack] = widthConst
+            fastAttackButtonCenterXConstriant[selectedFastAttack].active = false
+            
+            //fastAttackButtons[selectedFastAttack].addConstraint(widthConst)
+            fastAttacksContainerView.addConstraints([left, right])
+            //fastAttackButtonWidthConstraint[selectedFastAttack] = widthConst
         
             fastAttackLabelLeftConstraint[selectedFastAttack].active = false
             fastAttackLabelRigthConstraint[selectedFastAttack].active = false
@@ -275,7 +292,10 @@ class AttackStatsViewController: UIViewController {
  
             fastAttackLabelTopConstraint[selectedFastAttack].constant = 8
             fastAttackLabelBottomConstraint[selectedFastAttack].constant = 8
-            widthConst.constant = self.fastAttacksContainerView.frame.width
+            //widthConst.constant = self.fastAttacksContainerView.frame.width
+            
+            left.constant = 0
+            right.constant = 0
             
             let scaleLabel = CGAffineTransformMakeScale(1, 1)
             
@@ -283,9 +303,9 @@ class AttackStatsViewController: UIViewController {
                     self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
                     self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.pokemon.secondaryColor
                     self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 1
+                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowRadius = 8
                     self.view.layoutIfNeeded()
                 }, completion: nil)
-            
         }
         else {
             
@@ -293,23 +313,33 @@ class AttackStatsViewController: UIViewController {
                 fastAttackButtonTopConstriant[index].constant = 8
             }
             let scaleLabel = CGAffineTransformMakeScale(0.5, 0.5)
-            self.fastAttackButtonWidthConstraint[selectedFastAttack].constant = fastAttackButtonOriginalWidth
+            //self.fastAttackButtonWidthConstraint[selectedFastAttack].constant = fastAttackButtonOriginalWidth
+            let width = (fastAttacksContainerView.frame.width - fastAttackButtonOriginalWidth)/2.0
             fastAttackLabelTopConstraint[selectedFastAttack].constant = 0
             fastAttackLabelBottomConstraint[selectedFastAttack].constant = 0
+            fastAttackButtonLeftConstraint.constant = width
+            fastAttackButtonRigthConstraint.constant = width
             
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                     self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
                     self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.lightSecondaryColor
                     self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 0.5
+                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowRadius = 5
                     self.view.layoutIfNeeded()
                 }, completion: {
                     void in
                     self.fastAttackButtonOriginalWidth = 0
                     self.fastAttackLabelLeftConstraint[self.selectedFastAttack].active = true
                     self.fastAttackLabelRigthConstraint[self.selectedFastAttack].active = true
-                    self.fastAttackButtons[self.selectedFastAttack].removeConstraint(self.fastAttackButtonWidthConstraint[self.selectedFastAttack])
-                    self.fastAttackButtonWidthConstraint[self.selectedFastAttack] = nil
+                    //self.fastAttackButtons[self.selectedFastAttack].removeConstraint(self.fastAttackButtonWidthConstraint[self.selectedFastAttack])
+                    self.fastAttacksContainerView.removeConstraint(self.fastAttackButtonLeftConstraint)
+                    self.fastAttacksContainerView.removeConstraint(self.fastAttackButtonRigthConstraint)
+                    self.fastAttackButtonCenterXConstriant[self.selectedFastAttack].active = true
+                    self.fastAttackButtonRigthConstraint = nil
+                    self.fastAttackButtonLeftConstraint = nil
+                    //self.fastAttackButtonWidthConstraint[self.selectedFastAttack] = nil
                     self.selectedFastAttack = nil
+                    self.view.layoutIfNeeded()
             })
             
             
@@ -325,12 +355,24 @@ class AttackStatsViewController: UIViewController {
             
             specialAttackButtons[selectedSpecialAttack].layoutIfNeeded()
             let width = specialAttackButtons[selectedSpecialAttack].frame.width
-            let widthConst = NSLayoutConstraint(item: specialAttackButtons[selectedSpecialAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
+            let totalWidth = specialAttackContainerView.frame.width
+            let constWidth = (totalWidth - width)/2
+            
+            let left = NSLayoutConstraint(item: self.specialAttackButtons[self.selectedSpecialAttack], attribute: .Leading, relatedBy: .Equal, toItem: self.specialAttackContainerView, attribute: .Leading, multiplier: 1, constant: constWidth)
+            let right = NSLayoutConstraint(item: self.specialAttackContainerView, attribute: .Trailing, relatedBy: .Equal, toItem: self.specialAttackButtons[self.selectedSpecialAttack], attribute: .Trailing, multiplier: 1, constant: constWidth)
+            
+            specialAttackButtonLeftConstraint = left
+            specialAttackButtonRightConstraint = right
+            
+            //let widthConst = NSLayoutConstraint(item: specialAttackButtons[selectedSpecialAttack], attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: width)
             
             specialAttackButtonOriginalWidth = specialAttackButtons[selectedSpecialAttack].frame.width
             
-            specialAttackButtons[selectedSpecialAttack].addConstraint(widthConst)
-            specialAttackButtonWidthConstraint[selectedSpecialAttack] = widthConst
+            specialAttackButtonCenterXConstraint[selectedSpecialAttack].active = false
+            
+            //specialAttackButtons[selectedSpecialAttack].addConstraint(widthConst)
+            specialAttackContainerView.addConstraints([left, right])
+            //specialAttackButtonWidthConstraint[selectedSpecialAttack] = widthConst
             
             specialAttackLabelLeftConstraint[selectedSpecialAttack].active = false
             specialAttackLabelRigthConstraint[selectedSpecialAttack].active = false
@@ -347,7 +389,10 @@ class AttackStatsViewController: UIViewController {
             
             specialAttackLabelTopConstraint[selectedSpecialAttack].constant = 8
             specialAttackLabelBottomConstraint[selectedSpecialAttack].constant = 8
-            widthConst.constant = self.specialAttackContainerView.frame.width
+            //widthConst.constant = self.specialAttackContainerView.frame.width
+            
+            left.constant = 0
+            right.constant = 0
             
             let scaleLabel = CGAffineTransformMakeScale(1, 1)
             
@@ -366,9 +411,12 @@ class AttackStatsViewController: UIViewController {
                 specialAttackButtonTopConstraint[index].constant = 8
             }
             let scaleLabel = CGAffineTransformMakeScale(0.5, 0.5)
-            self.specialAttackButtonWidthConstraint[selectedSpecialAttack].constant = specialAttackButtonOriginalWidth
+            //self.specialAttackButtonWidthConstraint[selectedSpecialAttack].constant = specialAttackButtonOriginalWidth
+            let width = (specialAttackContainerView.frame.width - specialAttackButtonOriginalWidth)/2.0
             specialAttackLabelTopConstraint[selectedSpecialAttack].constant = 0
             specialAttackLabelBottomConstraint[selectedSpecialAttack].constant = 0
+            specialAttackButtonLeftConstraint.constant = width
+            specialAttackButtonRightConstraint.constant = width
             
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.specialAttackLabels[self.selectedSpecialAttack].transform = scaleLabel
@@ -380,8 +428,13 @@ class AttackStatsViewController: UIViewController {
                     self.specialAttackButtonOriginalWidth = 0
                     self.specialAttackLabelLeftConstraint[self.selectedSpecialAttack].active = true
                     self.specialAttackLabelRigthConstraint[self.selectedSpecialAttack].active = true
-                    self.specialAttackButtons[self.selectedSpecialAttack].removeConstraint(self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack])
-                    self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack] = nil
+                    //self.specialAttackButtons[self.selectedSpecialAttack].removeConstraint(self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack])
+                    self.specialAttackContainerView.removeConstraint(self.specialAttackButtonLeftConstraint)
+                    self.specialAttackContainerView.removeConstraint(self.specialAttackButtonRightConstraint)
+                    self.specialAttackButtonCenterXConstraint[self.selectedSpecialAttack].active = true
+                    self.specialAttackButtonRightConstraint = nil
+                    self.specialAttackButtonLeftConstraint = nil
+                    //self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack] = nil
                     self.selectedSpecialAttack = nil
             })
         }
