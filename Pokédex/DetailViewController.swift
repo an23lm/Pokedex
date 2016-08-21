@@ -190,6 +190,7 @@ class DetailViewController: UIViewController {
         
         eggView.backgroundColor = pokemon.secondaryColor
         eggDistLabel.textColor = pokemon.tertiaryColor
+        eggDistLabel.alpha = 0.5
         if pokemon.eggDistance == nil {
             eggView.hidden = true
         }
@@ -329,6 +330,11 @@ class DetailViewController: UIViewController {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
+            view.layer.shadowColor = pokemon.secondaryColor.CGColor
+            view.layer.shadowOffset = CGSize(width: 0, height: 1)
+            view.layer.shadowRadius = 1
+            view.layer.shadowOpacity = 1
+            view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 2).CGPath
             self.pokeCaptureChanceView.addSubview(view)
             originX += width + 5
             capBars.append(view)
@@ -392,6 +398,7 @@ class DetailViewController: UIViewController {
             else {
                 view.backgroundColor = pokemon.secondaryColor
                 view.alpha = 0.4
+                view.layer.shadowOpacity = 0
             }
         }
     }
@@ -418,6 +425,11 @@ class DetailViewController: UIViewController {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
+            view.layer.shadowColor = pokemon.secondaryColor.CGColor
+            view.layer.shadowOffset = CGSize(width: 0, height: 1)
+            view.layer.shadowRadius = 1
+            view.layer.shadowOpacity = 1
+            view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 2).CGPath
             self.pokeFleeChanceView.addSubview(view)
             originX += width + 5
             fleeBars.append(view)
@@ -451,7 +463,7 @@ class DetailViewController: UIViewController {
         }
         
         highlight *= 2
-        
+
         for (index, view) in fleeBars.enumerate() {
             if index + 1 <= highlight {
                 view.backgroundColor = color
@@ -459,6 +471,7 @@ class DetailViewController: UIViewController {
             else {
                 view.backgroundColor = pokemon.secondaryColor
                 view.alpha = 0.4
+                view.layer.shadowOpacity = 0
             }
         }
     }

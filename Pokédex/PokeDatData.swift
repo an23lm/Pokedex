@@ -18,6 +18,8 @@ public class PokeData {
         }
     }
     var pokemon: [Pokemon] = []
+    var attacks: [Attack] = []
+    var typeAdvantage: [TypeAdvantage] = []
     var levelInfo: [Double] = [0.094, 0.16639787, 0.21573247, 0.25572005, 0.29024988,
                                0.3210876, 0.34921268, 0.37523559, 0.39956728, 0.4225,
                                0.44310755, 0.46279839, 0.48168495, 0.49985844, 0.51739395,
@@ -29,19 +31,30 @@ public class PokeData {
     
     init() {
         parsePokeData()
+        parseAttack()
+        parseTypeAdvantage()
     }
     
     private func parsePokeData() {
         var pd = pass1()
         pd = pass2(pd)
+        pd = parseDmg(pd)
         pokemon = pd
-        //printList(pokemon)
     }
     
     public func getPokemon(withID id: Int) -> Pokemon? {
         for item in pokemon {
             if item.id == id {
                 return item
+            }
+        }
+        return nil
+    }
+    
+    public func getAttack(withName name: String) -> Attack? {
+        for att in attacks {
+            if att.move == name {
+                return att
             }
         }
         return nil
@@ -71,19 +84,19 @@ public class PokeData {
                     }
                     if let type1 = poke["Type I"] as? [String] {
                         for type in type1 {
-                            let poketype: Type = selectType(type)
+                            let poketype: Type = Type.getType(fromString: type)
                             tempPokemon.type.append(poketype)
                         }
                     }
                     if let type2 = poke["Type II"] as? [String] {
                         for type in type2 {
-                            let poketype: Type = selectType(type)
+                            let poketype: Type = Type.getType(fromString: type)
                             tempPokemon.type.append(poketype)
                         }
                     }
                     if let weekness = poke["Weaknesses"] as? [String] {
                         for type in weekness {
-                            let poketype: Type = selectType(type)
+                            let poketype: Type = Type.getType(fromString: type)
                             tempPokemon.weekness.append(poketype)
                         }
                     }
@@ -272,6 +285,127 @@ public class PokeData {
             print("------------------------------------- END --------------------------------------------")
         }
     }
+    
+    private func parseAttack() {
+        let file = NSBundle.mainBundle().pathForResource("PokeAttacks", ofType: "json")
+        
+        do {
+            
+            let jsonData = try NSData(contentsOfFile: file!, options: .DataReadingMappedIfSafe)
+            do {
+                
+                let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
+                for item in jsonResult {
+                    var tempAttack = Attack()
+                    if let move = item["Move"] as? String {
+                        tempAttack.move = move
+                    }
+                    if let type = item["Type"] as? String {
+                        tempAttack.type = Type.getType(fromString: type)
+                    }
+                    if let category = item["Category"] as? String {
+                        if category == "Charge" {
+                            tempAttack.isCharge = true
+                        }
+                    }
+                    if let pow = item["Power"] as? Int {
+                        tempAttack.power = pow
+                    }
+                    if let sec = item["Sec"] as? Float {
+                        tempAttack.sec = sec
+                    }
+                    if let dps = item["DPS"] as? Float {
+                        tempAttack.dps = dps
+                    }
+                    if let eng = item["Energy"] as? Int {
+                        tempAttack.energy = eng
+                    }
+                    attacks.append(tempAttack)
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    func parseDmg(pokemon: [Pokemon]) -> [Pokemon] {
+        let file = NSBundle.mainBundle().pathForResource("Pokemax", ofType: "json")
+        do {
+            let jsonData = try NSData(contentsOfFile: file!, options: .DataReadingMappedIfSafe)
+            do {
+                var pokearr: [Pokemon] = []
+                let result = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
+                for item in result {
+                    var temp: Pokemon! = nil
+                    for poke in pokemon {
+                        if poke.name == (item["name"] as! String) {
+                            temp = poke
+                            break
+                        }
+                    }
+                    if let dmg = item["val"] as? Float {
+                        temp.maxDmgTaken = dmg
+                    }
+                    pokearr.append(temp)
+                }
+                return pokearr
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
+        return []
+    }
+    
+    func parseTypeAdvantage() {
+        let file = NSBundle.mainBundle().pathForResource("TypeAdv", ofType: "json")
+        do {
+            let jsonData = try NSData(contentsOfFile: file!, options: .DataReadingMappedIfSafe)
+            do {
+                let result = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as! [NSDictionary]
+                for item in result {
+                    var temp = TypeAdvantage()
+                    if let type = item["Type"] as? String {
+                        temp.type = Type.getType(fromString: type)
+                    }
+                    if let adv = item["Advantage"] as? [String] {
+                        for type in adv {
+                            temp.advantage.append(Type.getType(fromString: type))
+                        }
+                    }
+                    if let dis = item["Disadvantage"] as? [String] {
+                        for type in dis {
+                            temp.disadvantage.append(Type.getType(fromString: type))
+                        }
+                    }
+                    typeAdvantage.append(temp)
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    func getTypeAdvantage(forType type: Type) -> TypeAdvantage? {
+        for item in typeAdvantage {
+            if item.type == type {
+                return item
+            }
+        }
+        return nil
+    }
+    
 }
 
 extension UIColor {

@@ -33,58 +33,58 @@ public enum Type {
     case Water
     case Fairy
     case Unknown
-}
-
-public func selectType(string: String) -> Type {
-    switch string {
-    case "Beauty":
-        return .Beauty
-    case "Bug":
-        return .Bug
-    case "Cool":
-        return .Cool
-    case "Cute":
-        return .Cute
-    case "Dark":
-        return .Dark
-    case "Dragon":
-        return .Dragon
-    case "Electric":
-        return .Electic
-    case "Fire":
-        return .Fire
-    case "Fighting":
-        return .Fighting
-    case "Flying":
-        return .Flying
-    case "Ghost":
-        return .Ghost
-    case "Grass":
-        return .Grass
-    case "Ground":
-        return .Ground
-    case "Ice":
-        return .Ice
-    case "Normal":
-        return .Normal
-    case "Poison":
-        return .Poison
-    case "Psychic":
-        return .Psychic
-    case "Rock":
-        return .Rock
-    case "Smart":
-        return .Smart
-    case "Steel":
-        return .Steel
-    case "Tough":
-        return .Tough
-    case "Water":
-        return .Water
-    case "Fairy":
-        return .Fairy
-    default:
-        return .Unknown
+    
+    static public func getType(fromString string: String) -> Type {
+        switch string {
+        case "Beauty":
+            return .Beauty
+        case "Bug":
+            return .Bug
+        case "Cool":
+            return .Cool
+        case "Cute":
+            return .Cute
+        case "Dark":
+            return .Dark
+        case "Dragon":
+            return .Dragon
+        case "Electric":
+            return .Electic
+        case "Fire":
+            return .Fire
+        case "Fighting":
+            return .Fighting
+        case "Flying":
+            return .Flying
+        case "Ghost":
+            return .Ghost
+        case "Grass":
+            return .Grass
+        case "Ground":
+            return .Ground
+        case "Ice":
+            return .Ice
+        case "Normal":
+            return .Normal
+        case "Poison":
+            return .Poison
+        case "Psychic":
+            return .Psychic
+        case "Rock":
+            return .Rock
+        case "Smart":
+            return .Smart
+        case "Steel":
+            return .Steel
+        case "Tough":
+            return .Tough
+        case "Water":
+            return .Water
+        case "Fairy":
+            return .Fairy
+        default:
+            return .Unknown
+        }
     }
 }
 
@@ -171,4 +171,21 @@ public struct Pokemon {
     var secondaryColor: UIColor = UIColor()
     var tertiaryColor: UIColor = UIColor()
     var eggDistance: Int? = nil
+    var maxDmgTaken: Float = 0
+}
+
+public struct Attack {
+    var move: String = ""
+    var type: Type = .Unknown
+    var isCharge: Bool = false
+    var power: Int = 0
+    var sec: Float = 0
+    var dps: Float = 0
+    var energy: Int = 0
+}
+
+public struct TypeAdvantage {
+    var type: Type = .Unknown
+    var advantage: [Type] = []
+    var disadvantage: [Type] = []
 }

@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="69" id="249-Ze-K20"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokédex Logo Mock1.png" translatesAutoresizingMaskIntoConstraints="NO" id="dle-zY-IRS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokédexLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="dle-zY-IRS">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Gyy-fW-Ok5"/>
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Pokédex Logo Mock1.png" width="1300" height="1300"/>
+        <image name="PokédexLogo.png" width="1300" height="1300"/>
     </resources>
 </document>

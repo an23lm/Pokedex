@@ -159,10 +159,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         cell.layoutIfNeeded()
-        if indexPath.item == 1 {
-            let cel = cell as? PokeCollectionViewCell
-            //print(cel?.pokeImageView.frame)
-        }
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

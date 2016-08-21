@@ -2,7 +2,7 @@
  {
   
    "primaryColor" : "#399494", 
-   "secondaryColor" : "#184a4a", 
+   "secondaryColor" : "#317373",
    "textColor" : "#ffffff", 
    "pokeegg" : "2",
    "EvolvesFromId": 0,
@@ -55,7 +55,7 @@
  {
    
    "primaryColor" : "#209483", 
-   "secondaryColor" : "#10414a", 
+   "secondaryColor" : "#d5415a",
    "textColor" : "#ffffff", 
    "pokeegg" : "null", 
    "EvolvesFromId": 1,
@@ -110,7 +110,7 @@
  {
   
    "primaryColor" : "#20b49c", 
-   "secondaryColor" : "#105241", 
+   "secondaryColor" : "#de4141",
    "textColor" : "#ffffff", 
    "pokeegg" : "null",  
    "EvolvesFromId": 2,
@@ -163,7 +163,7 @@
  {
    
    "primaryColor" : "#ff9441", 
-   "secondaryColor" : "#8b2900", 
+   "secondaryColor" : "#de5239",
    "textColor" : "#ffffff", 
    "pokeegg" : "2", 
    "EvolvesFromId": 0,
@@ -271,7 +271,7 @@
  {
    
    "primaryColor" : "#ee8329", 
-   "secondaryColor" : "#833118", 
+   "secondaryColor" : "#084152",
    "textColor" : "#ffffff", 
    "pokeegg" : "null", 
    "EvolvesFromId": 5,
@@ -739,7 +739,7 @@
    "Type I":["Bug"],
    "Type II":["Poison"],
    "Weaknesses":["Fire","Flying","Psychic","Rock"],
-   "Fast Attack(s)":["Bug Bite","Posion Sting"],
+   "Fast Attack(s)":["Bug Bite","Poison Sting"],
    "Charge Attack(s)":["Struggle"],
    "Weight":"10.0 kg",
    "Height":"0.6 m",
@@ -1307,7 +1307,7 @@
 
  {
    "primaryColor" : "#f6e652",
-   "secondaryColor" : "#9c5200",
+   "secondaryColor" : "#c52018",
    "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 172,
@@ -1361,7 +1361,7 @@
  {
    
    "primaryColor" : "#ffbd00", 
-   "secondaryColor" : "#bd5a31",
+   "secondaryColor" : "#393941",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 25,
@@ -1556,12 +1556,12 @@
    "MaxCP": 876,
    "AvgHP": 92,
    "MaxHP": 98,
-   "Name":"Nidoran F",
+   "Name":"Nidoran ♀",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
    "Fast Attack(s)":["Bite","Poison Sting"],
-   "Charge Attack(s)":["Body Slam","Sludge Bomb","Posion Fang"],
+   "Charge Attack(s)":["Body Slam","Sludge Bomb","Poison Fang"],
    "Weight":"7.0 kg",
    "Height":"0.4 m",
    "Next evolution(s)":[{"Number":"030","Name":"Nidorina"},{"Number":"031","Name":"Nidoqueen"}],
@@ -1688,7 +1688,7 @@
  {
 
    "primaryColor" : "#bd62c5", 
-   "secondaryColor" : "#006241",
+   "secondaryColor" : "#62416a",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -1721,7 +1721,7 @@
    "MaxCP": 843,
    "AvgHP": 78,
    "MaxHP": 84,
-   "Name":"Nidoran M",
+   "Name":"Nidoran ♂",
    "Classification":"Poison Pin Pokémon",
    "Type I":["Poison"],
    "Weaknesses":["Ground","Psychic"],
@@ -1958,7 +1958,7 @@
  {
    
    "primaryColor" : "#e6946a", 
-   "secondaryColor" : "#732000",
+   "secondaryColor" : "#bd4a29",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -2013,7 +2013,7 @@
     
    "primaryColor" : "#e6c552", 
    "secondaryColor" : "#826318",
-   "textColor" : "#668329",
+   "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 37,
    "EvolutionChainId": 15,
@@ -2065,7 +2065,7 @@
  {
    
    "primaryColor" : "#ffaca4", 
-   "secondaryColor" : "#a41020",
+   "secondaryColor" : "#104a8b",
    "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 174,
@@ -2268,7 +2268,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Electric","Ice","Psychic","Rock"],
    "Fast Attack(s)":["Bite","Wing Attack"],
-   "Charge Attack(s)":["Posion Fang","Ominous Wind","Air Cutter"],
+   "Charge Attack(s)":["Poison Fang","Ominous Wind","Air Cutter"],
    "Weight":"55.0 kg",
    "Height":"1.6 m",
    "Previous evolution(s)":[{"Number":"041","Name":"Zubat"}],
@@ -4329,7 +4329,7 @@
  {
    
    "primaryColor" : "#e66a7b", 
-   "secondaryColor" : "#8b9494",
+   "secondaryColor" : "#52525a",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 79,
@@ -6537,8 +6537,8 @@
  
  {
   
-   "primaryColor" : "#9c6a39", 
-   "secondaryColor" : "#ac2010",
+   "primaryColor" : "#9c6a39",
+   "secondaryColor" : "#7b5239",
    "textColor" : "#ffffff",
    "pokeegg" : "5",
    "EvolvesFromId": 0,
@@ -8209,7 +8209,7 @@
  {
 
    "primaryColor" : "#ded5e6", 
-   "secondaryColor" : "#392052",
+   "secondaryColor" : "#6a319c",
    "textColor" : "#ffffff",
    "pokeegg" : "null",
    "EvolvesFromId": 0,

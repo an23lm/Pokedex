@@ -1,0 +1,92 @@
+[
+	{
+        "Type": "Normal",
+        "Advantage": [],
+        "Disadvantage": ["Rock", "Ghost", "Steel"]
+	},
+	{
+        "Type": "Fighting",
+        "Advantage": ["Normal", "Rock", "Steel", "Ice", "Dark"],
+        "Disadvantage": ["Flying", "Poison", "Bug", "Ghost", "Psychic"]
+	},
+    {
+        "Type": "Flying",
+        "Advantage": ["Fighting", "Bug", "Grass"],
+        "Disadvantage": ["Rock", "Steel", "Electric"]
+	},
+    {
+        "Type": "Poison",
+        "Advantage": ["Grass", "Fairy"],
+        "Disadvantage": ["Poison", "Ground", "Rock", "Ghost", "Steel"]
+	},
+    {
+        "Type": "Ground",
+        "Advantage": ["Poison", "Rock", "Steel", "Fire", "Electric"],
+        "Disadvantage": ["Flying", "Bug", "Grass"]
+	},
+    {
+        "Type": "Rock",
+        "Advantage": ["Flying", "Bug", "Fire", "Ice"],
+        "Disadvantage": ["Fighting", "Ground", "Steel"]
+	},
+    {
+        "Type": "Bug",
+        "Advantage": ["Grass", "Psychic", "Dark"],
+        "Disadvantage": ["Fighting", "Flying", "Poison", "Ghost", "Steel", "Fire", "Fairy"]
+	},
+    {
+        "Type": "Ghost",
+        "Advantage": ["Ghost", "Psychic"],
+        "Disadvantage": ["Normal", "Dark"]
+	},
+    {
+        "Type": "Steel",
+        "Advantage": ["Rock", "Ice", "Fairy"],
+        "Disadvantage": ["Steel", "Fire", "Water", "Electric"]
+	},
+    {
+        "Type": "Fire",
+        "Advantage": ["Bug", "Steel", "Grass", "Ice"],
+        "Disadvantage": ["Rock", "Fire", "Water", "Dragon"]
+	},
+    {
+        "Type": "Water",
+        "Advantage": ["Ground", "Rock", "Fire"],
+        "Disadvantage": ["Water", "Grass", "Dragon"]
+	},
+    {
+        "Type": "Grass",
+        "Advantage": ["Ground", "Rock", "Water"],
+        "Disadvantage": ["Flying", "Poison", "Bug", "Steel", "Fire", "Grass", "Dragon"]
+	},
+    {
+        "Type": "Electric",
+        "Advantage": ["Flying", "Water"],
+        "Disadvantage": ["Ground", "Grass", "Electric", "Dragon"]
+	},
+    {
+        "Type": "Psychic",
+        "Advantage": ["Fighting", "Poison"],
+        "Disadvantage": ["Steel", "Psychic", "Dark"]
+	},
+    {
+        "Type": "Ice",
+        "Advantage": ["Flying", "Ground", "Grass", "Dragon"],
+        "Disadvantage": ["Steel", "Fire", "Water", "Ice"]
+	},
+    {
+        "Type": "Dragon",
+        "Advantage": ["Dragon"],
+        "Disadvantage": ["Steel", "Fairy"]
+	},
+    {
+        "Type": "Dark",
+        "Advantage": ["Ghost", "Psychic"],
+        "Disadvantage": ["Fighting", "Dark", "Fairy"]
+	},
+    {
+        "Type": "Normal",
+        "Advantage": ["Fighting", "Dragon", "Dark"],
+        "Disadvantage": ["Poison", "Steel", "Fire"]
+	}
+]

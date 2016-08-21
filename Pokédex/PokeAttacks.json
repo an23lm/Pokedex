@@ -1,0 +1,3232 @@
+[
+
+
+{
+
+"Move": "Cross Chop",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 60,
+"Sec": 2,
+"DPS": 30,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Stone Edge",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.1,
+"DPS": 25.84,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Blizzard",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 100,
+"Sec": 3.9,
+"DPS": 25.68,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Body Slam",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 40,
+"Sec": 1.56,
+"DPS": 25.68,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Hurricane",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.2,
+"DPS": 25.04,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Megahorn",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.2,
+"DPS": 25.04,
+"Energy": -100
+
+},
+
+
+
+{
+
+"Move": "Power Whip",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 70,
+"Sec": 2.8,
+"DPS": 25.04,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Solar Beam",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 120,
+"Sec": 4.9,
+"DPS": 24.48,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Fire Blast",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.1,
+"DPS": 24.4,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Cross Chop",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 60,
+"Sec": 2,
+"DPS": 30.0,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Hyper Beam",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 120,
+"Sec": 5,
+"DPS": 24,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Earthquake",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.2,
+"DPS": 23.84,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Hydro Pump",
+"Type": "Water",
+"Category": "Charge",
+"Power": 90,
+"Sec": 3.8,
+"DPS": 23.68,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Thunder",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.3,
+"DPS": 23.28,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Dragon Claw",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 35,
+"Sec": 1.6,
+"DPS": 21.84,
+"Energy": -50 
+
+},
+
+
+{
+
+"Move": "Gunk Shot",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3,
+"DPS": 21.68,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Sludge Bomb",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.6,
+"DPS": 21.12,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Heat Wave",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.8,
+"DPS": 21.04,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Moonblast",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 85,
+"Sec": 4.1,
+"DPS": 20.72,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Stone Edge",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.1,
+"DPS": 25.8,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Sludge Wave",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 70,
+"Sec": 3.4,
+"DPS": 20.56,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Blizzard",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 100,
+"Sec": 3.9,
+"DPS": 25.6,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Body Slam",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 40,
+"Sec": 1.56,
+"DPS": 25.6,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Thunderbolt",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.7,
+"DPS": 20.4,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Petal Blizzard",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.2,
+"DPS": 20.32,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Hurricane",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.2,
+"DPS": 25.0,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Megahorn",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.2,
+"DPS": 25.0,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Power Whip",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 70,
+"Sec": 2.8,
+"DPS": 25.0,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Leaf Blade",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.8,
+"DPS": 19.68,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Psychic",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.8,
+"DPS": 19.68,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Solar Beam",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 120,
+"Sec": 4.9,
+"DPS": 24.5,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Fire Blast",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.1,
+"DPS": 24.4,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Hyper Beam",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 120,
+"Sec": 5,
+"DPS": 24.0,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Aqua Tail",
+"Type": "Water",
+"Category": "Charge",
+"Power": 45,
+"Sec": 2.35,
+"DPS": 19.12,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Earthquake",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.2,
+"DPS": 23.8,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Flamethrower",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.9,
+"DPS": 18.96,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Play Rough",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.9,
+"DPS": 18.96,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Hydro Pump",
+"Type": "Water",
+"Category": "Charge",
+"Power": 90,
+"Sec": 3.8,
+"DPS": 23.7,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Brick Break",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 1.6,
+"DPS": 18.72,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Thunder",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 100,
+"Sec": 4.3,
+"DPS": 23.3,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Dragon Pulse",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.6,
+"DPS": 18.08,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Ice Beam",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.65,
+"DPS": 17.84,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Bug Buzz",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 75,
+"Sec": 4.25,
+"DPS": 17.68,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Dragon Claw",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 35,
+"Sec": 1.6,
+"DPS": 21.9,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Gunk Shot",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3,
+"DPS": 21.7,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Sludge Bomb",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.6,
+"DPS": 21.2,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Heat Wave",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 80,
+"Sec": 3.8,
+"DPS": 21.1,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Cross Poison",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 25,
+"Sec": 1.5,
+"DPS": 16.64,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Seed Bomb",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.4,
+"DPS": 16.64,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Thunder Punch",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.4,
+"DPS": 16.64,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Hyper Fang",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.1,
+"DPS": 16.64,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "X Scissor",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.1,
+"DPS": 16.64,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Moonblast",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 85,
+"Sec": 4.1,
+"DPS": 20.7,
+"Energy": -100 
+
+},
+
+
+{
+
+"Move": "Sludge Wave",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 70,
+"Sec": 3.4,
+"DPS": 20.6,
+"Energy": -100
+
+},
+
+
+{
+
+"Move": "Thunderbolt",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.7,
+"DPS": 20.4,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Petal Blizzard",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.2,
+"DPS": 20.3,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Leaf Blade",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.8,
+"DPS": 19.6,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Psychic",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.8,
+"DPS": 19.6,
+"Energy": -50 
+
+},
+
+
+{
+
+"Move": "Bone Club",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 25,
+"Sec": 1.6,
+"DPS": 15.6,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Rock Slide",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 50,
+"Sec": 3.2,
+"DPS": 15.6,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Flash Cannon",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 60,
+"Sec": 3.9,
+"DPS": 15.36,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Aqua Tail",
+"Type": "Water",
+"Category": "Charge",
+"Power": 45,
+"Sec": 2.35,
+"DPS": 19.1,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Flamethrower",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.9,
+"DPS": 19.0,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Play Rough",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 55,
+"Sec": 2.9,
+"DPS": 19.0,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Brick Break",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 1.6,
+"DPS": 18.8,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Iron Head",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2,
+"DPS": 15.04,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Drill Peck",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.7,
+"DPS": 14.8,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Psyshock",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.7,
+"DPS": 14.8,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Drill Run",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 50,
+"Sec": 3.4,
+"DPS": 14.72,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Shadow Ball",
+"Type": "Ghost",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.08,
+"DPS": 14.64,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Signal Beam",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.1,
+"DPS": 14.48,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Dragon Pulse",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.6,
+"DPS": 18.1,
+"Energy": -50 
+
+},
+
+
+{
+
+"Move": "Fire Punch",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.8,
+"DPS": 14.32,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Flame Burst",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.32,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Stomp",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.32,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Submission",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.32,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Ice Beam",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 65,
+"Sec": 3.65,
+"DPS": 17.8,
+"Energy": -50
+
+},
+
+
+{
+
+"Move": "Bug Buzz",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 75,
+"Sec": 4.25,
+"DPS": 17.6,
+"Energy": -50 
+
+},
+
+
+{
+
+"Move": "Discharge",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.5,
+"DPS": 14.0,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Power Gem",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.9,
+"DPS": 13.76,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Seald",
+"Type": "Water",
+"Category": "Charge",
+"Power": 55,
+"Sec": 4,
+"DPS": 13.76,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Cross Poison",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 25,
+"Sec": 1.5,
+"DPS": 16.7,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Low Sweep",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.25,
+"DPS": 13.36,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Seed Bomb",
+"Type": "Grass",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.4,
+"DPS": 16.7,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Thunder Punch",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.4,
+"DPS": 16.7,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Hyper Fang",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.1,
+"DPS": 16.7,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "X Scissor",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.1,
+"DPS": 16.7,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Dazzling Gleam",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 55,
+"Sec": 4.2,
+"DPS": 13.12,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Pound",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.54,
+"DPS": 12.96,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Dark Pulse",
+"Type": "Dark",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.5,
+"DPS": 12.88,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Ice Punch",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.5,
+"DPS": 12.88,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Metal Claw",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 8,
+"Sec": 0.63,
+"DPS": 12.72,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Bone Club",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 25,
+"Sec": 1.6,
+"DPS": 15.6,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Rock Slide",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 50,
+"Sec": 3.2,
+"DPS": 15.6,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Flash Cannon",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 60,
+"Sec": 3.9,
+"DPS": 15.4,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Psycho Cut",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.57,
+"DPS": 12.32,
+"Energy": 7 
+
+},
+
+
+{
+
+"Move": "Dig",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 70,
+"Sec": 5.8,
+"DPS": 12.08,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Bite",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12,
+"Energy": 7 
+
+},
+
+
+{
+
+"Move": "Dragon Breath",
+"Type": "Dragon",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Iron Head",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2,
+"DPS": 15.0,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Scratch",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Water Gun",
+"Type": "Water",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12,
+"Energy": 7 
+
+},
+
+
+{
+
+"Move": "Wing Attack",
+"Type": "Flying",
+"Category": "Fast",
+"Power": 9,
+"Sec": 0.75,
+"DPS": 12,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Fire Fang",
+"Type": "Fire",
+"Category": "Fast",
+"Power": 10,
+"Sec": 0.84,
+"DPS": 11.92,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Vice Grip",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.1,
+"DPS": 11.92,
+"Energy": -20 
+
+},
+
+
+{
+
+"Move": "Drill Peck",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.7,
+"DPS": 14.8,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Psyshock",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.7,
+"DPS": 14.8,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Drill Run",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 50,
+"Sec": 3.4,
+"DPS": 14.7,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Shadow Ball",
+"Type": "Ghost",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.08,
+"DPS": 14.6,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Signal Beam",
+"Type": "Bug",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.1,
+"DPS": 14.5,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Shadow Claw",
+"Type": "Ghost",
+"Category": "Fast",
+"Power": 11,
+"Sec": 0.95,
+"DPS": 11.6,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Feint Attack",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.04,
+"DPS": 11.52,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Mud Bomb",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.6,
+"DPS": 11.52,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Sludge",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.6,
+"DPS": 11.52,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Poison Jab",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.05,
+"DPS": 11.44,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Fire Punch",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.8,
+"DPS": 14.3,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Zen Headbutt",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.05,
+"DPS": 11.44,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Flame Burst",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.3,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Stomp",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.3,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Submission",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.1,
+"DPS": 14.3,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Horn Attack",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.2,
+"DPS": 11.36,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Steel Wing",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.33,
+"DPS": 11.28,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Discharge",
+"Type": "Electric",
+"Category": "Charge",
+"Power": 35,
+"Sec": 2.5,
+"DPS": 14.0,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Bug Bite",
+"Type": "Bug",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.45,
+"DPS": 11.12,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Frost Breath",
+"Type": "Ice",
+"Category": "Fast",
+"Power": 9,
+"Sec": 0.81,
+"DPS": 11.12,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Mud Slap",
+"Type": "Ground",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.35,
+"DPS": 11.12,
+"Energy": 9
+
+},
+
+
+{
+
+"Move": "Night Slash",
+"Type": "Dark",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.7,
+"DPS": 11.12,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Power Gem",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 40,
+"Sec": 2.9,
+"DPS": 13.8,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Scald",
+"Type": "Water",
+"Category": "Charge",
+"Power": 55,
+"Sec": 4,
+"DPS": 13.8,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Mud Shot",
+"Type": "Ground",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.55,
+"DPS": 10.88,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Tackle",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.1,
+"DPS": 10.88,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Bubble",
+"Type": "Water",
+"Category": "Fast",
+"Power": 25,
+"Sec": 2.3,
+"DPS": 10.88,
+"Energy": 15
+
+},
+
+
+{
+
+"Move": "Vine Whip",
+"Type": "Grass",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.65,
+"DPS": 10.8,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ice Shard",
+"Type": "Ice",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.4,
+"DPS": 10.72,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Magnet Bomb",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.8,
+"DPS": 10.72,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Low Sweep",
+"Type": "Fighting",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.25,
+"DPS": 13.3,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Aqua Jet",
+"Type": "Water",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.35,
+"DPS": 10.64,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Rock Smash",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.41,
+"DPS": 10.64,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Cut",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.13,
+"DPS": 13.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Cut",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.13,
+"DPS": 10.64,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Water Pulse",
+"Type": "Water",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.3,
+"DPS": 10.64,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Psybeam",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 40,
+"Sec": 3.8,
+"DPS": 10.56,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Dazzling Gleam",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 55,
+"Sec": 4.2,
+"DPS": 13.1,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Poison Fang",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.4,
+"DPS": 10.4,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Brine",
+"Type": "Water",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.4,
+"DPS": 10.4,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Pound",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.54,
+"DPS": 13.0,
+"Energy": 7 
+
+},
+
+
+{
+
+"Move": "Aerial Ace",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.9,
+"DPS": 10.32,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Bubble Beam",
+"Type": "Water",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.9,
+"DPS": 10.32,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Poison Sting",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.58,
+"DPS": 10.32,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Razor Leaf",
+"Type": "Grass",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.45,
+"DPS": 10.32,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Bulldoze",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.4,
+"DPS": 10.32,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Dark Pulse",
+"Type": "Dark",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.5,
+"DPS": 12.9,
+"Energy": -33
+
+},
+
+
+{
+
+"Move": "Ice Punch",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 45,
+"Sec": 3.5,
+"DPS": 12.9,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Metal Claw",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 8,
+"Sec": 0.63,
+"DPS": 12.7,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Lick",
+"Type": "Ghost",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.5,
+"DPS": 10,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Spark",
+"Type": "Electric",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.7,
+"DPS": 10,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Sucker Punch",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.7,
+"DPS": 10,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Swift",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3,
+"DPS": 10,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Confusion",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.51,
+"DPS": 9.92,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Psycho Cut",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.57,
+"DPS": 12.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ancient Power",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.6,
+"DPS": 9.76,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Ominous Wind",
+"Type": "Ghost",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.1,
+"DPS": 9.68,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Dig",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 70,
+"Sec": 5.8,
+"DPS": 12.1,
+"Energy": -33 
+
+},
+
+
+{
+
+"Move": "Bite",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Dragon Breath",
+"Type": "Dragon",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Scratch",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12.0,
+"Energy": 7 
+
+},
+
+
+{
+
+"Move": "Water Gun",
+"Type": "Water",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.5,
+"DPS": 12.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Wing Attack",
+"Type": "Flying",
+"Category": "Fast",
+"Power": 9,
+"Sec": 0.75,
+"DPS": 12.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Acid",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.05,
+"DPS": 9.52,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ember",
+"Type": "Fire",
+"Category": "Fast",
+"Power": 1.05,
+"Sec": 11.9,
+"DPS": 9.52,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Fire Fang",
+"Type": "Fire",
+"Category": "Fast",
+"Power": 10,
+"Sec": 0.84,
+"DPS": 11.9,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Vice Grip",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.1,
+"DPS": 11.9,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Shadow Claw",
+"Type": "Ghost",
+"Category": "Fast",
+"Power": 11,
+"Sec": 0.95,
+"DPS": 11.6,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Twister",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.7,
+"DPS": 9.28,
+"Energy": -20 
+
+},
+
+
+{
+
+"Move": "Feint Attack",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.04,
+"DPS": 11.5,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Mud Bomb",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.6,
+"DPS": 11.5,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Sludge",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.6,
+"DPS": 11.5,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Poison Jab",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.05,
+"DPS": 11.4,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Zen Headbutt",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.05,
+"DPS": 11.4,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Air Cutter",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.3,
+"DPS": 9.12,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Horn Attack",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.2,
+"DPS": 11.4,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Steel Wing",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.33,
+"DPS": 11.3,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Draining Kiss",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.8,
+"DPS": 8.96,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Bug Bite",
+"Type": "Bug",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.45,
+"DPS": 11.1,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Frost Breath",
+"Type": "Ice",
+"Category": "Fast",
+"Power": 9,
+"Sec": 0.81,
+"DPS": 11.1,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Mud Slap",
+"Type": "Ground",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.35,
+"DPS": 11.1,
+"Energy": 9
+
+},
+
+
+{
+
+"Move": "Night Slash",
+"Type": "Dark",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.7,
+"DPS": 11.1,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Rock Tomb",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.4,
+"DPS": 8.8,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Struggle",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 15,
+"Sec": 1.7,
+"DPS": 8.8,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Rock Throw",
+"Type": "Rock",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.36,
+"DPS": 8.8,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Mud Shot",
+"Type": "Ground",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.55,
+"DPS": 10.9,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Tackle",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.1,
+"DPS": 10.9,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Flame Wheel",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 40,
+"Sec": 4.6,
+"DPS": 8.72,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Peck",
+"Type": "Flying",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.15,
+"DPS": 8.72,
+"Energy": 10
+
+},
+
+
+{
+
+"Move": "Bubble",
+"Type": "Water",
+"Category": "Fast",
+"Power": 25,
+"Sec": 2.3,
+"DPS": 10.9,
+"Energy": 15
+
+},
+
+
+{
+
+"Move": "Vine Whip",
+"Type": "Grass",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.65,
+"DPS": 10.8,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ice Shard",
+"Type": "Ice",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.4,
+"DPS": 10.7,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Magnet Bomb",
+"Type": "Steel",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.8,
+"DPS": 10.7,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Aqua Jet",
+"Type": "Water",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.35,
+"DPS": 10.6,
+"Energy": -20 
+
+},
+
+
+{
+
+"Move": "Rock Smash",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.41,
+"DPS": 10.6,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Water Pulse",
+"Type": "Water",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.3,
+"DPS": 10.6,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Psybeam",
+"Type": "Psychic",
+"Category": "Charge",
+"Power": 40,
+"Sec": 3.8,
+"DPS": 10.5,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Bullet Punch",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.2,
+"DPS": 8.32,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Low Kick",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.6,
+"DPS": 8.32,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Poison Fang",
+"Type": "Poison",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.4,
+"DPS": 10.4,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Thunder Shock",
+"Type": "Electric",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.6,
+"DPS": 8.32,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Brine",
+"Type": "Water",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.4,
+"DPS": 10.4,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Aerial Ace",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.9,
+"DPS": 10.3,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Bubble Beam",
+"Type": "Water",
+"Category": "Charge",
+"Power": 30,
+"Sec": 2.9,
+"DPS": 10.3,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Poison Sting",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.58,
+"DPS": 10.3,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Razor Leaf",
+"Type": "Grass",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.45,
+"DPS": 10.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Bulldoze",
+"Type": "Ground",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.4,
+"DPS": 10.3,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Flame Charge",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.1,
+"DPS": 8.08,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Lick",
+"Type": "Ghost",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.5,
+"DPS": 10.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Spark",
+"Type": "Electric",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.7,
+"DPS": 10.0,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Sucker Punch",
+"Type": "Dark",
+"Category": "Fast",
+"Power": 7,
+"Sec": 0.7,
+"DPS": 10.0,
+"Energy": 4
+
+},
+
+
+{
+
+"Move": "Swift",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3,
+"DPS": 10.0,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Confusion",
+"Type": "Psychic",
+"Category": "Fast",
+"Power": 15,
+"Sec": 1.51,
+"DPS": 9.9,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ancient Power",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 35,
+"Sec": 3.6,
+"DPS": 9.7,
+"Energy": -25 
+
+},
+
+
+{
+
+"Move": "Ominous Wind",
+"Type": "Ghost",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.1,
+"DPS": 9.7,
+"Energy": -25
+
+},
+
+
+
+{
+
+"Move": "Acid",
+"Type": "Poison",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.05,
+"DPS": 9.5,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Ember",
+"Type": "Fire",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.05,
+"DPS": 9.5,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Quick Attack",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.33,
+"DPS": 9.4,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Fury Cutter",
+"Type": "Bug",
+"Category": "Fast",
+"Power": 3,
+"Sec": 0.4,
+"DPS": 7.52,
+"Energy": 12
+
+},
+
+
+{
+
+"Move": "Karate Chop",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.8,
+"DPS": 7.52,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Twister",
+"Type": "Dragon",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.7,
+"DPS": 9.3,
+"Energy": -20
+
+},
+
+
+
+
+
+{
+
+"Move": "Air Cutter",
+"Type": "Flying",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.3,
+"DPS": 9.1,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Draining Kiss",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 25,
+"Sec": 2.8,
+"DPS": 8.9,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Rock Tomb",
+"Type": "Rock",
+"Category": "Charge",
+"Power": 30,
+"Sec": 3.4,
+"DPS": 8.8,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Struggle",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 15,
+"Sec": 1.7,
+"DPS": 8.8,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Rock Throw",
+"Type": "Rock",
+"Category": "Fast",
+"Power": 12,
+"Sec": 1.36,
+"DPS": 8.8,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Flame Wheel",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 40,
+"Sec": 4.6,
+"DPS": 8.7,
+"Energy": -25
+
+},
+
+
+{
+
+"Move": "Peck",
+"Type": "Flying",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.15,
+"DPS": 8.7,
+"Energy": 10
+
+},
+
+
+{
+
+"Move": "Bullet Punch",
+"Type": "Steel",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.2,
+"DPS": 8.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Low Kick",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.6,
+"DPS": 8.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Thunder Shock",
+"Type": "Electric",
+"Category": "Fast",
+"Power": 5,
+"Sec": 0.6,
+"DPS": 8.3,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Icy Wind",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.8,
+"DPS": 6.56,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Flame Charge",
+"Type": "Fire",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.1,
+"DPS": 8.1,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Disarming Voice",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.9,
+"DPS": 6.4,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Wrap",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 4,
+"DPS": 6.24,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Quick Attack",
+"Type": "Normal",
+"Category": "Fast",
+"Power": 10,
+"Sec": 1.33,
+"DPS": 7.5,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Fury Cutter",
+"Type": "Bug",
+"Category": "Fast",
+"Power": 3,
+"Sec": 0.4,
+"DPS": 7.5,
+"Energy": 12
+
+},
+
+
+{
+
+"Move": "Karate Chop",
+"Type": "Fighting",
+"Category": "Fast",
+"Power": 6,
+"Sec": 0.8,
+"DPS": 7.5,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Icy Wind",
+"Type": "Ice",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.8,
+"DPS": 6.6,
+"Energy": -20 
+
+},
+
+
+{
+
+"Move": "Disarming Voice",
+"Type": "Fairy",
+"Category": "Charge",
+"Power": 25,
+"Sec": 3.9,
+"DPS": 6.4,
+"Energy": -20
+
+},
+
+
+{
+
+"Move": "Wrap",
+"Type": "Normal",
+"Category": "Charge",
+"Power": 25,
+"Sec": 4,
+"DPS": 6.3,
+"Energy": -20 
+
+},
+
+
+{
+
+"Move": "Splash",
+"Type": "Water",
+"Category": "Fast",
+"Power": 0,
+"Sec": 1.23,
+"DPS": 0.0,
+"Energy": 7
+
+},
+
+
+{
+
+"Move": "Splash",
+"Type": "Water",
+"Category": "Fast",
+"Power": 0,
+"Sec": 1.23,
+"DPS": 0.0,
+"Energy": 7
+
+}
+
+]

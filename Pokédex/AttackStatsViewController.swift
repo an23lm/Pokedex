@@ -8,25 +8,32 @@
 
 import UIKit
 
-class AttackStatsViewController: UIViewController {
+class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
 
     @IBOutlet weak var titleBar: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var selectOpponenetLabel: UILabel!
+    @IBOutlet weak var selectOpponentButton: UIButton!
+    @IBOutlet weak var selectOpponentButtonTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var selectFastAttackLabel: UILabel!
     @IBOutlet weak var fastAttacksContainerView: UIView!
     @IBOutlet weak var fastAttackContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var fastAttackContrainerViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var selectSpecialAttackLabel: UILabel!
     @IBOutlet weak var specialAttackContainerView: UIView!
     @IBOutlet weak var specialAttackContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var specialAttackContainerViewTopConstraint: NSLayoutConstraint!
     
     var selectedFastAttack: Int! = nil
     var selectedSpecialAttack: Int! = nil
     
     var pokeData: PokeData! = nil
     var pokemon: Pokemon! = nil
+    var selectedPokemon: Pokemon! = nil
     
     var fastAttackButtons: [UIView] = []
     var fastAttackLabels: [UILabel] = []
@@ -60,7 +67,33 @@ class AttackStatsViewController: UIViewController {
     var specialAttackLabelRigthConstraint: [NSLayoutConstraint] = []
     var specialAttackLabelCenterXConstriant: [NSLayoutConstraint] = []
     
+    @IBOutlet weak var displayDataView: UIView!
+    @IBOutlet weak var displayDataViewTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var fastAttackDPSLabel: UILabel!
+    @IBOutlet weak var fastAttackDPSView: UIView!
+    @IBOutlet weak var fastAttackDurationLabel: UILabel!
+    @IBOutlet weak var fastAttackDurationValueLabel: UILabel!
+    @IBOutlet weak var fastEnergyLabel: UILabel!
+    @IBOutlet weak var fastEnergyValueLabel: UILabel!
+    @IBOutlet weak var fastEffectiveLabel: UILabel!
+    @IBOutlet weak var fastAttackStabValue: UILabel!
+    @IBOutlet weak var fastAttackStabLabel: UILabel!
+    @IBOutlet weak var fastAttackDPS: UILabel!
+    
+    @IBOutlet weak var specialAttackDPSLabel: UILabel!
+    @IBOutlet weak var specialAttackDPSView: UIView!
+    @IBOutlet weak var specialAttackDurationLabel: UILabel!
+    @IBOutlet weak var specialAttackDurationValue: UILabel!
+    @IBOutlet weak var specialAttackEnergyLabel: UILabel!
+    @IBOutlet weak var specialAttackEnergyValue: UILabel!
+    @IBOutlet weak var specialAttackEffectiveLabel: UILabel!
+    @IBOutlet weak var specialAttackStabLabel: UILabel!
+    @IBOutlet weak var specialAttackStabValue: UILabel!
+    @IBOutlet weak var specialAttackDPS: UILabel!
+    
     var lightSecondaryColor = UIColor()
+    var lightSecondaryBGColor = UIColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,27 +105,246 @@ class AttackStatsViewController: UIViewController {
         specialAttackContainerView.backgroundColor = UIColor.clearColor()
         
         var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        pokemon.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        pokemon.tertiaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
         let lightTextColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
         
         pokemon.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
-        lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.3)
+        lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        lightSecondaryBGColor = UIColor(red: r, green: g, blue: b, alpha: 0.3)
         
         titleLabel.textColor = pokemon.tertiaryColor
         backButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
         
-        selectFastAttackLabel.textColor = lightTextColor
-        selectSpecialAttackLabel.textColor = lightTextColor
+        selectOpponentButton.backgroundColor = pokemon.secondaryColor
+        
+        selectFastAttackLabel.textColor = lightSecondaryColor
+        selectSpecialAttackLabel.textColor = lightSecondaryColor
+        selectOpponenetLabel.textColor = lightSecondaryColor
         
         fastAttacksContainerView.layer.cornerRadius = 5
         specialAttackContainerView.layer.cornerRadius = 5
+        selectOpponentButton.layer.cornerRadius = 5
+        fastAttackDPSView.layer.cornerRadius = 5
+        specialAttackDPSView.layer.cornerRadius = 5
         
+        displayDataView.backgroundColor = pokemon.primaryColor
+        
+        fastAttackDPSLabel.textColor = lightSecondaryColor
+        fastAttackDPSView.backgroundColor = pokemon.secondaryColor
+        fastAttackDurationLabel.textColor = lightTextColor
+        fastAttackDurationValueLabel.textColor = pokemon.tertiaryColor
+        fastEnergyLabel.textColor = lightTextColor
+        fastEnergyValueLabel.textColor = pokemon.tertiaryColor
+        fastEffectiveLabel.textColor = pokemon.tertiaryColor
+        fastAttackStabLabel.textColor = lightTextColor
+        fastAttackStabValue.textColor = pokemon.tertiaryColor
+        fastAttackDPS.textColor = pokemon.secondaryColor
+        
+        specialAttackDPSLabel.textColor = lightSecondaryColor
+        specialAttackDPSView.backgroundColor = pokemon.secondaryColor
+        specialAttackDurationLabel.textColor = lightTextColor
+        specialAttackDurationValue.textColor = pokemon.tertiaryColor
+        specialAttackEnergyLabel.textColor = lightTextColor
+        specialAttackEnergyValue.textColor = pokemon.tertiaryColor
+        specialAttackEffectiveLabel.textColor = pokemon.tertiaryColor
+        specialAttackStabLabel.textColor = lightTextColor
+        specialAttackStabValue.textColor = pokemon.tertiaryColor
+        specialAttackDPS.textColor = pokemon.secondaryColor
+        
+        setFastAttacks()
+        setSpecialAttacks()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setFastAttacks()
-        setSpecialAttacks()
+        self.selectOpponentButton.layoutIfNeeded()
+        selectOpponentButton.layer.shadowColor = UIColor.blackColor().CGColor
+        selectOpponentButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        selectOpponentButton.layer.shadowRadius = 5
+        selectOpponentButton.layer.shadowOpacity = 0.5
+        selectOpponentButton.layer.shadowPath = UIBezierPath(roundedRect: selectOpponentButton.bounds, cornerRadius: 5).CGPath
+        self.displayDataView.layoutIfNeeded()
+        displayDataView.alpha = 0
+        displayDataViewTopConstraint.constant = -displayDataView.frame.height
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if selectedFastAttack != nil && selectedSpecialAttack != nil && selectedPokemon != nil {
+            setupToDPS()
+        }
+    }
+    
+    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        super.unwindForSegue(unwindSegue, towardsViewController: subsequentVC)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier == "selectPokemonSegue" {
+            let destVc = segue.destinationViewController as! SelectPokemonViewController
+            destVc.pokeData = self.pokeData
+            destVc.pokemon = self.pokemon
+            destVc.delegate = self
+        }
+    }
+    
+    func pokemonSelected(id: Int) {
+        selectedPokemon = pokeData.getPokemon(withID: id)
+        setSelectedPokemon()
+    }
+    
+    func setSelectedPokemon() {
+        selectOpponentButton.backgroundColor = selectedPokemon.primaryColor
+        selectOpponentButton.setTitleColor(selectedPokemon.secondaryColor, forState: .Normal)
+        selectOpponentButton.setTitle(selectedPokemon.name, forState: .Normal)
+        if selectedFastAttack != nil && selectedSpecialAttack != nil {
+            calculateDPS()
+        }
+    }
+    
+    func setupToDPS() {
+        let height1 = selectFastAttackLabel.frame.height + 5
+        let height2 = selectSpecialAttackLabel.frame.height + 13
+        let height3 = selectOpponenetLabel.frame.height + 5
+        fastAttackContrainerViewTopConstraint.constant = -height1
+        specialAttackContainerViewTopConstraint.constant = -height2
+        selectOpponentButtonTopConstraint.constant = -height3
+        displayDataViewTopConstraint.constant = 20
+        UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
+            self.displayDataView.alpha = 1
+            self.view.layoutIfNeeded()
+            }, completion: nil)
+    }
+
+    func calculateDPS() {
+        print("Calc DPS")
+        let fAttack = pokeData.getAttack(withName: pokemon.attacks[selectedFastAttack])!
+        let cAttack = pokeData.getAttack(withName: pokemon.specialAttacks[selectedSpecialAttack])!
+        var fStab: Bool = false
+        var cStab: Bool = false
+        
+        let fTypeAdvantage: TypeAdvantage = pokeData.getTypeAdvantage(forType: fAttack.type)!
+        let cTypeAdvantage: TypeAdvantage = pokeData.getTypeAdvantage(forType: cAttack.type)!
+        var fastMulti: Float = 1
+        var chargeMulti: Float = 1
+        
+        for type in pokemon.type {
+            if fAttack.type == type {
+                fStab = true
+            }
+            if cAttack.type == type {
+                cStab = true
+            }
+        }
+        
+        for type1 in selectedPokemon.type {
+            for type2 in fTypeAdvantage.advantage {
+                if type1 == type2 {
+                    fastMulti *= 1.25
+                }
+            }
+            for type2 in fTypeAdvantage.disadvantage {
+                if type1 == type2 {
+                    fastMulti *= 0.8
+                }
+            }
+            for type2 in cTypeAdvantage.advantage {
+                if type1 == type2 {
+                    chargeMulti *= 1.25
+                }
+            }
+            for type2 in cTypeAdvantage.disadvantage {
+                if type1 == type2 {
+                    chargeMulti *= 0.8
+                }
+            }
+        }
+        
+        var seconds: Float = 0
+        var energy: Int = 0
+        var fDmg: Float = 0
+        var cDmg: Float = 0
+        while energy < -(cAttack.energy) {
+            seconds += fAttack.sec
+            energy += fAttack.energy
+            fDmg += fAttack.dps * fastMulti
+            if fStab {
+                fDmg *= 1.25
+            }
+        }
+        
+        let fDmgPS = fDmg/seconds
+        
+        energy += cAttack.energy
+        seconds += cAttack.sec
+        cDmg += cAttack.dps * chargeMulti
+        if cStab {
+            cDmg *= 1.25
+        }
+        
+        let cDmgPS = cDmg/cAttack.sec
+        
+        let dmg = fDmg + cDmg
+        let dps = dmg/seconds
+        let dp10s = dps * 10.0
+        
+        let maxdmg = selectedPokemon.maxDmgTaken
+        
+        dispatch_after(DISPATCH_TIME_NOW, dispatch_get_main_queue(), {
+            self.fastAttackDurationValueLabel.text = "\(fAttack.sec)"
+            self.fastEnergyValueLabel.text = "+\(fAttack.energy)"
+            if fStab {
+                self.fastAttackStabValue.text = "True"
+            }
+            else {
+                self.fastAttackStabValue.text = "False"
+            }
+            var effe = ""
+            if fastMulti < 0.8 {
+                effe = "Very ineffective"
+            }
+            else if fastMulti < 1 {
+                effe = "Ineffective"
+            }
+            else if fastMulti == 1 {
+                effe = "Normal"
+            }
+            else if fastMulti > 1.5 {
+                effe = "Super effective"
+            }
+            else {
+                effe = "Effective"
+            }
+            self.fastEffectiveLabel.text = effe
+            self.fastAttackDPS.text = "\(fDmgPS)"
+            
+            self.specialAttackDurationValue.text = "\(cAttack.sec)"
+            self.specialAttackEnergyValue.text = "\(cAttack.energy)"
+            if cStab {
+                self.specialAttackStabValue.text = "True"
+            }
+            else {
+                self.specialAttackStabValue.text = "False"
+            }
+            if chargeMulti < 0.8 {
+                effe = "Very ineffective"
+            }
+            else if chargeMulti < 1 {
+                effe = "Ineffective"
+            }
+            else if chargeMulti == 1 {
+                effe = "Normal"
+            }
+            else if chargeMulti > 1.5 {
+                effe = "Super effective"
+            }
+            else {
+                effe = "Effective"
+            }
+            self.specialAttackEffectiveLabel.text = effe
+            self.specialAttackDPS.text = "\(cDmgPS)"
+        })
     }
     
     func setFastAttacks() {
@@ -106,7 +358,7 @@ class AttackStatsViewController: UIViewController {
             
             let view = UIView()
             view.layer.cornerRadius = 5
-            view.backgroundColor = lightSecondaryColor
+            view.backgroundColor = lightSecondaryBGColor
             view.tag = index
             view.layer.shadowColor = UIColor.blackColor().CGColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -181,12 +433,13 @@ class AttackStatsViewController: UIViewController {
         for (index, fa) in pokemon.specialAttacks.enumerate() {
             let view = UIView()
             view.layer.cornerRadius = 5
-            view.backgroundColor = lightSecondaryColor
+            view.backgroundColor = lightSecondaryBGColor
             view.tag = index
             view.layer.shadowColor = UIColor.blackColor().CGColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1)
             view.layer.shadowRadius = 5
             view.layer.shadowOpacity = 0.5
+            //view.layer.shadowPath = UIBezierPath(roundedRect: view.frame, cornerRadius: 5).CGPath
             
             let label = UILabel()
             label.textColor = pokemon.tertiaryColor
@@ -302,12 +555,20 @@ class AttackStatsViewController: UIViewController {
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                     self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
                     self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.pokemon.secondaryColor
-                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 1
-                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowRadius = 8
                     self.view.layoutIfNeeded()
-                }, completion: nil)
+                }, completion: {
+                    void in
+                    if self.selectedSpecialAttack != nil && self.selectedPokemon != nil {
+                        self.setupToDPS()
+                        self.calculateDPS()
+                    }
+            })
         }
         else {
+            
+            fastAttackContrainerViewTopConstraint.constant = 8
+            specialAttackContainerViewTopConstraint.constant = 8
+            selectOpponentButtonTopConstraint.constant = 8
             
             for index in 1 ..< fastAttackButtons.count {
                 fastAttackButtonTopConstriant[index].constant = 8
@@ -322,8 +583,7 @@ class AttackStatsViewController: UIViewController {
             
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                     self.fastAttackLabels[self.selectedFastAttack].transform = scaleLabel
-                    self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.lightSecondaryColor
-                    self.fastAttackButtons[self.selectedFastAttack].layer.shadowOpacity = 0.5
+                    self.fastAttackButtons[self.selectedFastAttack].backgroundColor = self.lightSecondaryBGColor
                     self.fastAttackButtons[self.selectedFastAttack].layer.shadowRadius = 5
                     self.view.layoutIfNeeded()
                 }, completion: {
@@ -399,13 +659,22 @@ class AttackStatsViewController: UIViewController {
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.specialAttackLabels[self.selectedSpecialAttack].transform = scaleLabel
                 self.specialAttackButtons[self.selectedSpecialAttack].backgroundColor = self.pokemon.secondaryColor
-                self.specialAttackButtons[self.selectedSpecialAttack].layer.shadowOpacity = 1
                 self.view.layoutIfNeeded()
-                }, completion: nil)
+                }, completion: {
+                    void in
+                    if self.selectedFastAttack != nil && self.selectedPokemon != nil {
+                        self.setupToDPS()
+                        self.calculateDPS()
+                    }
+            })
             
         }
         
         else {
+            
+            fastAttackContrainerViewTopConstraint.constant = 8
+            specialAttackContainerViewTopConstraint.constant = 8
+            selectOpponentButtonTopConstraint.constant = 8
             
             for index in 1 ..< specialAttackButtons.count {
                 specialAttackButtonTopConstraint[index].constant = 8
@@ -420,8 +689,7 @@ class AttackStatsViewController: UIViewController {
             
             UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
                 self.specialAttackLabels[self.selectedSpecialAttack].transform = scaleLabel
-                self.specialAttackButtons[self.selectedSpecialAttack].backgroundColor = self.lightSecondaryColor
-                self.specialAttackButtons[self.selectedSpecialAttack].layer.shadowOpacity = 0.5
+                self.specialAttackButtons[self.selectedSpecialAttack].backgroundColor = self.lightSecondaryBGColor
                 self.view.layoutIfNeeded()
                 }, completion: {
                     void in
