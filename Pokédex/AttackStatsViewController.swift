@@ -120,6 +120,7 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
         selectFastAttackLabel.textColor = lightSecondaryColor
         selectSpecialAttackLabel.textColor = lightSecondaryColor
         selectOpponenetLabel.textColor = lightSecondaryColor
+        selectOpponentButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
         
         fastAttacksContainerView.layer.cornerRadius = 5
         specialAttackContainerView.layer.cornerRadius = 5
@@ -189,8 +190,8 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
         }
     }
     
-    func pokemonSelected(id: Int) {
-        selectedPokemon = pokeData.getPokemon(withID: id)
+    func pokemonSelected(pokemon: Pokemon) {
+        selectedPokemon = pokemon
         setSelectedPokemon()
     }
     
@@ -212,13 +213,15 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
         selectOpponentButtonTopConstraint.constant = -height3
         displayDataViewTopConstraint.constant = 20
         UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut, animations: {
-            self.displayDataView.alpha = 1
             self.view.layoutIfNeeded()
             }, completion: nil)
+        UIView.animateWithDuration(0.2, delay: 0.2, options: .CurveEaseOut, animations: {
+            self.displayDataView.alpha = 1
+        }, completion: nil)
     }
 
     func calculateDPS() {
-        print("Calc DPS")
+        
         let fAttack = pokeData.getAttack(withName: pokemon.attacks[selectedFastAttack])!
         let cAttack = pokeData.getAttack(withName: pokemon.specialAttacks[selectedSpecialAttack])!
         var fStab: Bool = false
@@ -261,37 +264,55 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
             }
         }
         
-        var seconds: Float = 0
-        var energy: Int = 0
-        var fDmg: Float = 0
-        var cDmg: Float = 0
-        while energy < -(cAttack.energy) {
-            seconds += fAttack.sec
-            energy += fAttack.energy
-            fDmg += fAttack.dps * fastMulti
-            if fStab {
-                fDmg *= 1.25
-            }
+        var fDmgPS = fAttack.dps * fastMulti * fAttack.sec
+        if fStab {
+            fDmgPS *= 1.25
         }
         
-        let fDmgPS = fDmg/seconds
-        
-        energy += cAttack.energy
-        seconds += cAttack.sec
-        cDmg += cAttack.dps * chargeMulti
+        var cDmgPS = cAttack.dps * chargeMulti * cAttack.sec
         if cStab {
-            cDmg *= 1.25
+            cDmgPS *= 1.25
         }
         
-        let cDmgPS = cDmg/cAttack.sec
+        var fEffe = ""
+        if fastMulti < 0.8 {
+            fEffe = "Very ineffective"
+        }
+        else if fastMulti < 1 {
+            fEffe = "Ineffective"
+        }
+        else if fastMulti == 1 {
+            fEffe = "Normal"
+        }
+        else if fastMulti > 1.5 {
+            fEffe = "Super effective"
+        }
+        else {
+            fEffe = "Effective"
+        }
         
-        let dmg = fDmg + cDmg
-        let dps = dmg/seconds
-        let dp10s = dps * 10.0
-        
-        let maxdmg = selectedPokemon.maxDmgTaken
+        var cEffe = ""
+        if chargeMulti < 0.8 {
+            cEffe = "Very ineffective"
+        }
+        else if chargeMulti < 1 {
+            cEffe = "Ineffective"
+        }
+        else if chargeMulti == 1 {
+            cEffe = "Normal"
+        }
+        else if chargeMulti > 1.5 {
+            cEffe = "Super effective"
+        }
+        else {
+            cEffe = "Effective"
+        }
+
+        print("fastMulti \(fastMulti)")
+        print("chargeMulti \(chargeMulti)")
         
         dispatch_after(DISPATCH_TIME_NOW, dispatch_get_main_queue(), {
+            
             self.fastAttackDurationValueLabel.text = "\(fAttack.sec)"
             self.fastEnergyValueLabel.text = "+\(fAttack.energy)"
             if fStab {
@@ -300,24 +321,9 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
             else {
                 self.fastAttackStabValue.text = "False"
             }
-            var effe = ""
-            if fastMulti < 0.8 {
-                effe = "Very ineffective"
-            }
-            else if fastMulti < 1 {
-                effe = "Ineffective"
-            }
-            else if fastMulti == 1 {
-                effe = "Normal"
-            }
-            else if fastMulti > 1.5 {
-                effe = "Super effective"
-            }
-            else {
-                effe = "Effective"
-            }
-            self.fastEffectiveLabel.text = effe
+            self.fastEffectiveLabel.text = fEffe
             self.fastAttackDPS.text = "\(fDmgPS)"
+            
             
             self.specialAttackDurationValue.text = "\(cAttack.sec)"
             self.specialAttackEnergyValue.text = "\(cAttack.energy)"
@@ -327,22 +333,7 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
             else {
                 self.specialAttackStabValue.text = "False"
             }
-            if chargeMulti < 0.8 {
-                effe = "Very ineffective"
-            }
-            else if chargeMulti < 1 {
-                effe = "Ineffective"
-            }
-            else if chargeMulti == 1 {
-                effe = "Normal"
-            }
-            else if chargeMulti > 1.5 {
-                effe = "Super effective"
-            }
-            else {
-                effe = "Effective"
-            }
-            self.specialAttackEffectiveLabel.text = effe
+                        self.specialAttackEffectiveLabel.text = cEffe
             self.specialAttackDPS.text = "\(cDmgPS)"
         })
     }
@@ -425,8 +416,6 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
         
         //specialAttackContainerView.backgroundColor = UIColor.whiteColor()
         specialAttackContainerViewHeightConstraint.active = false
-        
-        print(pokemon.specialAttacks)
         
         specialAttackButtons.removeAll()
         
@@ -705,6 +694,98 @@ class AttackStatsViewController: UIViewController, SelectedPokemonDelegate {
                     //self.specialAttackButtonWidthConstraint[self.selectedSpecialAttack] = nil
                     self.selectedSpecialAttack = nil
             })
+        }
+    }
+    
+    func printAll() {
+        
+        for selectedPokemon in pokeData.pokemon {
+            
+            var maxDmg: Float = 0.0
+            var name: String = ""
+            var attack: String = ""
+            
+            for pokemon in pokeData.pokemon {
+           
+                for fa in pokemon.attacks {
+                
+                    let att = pokeData.getAttack(withName: fa)!
+                    let fTypeAdvantage: TypeAdvantage = pokeData.getTypeAdvantage(forType: att.type)!
+                    var fastMulti: Float = 1
+                    var fStab = false
+            
+                    for type in pokemon.type {
+                        if att.type == type {
+                            fStab = true
+                        }
+                    }
+                    for type1 in selectedPokemon.type {
+                        for type2 in fTypeAdvantage.advantage {
+                            if type1 == type2 {
+                                fastMulti *= 1.25
+                            }
+                        }
+                        for type2 in fTypeAdvantage.disadvantage {
+                            if type1 == type2 {
+                                fastMulti *= 0.8
+                            }
+                        }
+                    }
+                    var dmg = att.dps * fastMulti * att.sec
+
+                    if fStab {
+                        dmg *= 1.25
+                    }
+                    
+                    if dmg > maxDmg {
+                        maxDmg = dmg
+                        name = pokemon.name
+                        attack = fa
+                    }
+                }
+                
+                for ca in pokemon.specialAttacks {
+                    let att = pokeData.getAttack(withName: ca)!
+                    print(att)
+                
+                    let cTypeAdvantage: TypeAdvantage = pokeData.getTypeAdvantage(forType: att.type)!
+                    var chargeMulti: Float = 1
+                    var cStab = false
+                    
+                    for type in pokemon.type {
+                        if att.type == type {
+                            cStab = true
+                        }
+                    }
+                    for type1 in selectedPokemon.type {
+                        for type2 in cTypeAdvantage.advantage {
+                            if type1 == type2 {
+                                chargeMulti *= 1.25
+                            }
+                        }
+                        for type2 in cTypeAdvantage.disadvantage {
+                            if type1 == type2 {
+                                chargeMulti *= 0.8
+                            }
+                        }
+                    }
+                    var dmg = att.dps * chargeMulti * att.sec
+                    if cStab {
+                        dmg *= 1.25
+                    }
+        
+                    if dmg > maxDmg {
+                        maxDmg = dmg
+                        name = pokemon.name
+                        attack = ca
+                    }
+                    
+                }
+            }
+            print("def pokemon\(selectedPokemon.name)--------------")
+            print("attack pokemon\(name)--------------")
+            print("------------\(attack)------------")
+            print(maxDmg)
         }
     }
     

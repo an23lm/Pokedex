@@ -96,39 +96,9 @@ class DetailViewController: UIViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        /*
-        if isEvolutionSelected {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        else {
-            baseViewController!.dismissViewControllerAnimated(true, completion: {
-                Void in
-                self.baseViewController!.dismissViewControllerAnimated(true, completion: nil)
-            })
-        }
-        */
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
-        /*
-        print("Number: \(pokeNumber)")
-        let pokeNumberGIFName = "\(pokeNumber)gif"
-        let path = Bundle.main().pathForResource(pokeNumberGIFName, ofType: "gif")
-        do {
-            let url = URL(fileURLWithPath: path!)
-            let det = try Data(contentsOf: url)
-            let img = FLAnimatedImage(animatedGIFData: det)
-            pokeImageView.animatedImage = img
-        }
-        catch{
-            print(error)
-        }
-         */
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.rotate), name: UIDeviceOrientationDidChangeNotification, object: nil)
         
@@ -190,7 +160,7 @@ class DetailViewController: UIViewController {
         
         eggView.backgroundColor = pokemon.secondaryColor
         eggDistLabel.textColor = pokemon.tertiaryColor
-        eggDistLabel.alpha = 0.5
+        eggDistLabel.alpha = 0.7
         if pokemon.eggDistance == nil {
             eggView.hidden = true
         }
@@ -330,10 +300,10 @@ class DetailViewController: UIViewController {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
-            view.layer.shadowColor = pokemon.secondaryColor.CGColor
+            view.layer.shadowColor = UIColor.blackColor().CGColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1)
             view.layer.shadowRadius = 1
-            view.layer.shadowOpacity = 1
+            view.layer.shadowOpacity = 0.5
             view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 2).CGPath
             self.pokeCaptureChanceView.addSubview(view)
             originX += width + 5
@@ -425,10 +395,10 @@ class DetailViewController: UIViewController {
             let view = UIView(frame: CGRect(x: originX, y: 0, width: width, height: height))
             view.backgroundColor = UIColor.redColor()
             view.layer.cornerRadius = 2
-            view.layer.shadowColor = pokemon.secondaryColor.CGColor
+            view.layer.shadowColor = UIColor.blackColor().CGColor
             view.layer.shadowOffset = CGSize(width: 0, height: 1)
             view.layer.shadowRadius = 1
-            view.layer.shadowOpacity = 1
+            view.layer.shadowOpacity = 0.5
             view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 2).CGPath
             self.pokeFleeChanceView.addSubview(view)
             originX += width + 5
@@ -566,17 +536,6 @@ class DetailViewController: UIViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        /*
-        if isEvolutionSelected {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        else {
-            baseViewController!.dismissViewControllerAnimated(true, completion: {
-                Void in
-                self.baseViewController!.dismissViewControllerAnimated(true, completion: nil)
-            })
-        }
-        */
     }
     
     @IBAction func evolButtonPress(sender: AnyObject) {
@@ -622,40 +581,5 @@ class DetailViewController: UIViewController {
             self.performSegueWithIdentifier("showEvolMultiSegue", sender: nil)
         }
     }
-    
-    @IBAction func swipeRight(sender: AnyObject) {
-        /*
-        print("right")
-        if pokemon.id + 1 <= 151 {
-            let sb = self.storyboard
-            let vc = sb?.instantiateViewControllerWithIdentifier("DVC") as? DetailViewController
-            vc!.pokeNumber = pokemon.id + 1
-            vc!.pokeData = pokeData
-            vc!.baseViewController = self.baseViewController
-            self.presentViewController(vc!, animated: true, completion: nil)
-         }
-        */
-    }
-    
-    @IBAction func swipeLeft(sender: AnyObject) {
-        /*
-        print("left")
-         if pokemon.id + 1 > 0 {
-            let sb = self.storyboard
-            let vc = sb?.instantiateViewControllerWithIdentifier("DVC") as? DetailViewController
-            vc!.pokeNumber = pokemon.id + 1
-            vc!.pokeData = pokeData
-            vc!.baseViewController = self.baseViewController
-            self.presentViewController(vc!, animated: true, completion: nil)
-         }
-         */
-    }
-    
-    @IBAction func fightButtonClick(sender: AnyObject) {
-        
-        
-        
-    }
-    
  
 }

@@ -40,6 +40,7 @@
 		F7E19B491D689454000DAC8D /* Pokemax.json in Resources */ = {isa = PBXBuildFile; fileRef = F7E19B481D689454000DAC8D /* Pokemax.json */; };
 		F7E19B4B1D68B898000DAC8D /* TypeAdv.json in Resources */ = {isa = PBXBuildFile; fileRef = F7E19B4A1D68B898000DAC8D /* TypeAdv.json */; };
 		F7E19B4D1D69A18B000DAC8D /* eggNew.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E19B4C1D69A18B000DAC8D /* eggNew.png */; };
+		F7E19B4F1D6BAD13000DAC8D /* egg1.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E19B4E1D6BAD13000DAC8D /* egg1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		F7E19B481D689454000DAC8D /* Pokemax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pokemax.json; sourceTree = "<group>"; };
 		F7E19B4A1D68B898000DAC8D /* TypeAdv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TypeAdv.json; sourceTree = "<group>"; };
 		F7E19B4C1D69A18B000DAC8D /* eggNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eggNew.png; sourceTree = "<group>"; };
+		F7E19B4E1D6BAD13000DAC8D /* egg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				F7A969E51D40C6A2000652EF /* PokeCollectionViewCell.swift */,
 				F7E19B4C1D69A18B000DAC8D /* eggNew.png */,
 				F75B43371D46B667004B8A5C /* PokédexLogo.png */,
+				F7E19B4E1D6BAD13000DAC8D /* egg1.png */,
 				F7DE955A1D42A1E0003FD8FB /* PokeButtons.xcassets */,
 				F77CB2A51D40C07200CD4F14 /* PokeImages.xcassets */,
 				F73BCA101D425B2700968DE8 /* PokeTypes.xcassets */,
@@ -357,6 +360,7 @@
 				F7E19B4D1D69A18B000DAC8D /* eggNew.png in Resources */,
 				F7A2E5091D401CD40022D528 /* Main.storyboard in Resources */,
 				F73BCA111D425B2700968DE8 /* PokeTypes.xcassets in Resources */,
+				F7E19B4F1D6BAD13000DAC8D /* egg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

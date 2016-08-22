@@ -38,7 +38,7 @@ public class PokeData {
     private func parsePokeData() {
         var pd = pass1()
         pd = pass2(pd)
-        pd = parseDmg(pd)
+        //pd = parseDmg(pd)
         pokemon = pd
     }
     

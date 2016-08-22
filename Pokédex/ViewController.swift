@@ -80,7 +80,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if let num = Int(sender.text) {
                 searchPokemon(withPartialNumber: num)
             }
-            searchPokemon(withPartialName: sender.text!)
+            else {
+                searchPokemon(withPartialName: sender.text!)
+            }
             pokeCollectionView.reloadData()
         }
         else {

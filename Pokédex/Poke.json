@@ -362,7 +362,7 @@
    "Type I":["Water"],
    "Weaknesses":["Electric","Grass"],
    "Fast Attack(s)":["Tackle","Bubble"],
-   "Charge Attack(s)":["Aqua Tail","Aqua Jet","Aqua Pulse"],
+   "Charge Attack(s)":["Aqua Tail","Aqua Jet"],
    "Weight":"9.0 kg",
    "Height":"0.5 m","Next Evolution Requirements":{"Amount":25,"Name":"Squirtle candies"},
    "Next evolution(s)":[{"Number":"008","Name":"Wartortle"},{"Number":"009","Name":"Blastoise"}],
@@ -1307,7 +1307,7 @@
 
  {
    "primaryColor" : "#f6e652",
-   "secondaryColor" : "#c52018",
+   "secondaryColor" : "#41414a",
    "textColor" : "#ffffff",
    "pokeegg" : "2",
    "EvolvesFromId": 172,

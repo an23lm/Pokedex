@@ -85,7 +85,7 @@
         "Disadvantage": ["Fighting", "Dark", "Fairy"]
 	},
     {
-        "Type": "Normal",
+        "Type": "Fairy",
         "Advantage": ["Fighting", "Dragon", "Dark"],
         "Disadvantage": ["Poison", "Steel", "Fire"]
 	}

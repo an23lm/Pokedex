@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SelectedPokemonDelegate {
-    func pokemonSelected(id: Int)
+    func pokemonSelected(pokemon: Pokemon)
 }
 
 class SelectPokemonViewController: UIViewController {
@@ -19,6 +19,7 @@ class SelectPokemonViewController: UIViewController {
     @IBOutlet weak var titleView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     var selectedId: Int! = nil
     
@@ -26,6 +27,8 @@ class SelectPokemonViewController: UIViewController {
     var pokemon: Pokemon! = nil
     
     var delegate: SelectedPokemonDelegate! = nil
+    
+    var pokeList: [Pokemon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,11 @@ class SelectPokemonViewController: UIViewController {
         backButton.setTitleColor(pokemon.tertiaryColor, forState: .Normal)
         view.backgroundColor = pokemon.primaryColor
         tableView.backgroundColor = pokemon.primaryColor
+        
+        searchTextField.layer.cornerRadius = 5
+        pokeList = pokeData.pokemon
+        
+        tableView.contentInset.top = 56
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,13 +60,13 @@ extension SelectPokemonViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pokeData.pokemon.count
+        return pokeList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PokeCell") as! PokeTableViewCell
         
-        let poke = pokeData.pokemon[indexPath.row]
+        let poke = pokeList[indexPath.row]
         cell.nameLabel.text = poke.name
         cell.idLabel.text = String(poke.id)
         cell.pokeImageView.image = UIImage(named: "\(poke.id)")
@@ -71,7 +79,62 @@ extension SelectPokemonViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate.pokemonSelected(indexPath.row + 1)
+        delegate.pokemonSelected(pokeList[indexPath.row])
         performSegueWithIdentifier("unwindSegue", sender: nil)
+    }
+}
+
+extension SelectPokemonViewController: UITextFieldDelegate {
+    
+    @IBAction func textFieldDidChange(sender: UITextField) {
+        
+        print(sender.text)
+        
+        if sender.text == "" {
+            pokeList = pokeData.pokemon
+        }
+        else if let number = Int(sender.text!) {
+            pokeList.removeAll()
+            searchPokemon(withPartialNumber: number)
+        }
+        else {
+            pokeList.removeAll()
+            searchPokemon(withPartialName: sender.text!)
+        }
+        tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Fade)
+    }
+    
+    func searchPokemon(withPartialName name: String) {
+        for poke in pokeData.pokemon {
+            if poke.name.lowercaseString.containsString(name.lowercaseString) {
+                pokeList.append(poke)
+            }
+        }
+    }
+    func searchPokemon(withPartialNumber number: Int) {
+        for poke in pokeData.pokemon {
+            if poke.id == number {
+                pokeList.append(poke)
+            }
+        }
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("Begin")
+        UIView.animateWithDuration(0.1, animations: {
+            textField.backgroundColor = UIColor.whiteColor()
+            textField.textColor = UIColor.blackColor()
+        })
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        print("End")
+        UIView.animateWithDuration(0.1, animations: {
+            textField.backgroundColor = UIColor.clearColor()
+            textField.textColor = self.pokemon.secondaryColor
+        })
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
 }
