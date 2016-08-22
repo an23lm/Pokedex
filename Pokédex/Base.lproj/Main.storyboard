@@ -418,7 +418,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="fightButtonClick:" destination="h3Q-yn-G4O" eventType="touchUpInside" id="GdY-bN-bvY"/>
                                                     <segue destination="E64-Wr-CEl" kind="show" identifier="showAttackStats" id="7VJ-rg-vzg"/>
                                                 </connections>
                                             </button>
