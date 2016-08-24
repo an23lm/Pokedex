@@ -53,6 +53,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pokeCollectionView.reloadData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if ((NSUserDefaults.standardUserDefaults().valueForKey("firstLaunch")) == nil) {
+            let alert = UIAlertController(title: "Disclaimer", message: "Pokémon and all Pokémon images are property of Niantic, The Pokémon Company International, Inc., or Nintendo.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: {
+                Void in
+                NSUserDefaults.standardUserDefaults().setValue("True", forKey: "firstLaunch")
+            })
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepareForSegue(segue, sender: sender)
         

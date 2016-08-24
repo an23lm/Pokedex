@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class PokeData {
     var trainerLevel: Int = 1 {

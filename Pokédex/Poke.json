@@ -7128,7 +7128,7 @@
    "Type II":["Flying"],
    "Weaknesses":["Electric","Rock"],
    "Fast Attack(s)":["Bite","Dragon Breath"],
-   "Charge Attack(s)":["Hydro Pump","Dragon Pulse","Twister"],
+   "Charge Attack(s)":["Hydro Pump","Dragon Pulse","Twister","Hyper Beam"],
    "Weight":"235.0 kg",
    "Height":"6.5 m",
    "Previous evolution(s)":[{"Number":"129","Name":"Magikarp"}],

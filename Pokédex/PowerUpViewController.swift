@@ -67,6 +67,7 @@ class PowerUpViewController: UIViewController {
         
         pokemon!.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
         let lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        let superLightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.4)
         trainerLevelLabel.textColor = lightSecondaryColor
         combatPointsLabel.textColor = lightSecondaryColor
         trainerLevel.textColor = pokemon?.secondaryColor
@@ -83,8 +84,9 @@ class PowerUpViewController: UIViewController {
         
         contentView.backgroundColor = pokemon?.secondaryColor
         
-        cpView.color1 = (pokemon?.tertiaryColor)!
-        cpView.color2 = (pokemon?.secondaryColor)!
+        cpView.color1 = (pokemon?.secondaryColor)!
+        cpView.color2 = (superLightSecondaryColor)
+        cpView.color3 = (pokemon?.tertiaryColor)!
         
         disclaimerText.textColor = lightTextColor
         

@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pokeID: UILabel!
     @IBOutlet weak var pokeClassification: UILabel!
     @IBOutlet weak var pokeTypeView: UIView!
-    @IBOutlet weak var pokeImageView: FLAnimatedImageView!
+    @IBOutlet weak var pokeImageView: UIImageView!
     @IBOutlet weak var pokeWeeknessView: UIView!
     @IBOutlet weak var pokeFastAttackLabel1View: UIView!
     @IBOutlet weak var pokeFastAttacksView: UIView!

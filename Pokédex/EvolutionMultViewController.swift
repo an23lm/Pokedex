@@ -60,6 +60,7 @@ class EvolutionMultViewController: UIViewController {
         pokemon?.secondaryColor.getRed(&r, green: &g, blue: &b, alpha: &a)
 
         let lightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.7)
+        let superLightSecondaryColor = UIColor(red: r, green: g, blue: b, alpha: 0.4)
         combatPointsLabel.textColor = lightSecondaryColor
         trainerLevelLabel.textColor = lightSecondaryColor
         trainerLevelUp.fillColor = (pokemon?.secondaryColor)!
@@ -79,10 +80,14 @@ class EvolutionMultViewController: UIViewController {
         
         disclamerText.textColor = textColor
         disclamerView.backgroundColor = pokemon?.secondaryColor
-        currentCPView.color1 = (pokemon?.tertiaryColor)!
-        currentCPView.color2 = (pokemon?.secondaryColor)!
-        evolutionCPView.color1 = (pokemon?.tertiaryColor)!
-        evolutionCPView.color2 = (pokemon?.secondaryColor)!
+        
+        currentCPView.color1 = (pokemon?.secondaryColor)!
+        currentCPView.color2 = (superLightSecondaryColor)
+        currentCPView.color3 = pokemon!.tertiaryColor
+        
+        evolutionCPView.color1 = (pokemon?.secondaryColor)!
+        evolutionCPView.color2 = (superLightSecondaryColor)
+        evolutionCPView.color3 = pokemon!.tertiaryColor
     }
 
     override func didReceiveMemoryWarning() {

@@ -63,7 +63,7 @@ import UIKit
         maxCpCircleLayer.path = circlePath.CGPath
         maxCpCircleLayer.fillColor = UIColor.clearColor().CGColor
         maxCpCircleLayer.strokeColor = color2.CGColor
-        maxCpCircleLayer.lineWidth = 5.0
+        maxCpCircleLayer.lineWidth = 7
         maxCpCircleLayer.strokeEnd = 0
         maxCpCircleLayer.lineCap = kCALineCapRound
         layer.addSublayer(maxCpCircleLayer)
@@ -88,7 +88,7 @@ import UIKit
         cpCapCircleLayer.path = circlePath.CGPath
         cpCapCircleLayer.fillColor = UIColor.clearColor().CGColor
         cpCapCircleLayer.strokeColor = color3.CGColor
-        cpCapCircleLayer.lineWidth = 5.0
+        cpCapCircleLayer.lineWidth = 2
         cpCapCircleLayer.strokeEnd = 0
         cpCapCircleLayer.lineCap = kCALineCapRound
         layer.addSublayer(cpCapCircleLayer)
@@ -104,7 +104,7 @@ import UIKit
         currentCpCircleLayer.path = circlePath.CGPath
         currentCpCircleLayer.fillColor = UIColor.clearColor().CGColor
         currentCpCircleLayer.strokeColor = color1.CGColor
-        currentCpCircleLayer.lineWidth = 5.0
+        currentCpCircleLayer.lineWidth = 7.2
         currentCpCircleLayer.strokeEnd = 0
         currentCpCircleLayer.lineCap = kCALineCapRound
         layer.addSublayer(currentCpCircleLayer)

@@ -405,7 +405,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-PU-Uu5" customClass="FLAnimatedImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-PU-Uu5">
                                                 <rect key="frame" x="94" y="70" width="188" height="188"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9H1-PU-Uu5" secondAttribute="height" multiplier="1:1" id="xAb-Bt-1GZ"/>
@@ -693,7 +693,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-4R-JZG">
                                                                 <rect key="frame" x="8" y="8" width="70" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jis-Mj-iRt">
@@ -723,7 +723,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAB:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-bx-tVw">
                                                                 <rect key="frame" x="230" y="37" width="46" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -800,7 +800,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAB:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRJ-oM-xMq">
                                                                 <rect key="frame" x="225" y="37" width="46" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -982,8 +982,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-VT-0Bb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brF-gf-BNt">
-                                        <rect key="frame" x="8" y="31" width="60" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brF-gf-BNt">
+                                        <rect key="frame" x="8" y="32" width="60" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="S3O-Wn-L7V"/>
                                             <constraint firstAttribute="height" constant="35" id="iCP-xf-ZXp"/>
@@ -995,8 +995,8 @@
                                             <segue destination="9Oq-OX-RHX" kind="unwind" unwindAction="unwindForSegue:towardsViewController:" id="ZO3-fB-79n"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVc-LO-Q9B">
-                                        <rect key="frame" x="115" y="36" width="145" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVc-LO-Q9B">
+                                        <rect key="frame" x="115" y="37" width="145" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1590,6 +1590,60 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.60000002379999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnV-Rj-V23" customClass="CounterButton" customModule="Poke_dex" customModuleProvider="target">
+                                <rect key="frame" x="75" y="265" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="lHy-5w-WTb"/>
+                                    <constraint firstAttribute="height" constant="40" id="nGw-Cl-v0n"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.13553312420845032" green="0.20921963453292847" blue="0.5675320029258728" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.60000002379999995" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trainerLevelDown:" destination="vDD-9f-Qt0" eventType="touchUpInside" id="wkA-HY-hhI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-Yf-vwh" customClass="CPView" customModule="Poke_dex" customModuleProvider="target">
+                                <rect key="frame" x="75" y="109" width="225" height="112.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B16-Yh-Jdd">
+                                        <rect key="frame" x="67" y="22" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="B16-Yh-Jdd" secondAttribute="height" multiplier="1:1" id="NYe-Xn-JkM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JtX-Yf-vwh" secondAttribute="height" multiplier="2:1" id="Pje-hI-utc"/>
+                                    <constraint firstItem="B16-Yh-Jdd" firstAttribute="width" secondItem="JtX-Yf-vwh" secondAttribute="width" multiplier="0.4" id="QkG-je-fH2"/>
+                                    <constraint firstAttribute="bottom" secondItem="B16-Yh-Jdd" secondAttribute="bottom" id="hQA-or-yL0"/>
+                                    <constraint firstItem="B16-Yh-Jdd" firstAttribute="centerX" secondItem="JtX-Yf-vwh" secondAttribute="centerX" id="wDg-8J-Yjt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentCP">
+                                        <integer key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxCP">
+                                        <integer key="value" value="300"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="levelCap">
+                                        <integer key="value" value="210"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color3">
+                                        <color key="value" red="1" green="0.1491314172744751" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-NF-3WH">
                                 <rect key="frame" x="16" y="396" width="343" height="596"/>
                                 <subviews>
@@ -1678,60 +1732,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnV-Rj-V23" customClass="CounterButton" customModule="Poke_dex" customModuleProvider="target">
-                                <rect key="frame" x="75" y="265" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="lHy-5w-WTb"/>
-                                    <constraint firstAttribute="height" constant="40" id="nGw-Cl-v0n"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.13553312420845032" green="0.20921963453292847" blue="0.5675320029258728" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="0.60000002379999995" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="trainerLevelDown:" destination="vDD-9f-Qt0" eventType="touchUpInside" id="wkA-HY-hhI"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtX-Yf-vwh" customClass="CPView" customModule="Poke_dex" customModuleProvider="target">
-                                <rect key="frame" x="75" y="109" width="225" height="112.5"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B16-Yh-Jdd">
-                                        <rect key="frame" x="67" y="22" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="B16-Yh-Jdd" secondAttribute="height" multiplier="1:1" id="NYe-Xn-JkM"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="JtX-Yf-vwh" secondAttribute="height" multiplier="2:1" id="Pje-hI-utc"/>
-                                    <constraint firstItem="B16-Yh-Jdd" firstAttribute="width" secondItem="JtX-Yf-vwh" secondAttribute="width" multiplier="0.4" id="QkG-je-fH2"/>
-                                    <constraint firstAttribute="bottom" secondItem="B16-Yh-Jdd" secondAttribute="bottom" id="hQA-or-yL0"/>
-                                    <constraint firstItem="B16-Yh-Jdd" firstAttribute="centerX" secondItem="JtX-Yf-vwh" secondAttribute="centerX" id="wDg-8J-Yjt"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="currentCP">
-                                        <integer key="value" value="200"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxCP">
-                                        <integer key="value" value="300"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="levelCap">
-                                        <integer key="value" value="210"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color3">
-                                        <color key="value" red="1" green="0.1491314172744751" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20738130807876587" green="0.29099112749099731" blue="0.64378625154495239" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
