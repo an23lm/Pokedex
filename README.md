@@ -10,4 +10,5 @@ The source code to the Pokédex app.
 <img src="https://user-images.githubusercontent.com/5507600/167197488-8d551915-0eef-47dc-ba87-abd4a3bcbd72.jpeg" width="300" />
 <img src="https://user-images.githubusercontent.com/5507600/167197492-913bd0d0-f27c-4f0d-bf81-e6455686e8a4.jpeg" width="300" />
  
+## Download
 [Download on the App Store](https://itunes.apple.com/in/app/pokegodex/id1138813329?mt=8)
