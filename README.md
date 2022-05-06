@@ -1,5 +1,5 @@
-# Pok-GODex
-The source code to the PokéGOdex app seen on the iOS AppStore.
+# Pokédex
+The source code to the Pokédex app.
 
 <img src="https://user-images.githubusercontent.com/5507600/167199912-333d0ef6-0c6c-4169-b0dd-74ecb2a45a45.mov" width="300" />
 
